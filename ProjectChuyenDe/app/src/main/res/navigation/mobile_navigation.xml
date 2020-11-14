@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/nav_trangchu">
 
     <fragment
-        android:id="@+id/nav_home"
+        android:id="@+id/nav_trangchu"
         android:name="com.example.projectchuyende.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
     <fragment
-        android:id="@+id/nav_gallery"
+        android:id="@+id/nav_thanhtoan"
         android:name="com.example.projectchuyende.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/menu_pay"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
+        android:id="@+id/nav_trogiup"
         android:name="com.example.projectchuyende.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
+        android:label="@string/menu_help"
         tools:layout="@layout/fragment_slideshow" />
     <fragment
-        android:id="@+id/btnSignin"
-        android:name="com.example.projectchuyende.login.loginFrament"
-        android:label="@string/sign_in"
-        tools:layout="@layout/fragment_login_activity" />
+        android:id="@+id/nav_signin"
+
+        android:name="com.example.projectchuyende.ui.signin.SignInFragment"
+        android:label="@string/menu_sign"
+        tools:layout="@layout/fragment_signin" />
 </navigation>

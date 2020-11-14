@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_trangchu"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_thanhtoan"
+            android:icon="@drawable/payblack"
+            android:title="@string/menu_pay" />
+        <item
+            android:id="@+id/nav_trogiup"
+            android:icon="@drawable/ic_baseline_help_24"
+            android:title="@string/menu_help" />
+        <item
+            android:id="@+id/nav_gioithieu"
+            android:icon="@drawable/infor"
+            android:title="@string/menu_infor" />
+    </group>
+    <item>
+        <menu>
+            <item
+                android:id="@+id/nav_signin"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="@string/menu_sign" />
+        </menu>
+    </item>
+</menu>

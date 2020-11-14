@@ -6,9 +6,14 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
+    <!-- Navigation Drawer người dùng    -->
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="sign_in">signin</string>
+    <string name="title_home">Home</string>
+    <string name="menu_pay">Thanh Toán</string>
+    <string name="menu_help">Trợ Giúp</string>
+    <string name="menu_infor">Giới Thiệu</string>
+    <string name="menu_sign">Sign in</string>
+    <!--  menu  nhanc vien -->
+    <string name="menu_filter"> Filter </string>
+    <string name="menu_thongtinnhanvien"> Thông tin </string>
 </resources>
