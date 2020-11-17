@@ -32,7 +32,8 @@ public class LoadingActivity extends AppCompatActivity {
             public void run() {
                 super.run();
                 int waited = 0;
-                while (waited < 4000) {
+                //thoi gian load
+                while (waited < 2000) {
                     try {
                         sleep(100);
                     } catch (InterruptedException e) {
