@@ -1,32 +1,38 @@
-package com.example.projectchuyende;
+package com.example.projectchuyende.ui.liststaff;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.ListStaffAdapter;
 import com.example.projectchuyende.model.Nhanvien;
 
 import java.util.ArrayList;
 
-public class List_staff extends AppCompatActivity {
+public class List_staff extends Fragment {
     ListView lv_listStaff;
     ArrayList<Nhanvien> datalistStaff = new ArrayList<>();
     ListStaffAdapter ListStaffadapter;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_staff);
-        setControl();
-        setEvent();
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.show_liststaff, container, false);
+        lv_listStaff = root.findViewById(R.id.lv_listStaff);
+        return root;
     }
-
     private void setEvent() {
         dataViewListStaff();
-        ListStaffadapter = new ListStaffAdapter(this, R.layout.show_liststaff, datalistStaff);
+        ListStaffadapter = new ListStaffAdapter(getContext(), R.layout.show_liststaff, datalistStaff);
         lv_listStaff.setAdapter(ListStaffadapter);
     }
 
@@ -41,7 +47,4 @@ public class List_staff extends AppCompatActivity {
         datalistStaff.add(nhanvien1);
     }
 
-    private void setControl() {
-        lv_listStaff = findViewById(R.id.lv_listStaff);
-    }
 }

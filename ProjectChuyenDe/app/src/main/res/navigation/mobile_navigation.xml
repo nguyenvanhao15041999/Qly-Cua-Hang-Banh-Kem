@@ -23,8 +23,12 @@
         tools:layout="@layout/fragment_slideshow" />
     <fragment
         android:id="@+id/nav_signin"
-
         android:name="com.example.projectchuyende.ui.signin.SignInFragment"
         android:label="@string/menu_sign"
         tools:layout="@layout/fragment_signin" />
+    <fragment
+        android:id="@+id/nav_danhsachnhanvien"
+        android:name="com.example.projectchuyende.ui.liststaff.List_staff"
+        android:label="@string/menu_danhsachnhanvien"
+        tools:layout="@layout/show_liststaff" />
 </navigation>
