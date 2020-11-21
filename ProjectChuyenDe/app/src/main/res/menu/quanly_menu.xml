@@ -9,9 +9,9 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_thongtin"
-            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
-            android:title="@string/menu_thongtinnhanvien" />
+            android:id="@+id/nav_danhsachnhanvien"
+            android:icon="@drawable/nhanviendanhsach"
+            android:title="@string/menu_danhsachnhanvien" />
         <item
             android:id="@+id/nav_trogiup"
             android:icon="@drawable/ic_baseline_help_24"
