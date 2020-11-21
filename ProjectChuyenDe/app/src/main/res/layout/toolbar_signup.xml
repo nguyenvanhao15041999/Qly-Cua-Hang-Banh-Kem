@@ -64,17 +64,5 @@
         app:mrl_rippleOverlay="true"
         app:mrl_ripplePersistent="false"
         app:mrl_rippleRoundedCorners="30dp">
-
-        <ImageView
-
-            android:id="@+id/imgMenu"
-            android:layout_marginRight="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:src="@drawable/addmember"
-            android:minHeight="?attr/actionBarSize"
-            android:scaleType="centerInside"
-            />
     </com.balysv.materialripple.MaterialRippleLayout>
 </androidx.appcompat.widget.Toolbar>
