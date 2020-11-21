@@ -94,6 +94,7 @@
             android:textSize="20sp" />
 
         <Button
+            android:id="@+id/btnSignup"
             android:layout_width="97dp"
             android:layout_height="37dp"
             android:layout_marginLeft="100dp"

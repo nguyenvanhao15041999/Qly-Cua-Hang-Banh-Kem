@@ -16,6 +16,10 @@
     <!--  menu  nhanc vien -->
     <string name="menu_filter"> Filter </string>
     <string name="menu_thongtinnhanvien"> Thông tin </string>
+<!--    Menu quan ly -->
+    <string name="menu_danhsachnhanvien">Danh sách nhân viên</string>
+    <string name="menu_taonhanvien">Tạo nhân viên</string>
+    <string name="menu_thongkengaycong">Thống kê ngày công</string>
 <!--    string sign up-->
     <string name="edtTaikhoan">Nhập tài khoản....</string>
     <string name="tv_email">Email</string>
