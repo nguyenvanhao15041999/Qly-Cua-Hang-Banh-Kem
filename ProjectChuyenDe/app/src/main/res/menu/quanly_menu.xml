@@ -10,23 +10,35 @@
             android:title="@string/menu_home" />
         <item
             android:id="@+id/nav_danhsachnhanvien"
-            android:icon="@drawable/nhanviendanhsach"
+            android:icon="@drawable/listthongtinnhanvien"
             android:title="@string/menu_danhsachnhanvien" />
+        <item
+            android:id="@+id/nav_thongkengaycong"
+            android:icon="@drawable/thongke1"
+            android:title="@string/menu_thongkengaycong" />
+        <item
+            android:id="@+id/nav_danhsachban"
+            android:icon="@drawable/table"
+            android:title="@string/menu_danhsachban" />
+        <item
+            android:id="@+id/nav_thucdon"
+            android:icon="@drawable/menufood"
+            android:title="@string/menu_thucdon" />
         <item
             android:id="@+id/nav_trogiup"
             android:icon="@drawable/ic_baseline_help_24"
             android:title="@string/menu_help" />
         <item
-            android:id="@+id/nav_gioithieu"
+            android:id="@+id/nav_thongtin"
             android:icon="@drawable/infor"
             android:title="@string/menu_infor" />
     </group>
     <item>
         <menu>
             <item
-                android:id="@+id/nav_signin"
+                android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
-                android:title="@string/menu_sign" />
+                android:title="@string/menu_dangxuat" />
         </menu>
     </item>
 </menu>
