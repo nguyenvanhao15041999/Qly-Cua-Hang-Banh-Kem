@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_margin="10dp"
+        android:id="@+id/imgListStaff"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:src="@drawable/ban"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_nameStaff_LS"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Phan Duy Thai" />
+
+        <TextView
+            android:id="@+id/tv_MemberStaff_LS"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:text="Nhan vien" />
+    </LinearLayout>
+
+</LinearLayout>
