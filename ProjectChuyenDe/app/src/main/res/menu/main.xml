@@ -14,7 +14,7 @@
         app:showAsAction="always"
         android:title="TODO" />
     <item
-        android:id="@+id/action_exit"
+        android:id="@+id/exit"
         app:showAsAction="never"
         android:title="Exit" />
 </menu>

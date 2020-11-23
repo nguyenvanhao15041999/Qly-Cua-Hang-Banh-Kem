@@ -1,20 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPink">
 
     <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="137dp"
+        android:layout_marginTop="110dp"
         android:background="@drawable/cake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
+
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"/>
+        android:id="@+id/linearLayout14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtVersion"
+            android:textSize="@dimen/textSize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/layout_marginLeft"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout14">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:text="@string/txtMember"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/txtMember1"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/txtMember2"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/txtMember3"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/txtMember4"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/layout_marginLeft"
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:text="@string/txtMember5"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginLeft="@dimen/layout_marginLeft"
+        android:id="@+id/linearLayout18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/layout_marginTop"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout17"
+        tools:layout_editor_absoluteX="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tutorial:"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout18">
+
+        <TextView
+            android:layout_marginTop="@dimen/layout_marginTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTutorial1"
+            android:textSize="@dimen/textSize"
+            android:textStyle="bold" />
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
