@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/nav_thanhtoan"
-        android:name="com.example.projectchuyende.ui.gallery.GalleryFragment"
+        android:name="com.example.projectchuyende.ui.pay.PayFragment"
         android:label="@string/menu_pay"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_pay" />
 
     <fragment
         android:id="@+id/nav_trogiup"
@@ -36,4 +36,14 @@
         android:name="com.example.projectchuyende.ui.information.Information"
         android:label="@string/menu_infor"
         tools:layout="@layout/fragment_information" />
+    <fragment
+        android:id="@+id/nav_danhsachban"
+        android:name="com.example.projectchuyende.ui.listdesk.ListDesk"
+        android:label="@string/menu_danhsachban"
+        tools:layout="@layout/fragment_listdesk" />
+    <fragment
+        android:id="@+id/nav_thucdon"
+        android:name="com.example.projectchuyende.ui.menu.MenuFragment"
+        android:label="@string/menu_thucdon"
+        tools:layout="@layout/fragment_menu" />
 </navigation>

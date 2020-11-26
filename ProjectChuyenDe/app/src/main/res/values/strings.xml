@@ -49,4 +49,6 @@
     <string name="txtMember5">Bùi Nguyễn Minh</string>
     <string name="txtTutorial">Tutorial: </string>
     <string name="txtTutorial1">Tiêu Kim Cương</string>
+<!--    Menu nhan vien-->
+    <string name="menu_thongke">Thống Kê</string>
 </resources>
