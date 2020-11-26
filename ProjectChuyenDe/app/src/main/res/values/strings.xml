@@ -19,27 +19,27 @@
 
     <!--    string sign up-->
 
-<!--    Menu quan ly -->
+    <!--    Menu quan ly -->
     <string name="menu_danhsachnhanvien">Danh sách nhân viên</string>
     <string name="menu_taonhanvien">Tạo nhân viên</string>
     <string name="menu_thongkengaycong">Thống kê ngày công</string>
     <string name="menu_danhsachban">Danh sách bàn</string>
     <string name="menu_thucdon">Thực đơn</string>
     <string name="menu_dangxuat">Đăng xuất</string>
-<!--    string sign up-->
+    <!--    string sign up-->
     <string name="edtTaikhoan">Nhập tài khoản....</string>
     <string name="tv_email">Email</string>
     <string name="tv_sdt">SDT</string>
     <string name="tv_diaChi">Địa chỉ</string>
     <string name="tv_btnSignup">Địa chỉ</string>
-<!--  string help-->
+    <!--  string help-->
     <string name="txtdiachi">Địa chỉ: </string>
     <string name="txtSdt">1900xnxx </string>
     <string name="txtTentruong">CĐ Công Nghệ Thủ Đức</string>
     <string name="txtHotline">Hotline</string>
     <string name="txtEmail">Email</string>
     <string name="txtemail">thuducxx@gmail.com</string>
-<!--    string information-->
+    <!--    string information-->
     <string name="txtVersion">Version 0.0.1</string>
     <string name="txtMember">Members: </string>
     <string name="txtMember1">Võ Minh Tấn Vũ</string>
@@ -49,4 +49,45 @@
     <string name="txtMember5">Bùi Nguyễn Minh</string>
     <string name="txtTutorial">Tutorial: </string>
     <string name="txtTutorial1">Tiêu Kim Cương</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+<!--    string timekeeping-->
+    <string name="txtName">Tên</string>
+    <string name="txtNgaycong">Ngày công</string>
+    <string name="txtTonggio">Tổng giờ</string>
+    <string name="txtThuong">Thưởng</string>
+    <string name="txtLuongcb">Lương CB</string>
+    <string name="txtTongluong">Tổng lương</string>
+
+<!--    du lieu thang-->
+    <string-array name="datathang">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+<!--    nam-->
+    <string-array name="datanam">
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+    </string-array>
 </resources>
