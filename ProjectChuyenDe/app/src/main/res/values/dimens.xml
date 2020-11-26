@@ -7,4 +7,9 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="height_activity">400dp</dimen>
     <dimen name="heightTr_activity">200dp</dimen>
+    <dimen name="textSize">20dp</dimen>
+    <dimen name="paddingLeft">10dp</dimen>
+    <dimen name="layout_marginTop">10dp</dimen>
+    <dimen name="layout_marginLeft">10dp</dimen>
+
 </resources>
