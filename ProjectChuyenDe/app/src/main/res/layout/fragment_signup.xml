@@ -6,10 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/colorPink">
 
-    <include
-        android:id="@+id/include"
-        layout="@layout/toolbar_signup"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"

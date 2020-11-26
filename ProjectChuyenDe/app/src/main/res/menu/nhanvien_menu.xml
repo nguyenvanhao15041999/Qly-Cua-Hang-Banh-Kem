@@ -17,6 +17,10 @@
             android:icon="@drawable/thongkenhanvien"
             android:title="@string/menu_thongke" />
         <item
+            android:id="@+id/nav_danhsachban"
+            android:icon="@drawable/desk"
+            android:title="@string/menu_danhsachban" />
+        <item
             android:id="@+id/nav_trogiup"
             android:icon="@drawable/ic_baseline_help_24"
             android:title="@string/menu_help" />
