@@ -37,11 +37,11 @@ public class ListStaffAdapter extends ArrayAdapter {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View viewNhanvien;
-        if (convertView==null){
-            viewNhanvien = View.inflate(parent.getContext(),resource,null);
-        }else viewNhanvien=convertView;
-        TextView NameStaff=viewNhanvien.findViewById(R.id.tv_nameStaff_LS);
-        TextView MemberStaff=viewNhanvien.findViewById(R.id.tv_MemberStaff_LS);
+        if (convertView == null) {
+            viewNhanvien = View.inflate(parent.getContext(), resource, null);
+        } else viewNhanvien = convertView;
+        TextView NameStaff = viewNhanvien.findViewById(R.id.tv_nameStaff_LS);
+        TextView MemberStaff = viewNhanvien.findViewById(R.id.tv_MemberStaff_LS);
 
         final Nhanvien nhanvien = this.dataNhanvien.get(position);
         NameStaff.setText("Ten NV: " + nhanvien.getsStaffName());

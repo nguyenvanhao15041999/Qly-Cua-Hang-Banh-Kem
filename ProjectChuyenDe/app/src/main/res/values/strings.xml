@@ -94,4 +94,11 @@
         <item>2025</item>
     </string-array>
 
+    <!--danh sach cac khu vuc-->
+    <string-array name="Khuvuc">
+        <item>V1: Dành cho học sinh, sinh viên</item>
+        <item>V2: Dành cho học sinh, sinh viên</item>
+        <item>V3: Dành cho học sinh, sinh viên</item>
+    </string-array>
+
 </resources>
