@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -65,6 +66,10 @@ public class List_staff extends Fragment {
         nhanvien1.setsStaffName("Phan duy thai");
         nhanvien1.setsMember("Nhan vien");
         datalistStaff.add(nhanvien1);
+        Nhanvien nhanvien2 = new Nhanvien();
+        nhanvien2.setsStaffName("Phan duy thai");
+        nhanvien2.setsMember("Nhan vien");
+        datalistStaff.add(nhanvien2);
     }
 
 }
