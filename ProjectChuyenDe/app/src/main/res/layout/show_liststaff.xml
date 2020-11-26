@@ -13,20 +13,20 @@
         android:src="@drawable/ban"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/tv_nameStaff_LS"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:text="Phan Duy Thai" />
 
         <TextView
             android:id="@+id/tv_MemberStaff_LS"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
             android:text="Nhan vien" />
