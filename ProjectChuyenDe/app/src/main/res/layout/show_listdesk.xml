@@ -3,7 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="wrap_content">
     <ImageView
         android:id="@+id/imgDesk"
         android:layout_width="100dp"
@@ -11,9 +15,13 @@
         android:src="@drawable/table_rong" />
 
     <TextView
+        android:textSize="20dp"
+        android:layout_gravity=""
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/tv_numberDesk"
         android:text="Ban 1" />
+</LinearLayout>
+
 
 </LinearLayout>

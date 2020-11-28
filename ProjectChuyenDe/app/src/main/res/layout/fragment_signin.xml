@@ -25,9 +25,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="35dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp">
+        tools:ignore="MissingConstraints">
 
         <TextView
             android:layout_width="wrap_content"
@@ -53,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         tools:ignore="MissingConstraints">
@@ -69,9 +71,9 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
-            android:paddingRight="5dp"
             android:background="@color/colorWhite"
             android:drawableEnd="@drawable/eye_nham"
+            android:paddingRight="5dp"
             android:password="true"
             android:textSize="20sp" />
     </LinearLayout>
@@ -82,8 +84,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:gravity="center"
-        android:layout_marginLeft="10dp"
         android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:ignore="MissingConstraints">
@@ -109,20 +111,25 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
         android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
         tools:ignore="MissingConstraints">
+
         <TextView
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:textColor="@color/colorBluelight"
-            android:textStyle="italic"
-            android:text="Quên mật khẩu ?"
+            android:id="@+id/tvForgotpassword"
             android:layout_width="wrap_content"
-            android:layout_height="22dp"/>
+            android:layout_height="22dp"
+            android:clickable="true"
+            android:text="Quên mật khẩu ?"
+            android:textAllCaps="false"
+            android:textColor="@color/colorBluelight"
+            android:textSize="20sp"
+            android:textStyle="italic" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
