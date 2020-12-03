@@ -52,13 +52,13 @@
     <string name="txtTutorial">Tutorial: </string>
     <string name="txtTutorial1">Tiêu Kim Cương</string>
 
-<!--    Menu nhan vien-->
+    <!--    Menu nhan vien-->
     <string name="menu_thongke">Thống Kê</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
-<!--    string timekeeping-->
+    <!--    string timekeeping-->
     <string name="txtName">Tên</string>
     <string name="txtNgaycong">Ngày công</string>
     <string name="txtTonggio">Tổng giờ</string>
@@ -66,7 +66,7 @@
     <string name="txtLuongcb">Lương CB</string>
     <string name="txtTongluong">Tổng lương</string>
 
-<!--    du lieu thang-->
+    <!--    du lieu thang-->
     <string-array name="datathang">
         <item>1</item>
         <item>2</item>
@@ -81,7 +81,7 @@
         <item>11</item>
         <item>12</item>
     </string-array>
-<!--    nam-->
+    <!--    nam-->
     <string-array name="datanam">
         <item>2015</item>
         <item>2016</item>
@@ -102,7 +102,18 @@
         <item>V2: Dành cho học sinh, sinh viên</item>
         <item>V3: Dành cho học sinh, sinh viên</item>
     </string-array>
-<!--    Toolbar -->
-<!--    forgot pass-->
+
+    <!--string list desk-->
+    <string name="txtTenban">Tên bàn (*)</string>
+    <string name="txtSonguoi">Số người (*)</string>
+    <string name="txtKhuvuc">Khu vực (*)</string>
+    <string name="txthintTenban">Nhập tên bàn...</string>
+    <string name="txthintSonguoi">Nhập số người</string>
+    <string name="btnHuy"> Hủy </string>
+    <string name="btnDongy"> Đồng ý </string>
+
+
+    <!--    Toolbar -->
+    <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
 </resources>
