@@ -91,6 +91,7 @@
         tools:ignore="MissingConstraints">
 
         <Button
+            android:id="@+id/btnSignin"
             android:layout_width="97dp"
             android:layout_height="37dp"
             android:layout_marginLeft="30dp"
