@@ -10,4 +10,6 @@
     <color name="colorBlack">#000000</color>
     <color name="colorYellow">#FFC107</color>
     <color name="colorBluelight">#0188FF</color>
+    <color name="colorRedPink">#E41E61</color>
+
 </resources>
