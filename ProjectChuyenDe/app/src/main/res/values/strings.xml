@@ -102,8 +102,6 @@
         <item>V2: Dành cho học sinh, sinh viên</item>
         <item>V3: Dành cho học sinh, sinh viên</item>
     </string-array>
-<<<<<<< HEAD
-=======
 
     <!--string list desk-->
     <string name="txtTenban">Tên bàn (*)</string>
@@ -114,8 +112,6 @@
     <string name="btnHuy"> Hủy </string>
     <string name="btnDongy"> Đồng ý </string>
 
-
->>>>>>> 95566f675172861d3b62c94faa8edabc3e6ffc85
     <!--    Toolbar -->
     <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
