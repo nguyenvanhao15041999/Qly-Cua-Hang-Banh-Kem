@@ -22,6 +22,13 @@ import com.example.projectchuyende.Preferences;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.activity.forgotpassword.ForgotPassWordActivity;
 import com.example.projectchuyende.activity.signup.SignUpActivity;
+import com.example.projectchuyende.validators.EmailValidator;
+import com.example.projectchuyende.validators.PasswordValidator;
+import com.example.projectchuyende.validators.UsernameValidator;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -34,6 +41,7 @@ public class SignInFragment extends Fragment {
     EditText edtAccount;
     EditText edtPassword;
     Button btnSignin;
+    private FirebaseAuth firebaseAuth;
 
     @Nullable
     @Override
@@ -44,6 +52,9 @@ public class SignInFragment extends Fragment {
         edtAccount = root.findViewById(R.id.edtAccount);
         edtPassword = root.findViewById(R.id.edtPassword);
         btnSignin = root.findViewById(R.id.btnSignin);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
         setEvent();
         return root;
     }
@@ -67,32 +78,34 @@ public class SignInFragment extends Fragment {
         btnSignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-                reference.child("login").addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        String username = edtAccount.getText().toString();
-                        String password = edtPassword.getText().toString();
-                        if (snapshot.child(username).exists()) {
-                            if (snapshot.child(username).child("password").getValue(String.class).equals(password)) {
-                                if (snapshot.child(username).child("as").getValue(String.class).equals("user")) {
-                                    Log.d("user", "User login sucess");
-                                } else {
-                                    if (snapshot.child(username).child("as").getValue(String.class).equals("admin")) {
-                                        Log.d("admin", "Admin login sucess");
-                                    }
-                                }
-                            }
-                        } else {
-                            Log.d("failed", "login failed");
-                        }
-                    }
+                String username = edtAccount.getText().toString(); // username = email
+                String password = edtPassword.getText().toString();
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+//                EmailValidator emailValidator = new EmailValidator();
+//                PasswordValidator passwordValidator = new PasswordValidator();
+//
+//                if (emailValidator.validate(username) == false) {
+//                    return;
+//                } else if (passwordValidator.validate(password) == false) {
+//                    return;
+//                } else {
+//                    login(username, password);
+//                }
 
-                    }
-                });
+                login(username, password);
+            }
+        });
+    }
+
+    private void login(String username, String password) {
+        firebaseAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Log.d("signin", "Sign in success");
+                }else{
+                    Log.d("signin", "Sign in failed");
+                }
             }
         });
     }

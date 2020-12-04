@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPink"
+    android:orientation="vertical"
+    tools:context=".ui.order.Bookdesk">
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/toolbar_desk" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvMaBan"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Mã Bàn"
+            android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/txtMaBan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvHoTen"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Họ và Tên"
+            android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/txtHoTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSDT"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="SĐT"
+            android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/txtSDT"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"></EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvDiaChi"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Địa Chỉ"
+            android:textSize="15dp"></TextView>
+
+        <EditText
+            android:id="@+id/txtDiaChi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textSize="15dp"></EditText>
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radChonTruoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:text="Chọn Trước"
+            android:textSize="20dp"
+            android:textStyle="bold"></RadioButton>
+
+        <RadioButton
+            android:id="@+id/radChonSau"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="Chọn Sau"
+            android:textSize="20dp"
+            android:textStyle="bold"></RadioButton>
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnDat"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:background="@color/colorBlue"
+            android:text="Đặt"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"></Button>
+
+        <Button
+            android:id="@+id/btnHuy"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:background="@color/colorRed"
+            android:text="Huỷ"
+            android:textColor="@color/colorWhite"
+            android:textSize="15dp"></Button>
+    </LinearLayout>
+</LinearLayout>

@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".List_staff"></activity>-->
+        <activity android:name=".ui.order.BookParty"></activity>
+        <activity android:name=".ui.order.Bookdesk" /> <!-- <activity android:name=".List_staff"></activity> -->
         <activity
             android:name=".activity.LoadingActivity"
             android:label="@string/app_name"
@@ -28,16 +29,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="adjustResize|stateHidden" />
-        <activity android:name=".activity.signup.SignUpActivity"
-            android:theme="@style/AppTheme.NoActionBar"
+        <activity
+            android:name=".activity.signup.SignUpActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"
-            />
-        <activity android:name=".activity.forgotpassword.ForgotPassWordActivity"
             android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".activity.forgotpassword.ForgotPassWordActivity"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
-
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
     </application>
 
 </manifest>
