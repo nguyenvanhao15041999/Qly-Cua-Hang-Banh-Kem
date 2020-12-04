@@ -13,6 +13,7 @@
     <string name="menu_help">Trợ Giúp</string>
     <string name="menu_infor">Giới Thiệu</string>
     <string name="menu_sign">Sign in</string>
+    <string name="menu_signup">Sign up</string>
     <!--  menu  nhanc vien -->
     <string name="menu_filter"> Filter </string>
     <string name="menu_thongtinnhanvien"> Thông tin nhan vien </string>
