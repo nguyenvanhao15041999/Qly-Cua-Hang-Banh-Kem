@@ -37,26 +37,26 @@
     <string name="tv_btnSignup">Địa chỉ</string>
     <!-- string staff_information-->
     <string name="tv_Manv">Mã NV</string>
-    <string name="edtManv">Nhập mã nhân viên...</string>
+    <string name="edtManv">Enter your code...</string>
     <string name="tv_tennv">Tên NV</string>
-    <string name="edtTennv">Nhập tên nhân viên...</string>
+    <string name="edtTennv">Enter your name...</string>
     <string name="tv_chucvu">Chức vụ</string>
     <string name="edtchucvu">...</string>
-    <string name="edtsdt">Nhập vào số điện thoại...</string>
-    <string name="edtdiachi">Nhập vào địa chỉ</string>
-    <string name="edtEmail">Nhập vào email...</string>
     <string name="tv_luong">Lương</string>
     <string name="edtluong">Số lương nhân viên...</string>
     <string name="tv_taikhoan">Tài khoản</string>
     <string name="tv_Password">Mật khẩu</string>
-    <string name="edtmatkhau">Nhập mật khẩu...</string>
+    <string name="edtmatkhau">Enter your password...</string>
     <string name="edtgioitinh">Gioi tinh</string>
     <string name="hienthi">Hiển thị</string>
     <string name="btn_hienthi">Hiển thị</string>
     <string name="motaSP">Mô tả sản phẩm:</string>
     <string name="btntaotaikhoan">Tạo tài khoản</string>
-    <string name="edt_chucvu">...</string>
     <string name="motaSP2">Mô tả</string>
+    <string name="btn_taikhoan">Tài khoản</string>
+    <string name="edt_hoten">Enter your name</string>
+    <string name="edt_Taikhoan">Enter your Acount</string>
+    <string name="btn_save">Save</string>
     <!--  string help-->
     <string name="txtdiachi">Địa chỉ: </string>
     <string name="txtSdt">1900xnxx </string>
@@ -143,4 +143,5 @@
     <!--    Toolbar -->
     <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
+
 </resources>
