@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/txtTenban" />
+
+        <EditText
+            android:id="@+id/txtTenBanLD_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txthintTenban" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/txtTenban" />
+
+        <EditText
+            android:id="@+id/txtSonguoiLD_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/txthintSonguoi"
+            android:inputType="number" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@string/txtKhuvuc" />
+
+        <Spinner
+            android:id="@+id/spKhuvucLD_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/Khuvuc" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancelLD_dialog"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnHuy" />
+
+        <Button
+            android:id="@+id/btnAcceptLD_dialog"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnDongy" />
+    </LinearLayout>
+
+
+</LinearLayout>

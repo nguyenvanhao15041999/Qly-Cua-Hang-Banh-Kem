@@ -18,7 +18,9 @@
     <string name="menu_thongtinnhanvien"> Thông tin </string>
 
     <!--    string sign up-->
-
+    <string name="edt_email">Enter your email...</string>
+    <string name="edt_sdt">Enter your phonenumber...</string>
+    <string name="edt_diachi">Enter your address...</string>
     <!--    Menu quan ly -->
     <string name="menu_danhsachnhanvien">Danh sách nhân viên</string>
     <string name="menu_taonhanvien">Tạo nhân viên</string>
@@ -90,6 +92,8 @@
 
 
 
+
+
     <!--    du lieu thang-->
     <string-array name="datathang">
         <item>1</item>
@@ -127,4 +131,17 @@
         <item>V3: Dành cho học sinh, sinh viên</item>
     </string-array>
 
+    <!--string list desk-->
+    <string name="txtTenban">Tên bàn (*)</string>
+    <string name="txtSonguoi">Số người (*)</string>
+    <string name="txtKhuvuc">Khu vực (*)</string>
+    <string name="txthintTenban">Nhập tên bàn...</string>
+    <string name="txthintSonguoi">Nhập số người</string>
+    <string name="btnHuy"> Hủy </string>
+    <string name="btnDongy"> Đồng ý </string>
+
+
+    <!--    Toolbar -->
+    <!--    forgot pass-->
+    <string name="tvForgotpassword">Forgot Password</string>
 </resources>
