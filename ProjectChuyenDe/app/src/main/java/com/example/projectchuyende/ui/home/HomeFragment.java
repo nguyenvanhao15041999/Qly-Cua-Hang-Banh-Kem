@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.projectchuyende.R;
+import com.example.projectchuyende.ui.order.BookParty;
 import com.example.projectchuyende.ui.order.Bookdesk;
 
 public class HomeFragment extends Fragment {
@@ -29,6 +30,14 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Bookdesk.class);
+                getActivity().startActivity(intent);
+            }
+        });
+
+        btnDatTiec.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BookParty.class);
                 getActivity().startActivity(intent);
             }
         });
