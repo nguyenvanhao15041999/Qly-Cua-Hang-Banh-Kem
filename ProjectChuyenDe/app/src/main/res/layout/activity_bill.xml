@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPink"
+    tools:context=".ui.pay.Bill">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/include3"
+            layout="@layout/toolbar_bill" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvMaHD"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tvMaHD"
+                android:textSize="15dp"
+                android:layout_marginRight="5dp"></TextView>
+
+            <EditText
+                android:id="@+id/txtMaHD"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"
+                android:enabled="true"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvHoTen"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tvHoTen"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/txtHoTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvSDT"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tvSDT"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/txtSDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvDiaChi"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tvDiaChi"
+                android:textSize="15dp"></TextView>
+
+            <EditText
+                android:id="@+id/txtDiaChi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:textSize="15dp"></EditText>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lvHoaDon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"></ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tvTongTien"
+                android:layout_marginRight="5dp"></TextView>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="@string/tvTien"
+                ></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnThanhToan"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:background="@color/colorGreenDank"
+                android:text="@string/btnThanhToan"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"></Button>
+
+            <Button
+                android:id="@+id/btnHuy"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:background="@color/colorRed"
+                android:text="@string/btnHuy"
+                android:textColor="@color/colorWhite"
+                android:textSize="15dp"></Button>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

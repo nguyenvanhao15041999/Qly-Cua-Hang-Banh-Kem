@@ -20,18 +20,30 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.projectchuyende.R;
+<<<<<<< Updated upstream
 import com.example.projectchuyende.ui.home.HomeFragment;
+=======
+import com.example.projectchuyende.ui.listdesk.Table;
+import com.example.projectchuyende.ui.pay.Bill;
+>>>>>>> Stashed changes
 import com.google.android.material.navigation.NavigationView;
 
 public class Bookdesk extends AppCompatActivity {
     ImageView imgBack;
     Button btnDat, btnHuy;
     private AppBarConfiguration mAppBarConfiguration;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookdesk);
         Toolbar toolbar = findViewById(R.id.toolbarbookdesk);
+<<<<<<< Updated upstream
+=======
+        imgBack = findViewById(R.id.imgBack);
+        btnDat = findViewById(R.id.btnDat);
+        btnHuy = findViewById(R.id.btnHuy);
+>>>>>>> Stashed changes
         setSupportActionBar(toolbar);
         setControl();
         setEvent();
@@ -50,6 +62,7 @@ public class Bookdesk extends AppCompatActivity {
                 onBackPressed();
             }
         });
+<<<<<<< Updated upstream
 
         btnHuy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,5 +90,15 @@ public class Bookdesk extends AppCompatActivity {
             }
         });
     }
+=======
+>>>>>>> Stashed changes
 
+        btnDat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Bookdesk.this, Bill.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

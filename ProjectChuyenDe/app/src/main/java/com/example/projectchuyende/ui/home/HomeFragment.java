@@ -12,11 +12,17 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.projectchuyende.R;
+<<<<<<< Updated upstream
+=======
+import com.example.projectchuyende.ui.listdesk.Table;
+import com.example.projectchuyende.ui.order.BookParty;
+>>>>>>> Stashed changes
 import com.example.projectchuyende.ui.order.Bookdesk;
 import com.example.projectchuyende.ui.order.BookParty;
 
 public class HomeFragment extends Fragment {
     Button btnKhu, btnDatTiec;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         btnKhu = root.findViewById(R.id.btnKhu);
@@ -29,7 +35,7 @@ public class HomeFragment extends Fragment {
         btnKhu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Bookdesk.class);
+                Intent intent = new Intent(getActivity(), Table.class);
                 getActivity().startActivity(intent);
             }
         });
@@ -42,8 +48,11 @@ public class HomeFragment extends Fragment {
             }
         });
     }
+<<<<<<< Updated upstream
 
 
 
 
+=======
+>>>>>>> Stashed changes
 }

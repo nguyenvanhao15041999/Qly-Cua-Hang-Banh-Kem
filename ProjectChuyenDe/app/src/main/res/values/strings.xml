@@ -65,6 +65,11 @@
     <string name="txtThuong">Thưởng</string>
     <string name="txtLuongcb">Lương CB</string>
     <string name="txtTongluong">Tổng lương</string>
+<<<<<<< Updated upstream
+=======
+    <string name="tv_Gioitinh">Giới tính</string>
+
+>>>>>>> Stashed changes
 
     <!--    du lieu thang-->
     <string-array name="datathang">
@@ -98,9 +103,10 @@
 
     <!--danh sach cac khu vuc-->
     <string-array name="Khuvuc">
-        <item>V1: Dành cho học sinh, sinh viên</item>
+        <item>V1: Dành cho Khách hàng ăn tại quán</item>
         <item>V2: Dành cho học sinh, sinh viên</item>
-        <item>V3: Dành cho học sinh, sinh viên</item>
+        <item>V3: Dành cho nhân viên, văn phòng</item>
+        <item>V3: Dành cho đặt tiệc</item>
     </string-array>
 
     <!--string list desk-->
@@ -111,10 +117,19 @@
     <string name="txthintSonguoi">Nhập số người</string>
     <string name="btnHuy"> Hủy </string>
     <string name="btnDongy"> Đồng ý </string>
+    <string name="btnDatBan"> Đặt bàn </string>
 
     <!--    Toolbar -->
+<<<<<<< Updated upstream
     <string name="barDattiec">Đặt tiệc</string>
     <string name="barDatban">Đặt Bàn</string>
+=======
+    <string name="barDatTiec">Đặt Tiệc</string>
+    <string name="barDatBan">Đặt Bàn</string>
+    <string name="barHoaDon">Hoá Đơn</string>
+    <string name="barTable">Danh Sách Bàn</string>
+
+>>>>>>> Stashed changes
 
     <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
@@ -133,8 +148,16 @@
     <string name="lvDiaChi">Địa Chỉ</string>
     <string name="btnDat">Đặt</string>
 
+<<<<<<< Updated upstream
 
 
 
 
+=======
+    <!--    String Bill-->
+    <string name="tvMaHD">Mã Hoá Đơn</string>
+    <string name="btnThanhToan">Thanh Toán</string>
+    <string name="tvTongTien">Tổng Tiền</string>
+    <string name="tvTien">0 đồng</string>
+>>>>>>> Stashed changes
 </resources>

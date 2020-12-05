@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbarbookparty"
+    android:id="@+id/toolbarbookdesk"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:layout_alignParentTop="true"
@@ -45,11 +45,7 @@
         android:layout_toRightOf="@+id/imgArrowLeft"
         android:ellipsize="end"
         android:maxLines="1"
-<<<<<<< Updated upstream
-        android:text="Đặt Tiệc"
-=======
-        android:text="@string/barDatTiec"
->>>>>>> Stashed changes
+        android:text="@string/barDatBan"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/textSize" />
