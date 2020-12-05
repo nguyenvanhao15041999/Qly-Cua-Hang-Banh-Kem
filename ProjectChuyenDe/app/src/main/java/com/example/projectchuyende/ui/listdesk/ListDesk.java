@@ -54,7 +54,7 @@ public class ListDesk extends Fragment {
                 builderSua.setTitle(" Sửa bàn ");
                 builderChucnang.setItems(chucnang, new DialogInterface.OnClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
+                    public void onClick(final DialogInterface dialogInterface, int i) {
                         switch (chucnang[i]) {
                             case "Sửa":
                                 View customListdesk = getLayoutInflater().inflate(R.layout.dialog_listdesk_custom, null);
@@ -80,7 +80,6 @@ public class ListDesk extends Fragment {
                                         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int i) {
-                                               Toast.makeText(getActivity(),"Dong y",Toast.LENGTH_LONG).show();
                                             }
                                         });
                                         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
