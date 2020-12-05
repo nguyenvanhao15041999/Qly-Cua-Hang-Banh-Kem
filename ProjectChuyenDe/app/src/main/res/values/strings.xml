@@ -57,6 +57,8 @@
     <string name="btn_taikhoan">Tài khoản</string>
     <string name="edt_hoten">Enter your name</string>
     <string name="btn_save">Save</string>
+    <string name="tv_ngaysinh">Ngày sinh</string>
+    <string name="edtngaysinh">Enter your date...</string>
     <!--  string help-->
     <string name="txtdiachi">Địa chỉ: </string>
     <string name="txtSdt">1900xnxx </string>
@@ -161,4 +163,12 @@
     <string name="radTruoc">Chọn Trước</string>
     <string name="radSau">Chọn Sau</string>
     <string name="btnDat">Đặt</string>
+    <string name="txt_manv">17211TT2982</string>
+    <string name="txt_tennv">Phan Duy Thái</string>
+    <string name="txt_sdt">032985783</string>
+    <string name="txt_diachi">68/6/2c</string>
+    <string name="txt_luong">0đ</string>
+    <string name="txt_Email">Thaiphaner99@gmail.com</string>
+    <string name="txt_chucvu">Nhân viên quèn</string>
+
 </resources>
