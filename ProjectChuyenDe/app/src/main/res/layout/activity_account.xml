@@ -28,9 +28,8 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="Tài khoản"
             android:textSize="20dp" />
@@ -39,7 +38,7 @@
             android:id="@+id/edtAccount"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
             android:hint="@string/edtTaikhoan"
@@ -56,20 +55,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="Mật khẩu"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/edtPassword"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="Nhập mật khẩu.."
+            android:hint="@string/edtmatkhau"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -81,20 +80,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="35dp"
             android:gravity="center"
             android:text="@string/tv_hoten"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/edtName"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginStart="10dp"
+            android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
+            android:hint="@string/edt_hoten"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -106,20 +105,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="50dp"
             android:gravity="center"
             android:text="@string/tv_sdt"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/edtSdt"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginStart="15dp"
+            android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
+            android:hint="@string/edt_sdt"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -131,20 +130,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="30dp"
             android:gravity="center"
             android:text="@string/tv_diaChi"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/edtAddress"
             android:layout_width="250dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="10dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
+            android:hint="@string/edt_diachi"
             android:textSize="20dp" />
     </LinearLayout>
     <LinearLayout
@@ -155,19 +154,20 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
             android:gravity="center"
             android:text="@string/tv_email"
             android:textSize="20dp" />
 
         <EditText
+            android:id="@+id/edtEmail"
             android:layout_width="250dp"
             android:layout_height="40dp"
-            android:layout_marginStart="50dp"
+            android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
+            android:hint="@string/edt_email"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -182,6 +182,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAllCaps="false"
-            android:text="Save"/>
+            android:text="@string/btn_save"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
