@@ -1,0 +1,140 @@
+<resources>
+    <string name="app_name">ProjectChuyenDe</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <!-- Navigation Drawer người dùng    -->
+    <string name="menu_home">Home</string>
+    <string name="title_home">Home</string>
+    <string name="menu_pay">Thanh Toán</string>
+    <string name="menu_help">Trợ Giúp</string>
+    <string name="menu_infor">Giới Thiệu</string>
+    <string name="menu_sign">Sign in</string>
+    <!--  menu  nhanc vien -->
+    <string name="menu_filter"> Filter </string>
+    <string name="menu_thongtinnhanvien"> Thông tin </string>
+
+    <!--    string sign up-->
+    <string name="edt_email">Enter your email...</string>
+    <string name="edt_sdt">Enter your phonenumber...</string>
+    <string name="edt_diachi">Enter your address...</string>
+    <!--    Menu quan ly -->
+    <string name="menu_danhsachnhanvien">Danh sách nhân viên</string>
+    <string name="menu_taonhanvien">Tạo nhân viên</string>
+    <string name="menu_thongkengaycong">Thống kê ngày công</string>
+    <string name="menu_danhsachban">Danh sách bàn</string>
+    <string name="menu_thucdon">Thực đơn</string>
+    <string name="menu_dangxuat">Đăng xuất</string>
+    <!--    string sign up-->
+    <string name="edtTaikhoan">Nhập tài khoản....</string>
+    <string name="tv_email">Email</string>
+    <string name="tv_sdt">SDT</string>
+    <string name="tv_diaChi">Địa chỉ</string>
+    <string name="tv_btnSignup">Địa chỉ</string>
+    <!--  string help-->
+    <string name="txtdiachi">Địa chỉ: </string>
+    <string name="txtSdt">1900xnxx </string>
+    <string name="txtTentruong">CĐ Công Nghệ Thủ Đức</string>
+    <string name="txtHotline">Hotline</string>
+    <string name="txtEmail">Email</string>
+    <string name="txtemail">thuducxx@gmail.com</string>
+    <!--    string information-->
+    <string name="txtVersion">Version 0.0.1</string>
+    <string name="txtMember">Members: </string>
+    <string name="txtMember1">Võ Minh Tấn Vũ</string>
+    <string name="txtMember2">Trần Minh Thuận</string>
+    <string name="txtMember3">Phan Duy Thái</string>
+    <string name="txtMember4">Nguyễn Văn Hảo</string>
+    <string name="txtMember5">Bùi Nguyễn Minh</string>
+    <string name="txtTutorial">Tutorial: </string>
+    <string name="txtTutorial1">Tiêu Kim Cương</string>
+
+    <!--    Menu nhan vien-->
+    <string name="menu_thongke">Thống Kê</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    string timekeeping-->
+    <string name="txtName">Tên</string>
+    <string name="txtNgaycong">Ngày công</string>
+    <string name="txtTonggio">Tổng giờ</string>
+    <string name="txtThuong">Thưởng</string>
+    <string name="txtLuongcb">Lương CB</string>
+    <string name="txtTongluong">Tổng lương</string>
+
+    <!--    du lieu thang-->
+    <string-array name="datathang">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <!--    nam-->
+    <string-array name="datanam">
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+        <item>2023</item>
+        <item>2024</item>
+        <item>2025</item>
+    </string-array>
+
+    <!--danh sach cac khu vuc-->
+    <string-array name="Khuvuc">
+        <item>V1: Dành cho học sinh, sinh viên</item>
+        <item>V2: Dành cho học sinh, sinh viên</item>
+        <item>V3: Dành cho học sinh, sinh viên</item>
+    </string-array>
+
+    <!--string list desk-->
+    <string name="txtTenban">Tên bàn (*)</string>
+    <string name="txtSonguoi">Số người (*)</string>
+    <string name="txtKhuvuc">Khu vực (*)</string>
+    <string name="txthintTenban">Nhập tên bàn...</string>
+    <string name="txthintSonguoi">Nhập số người</string>
+    <string name="btnHuy"> Hủy </string>
+    <string name="btnDongy"> Đồng ý </string>
+
+    <!--    Toolbar -->
+    <string name="barDattiec">Đặt tiệc</string>
+    <string name="barDatban">Đặt Bàn</string>
+
+    <!--    forgot pass-->
+    <string name="tvForgotpassword">Forgot Password</string>
+
+    <!--  String Home  -->
+    <string name="btnBanh">Bánh</string>
+    <string name="btnNuoc">Nước Uống</string>
+    <string name="btnKhu">Khu (Đặt bàn)</string>
+    <string name="btnDattiec">Đặt tiệc</string>
+
+    <!--  String BookDesk and BookParty -->
+    <string name="lvMaBan">Mã Bàn</string>
+    <string name="lvMaTiec">Mã Tiệc</string>
+    <string name="lvHoTen">Họ và Tên</string>
+    <string name="lvSDT">SĐT</string>
+    <string name="lvDiaChi">Địa Chỉ</string>
+    <string name="btnDat">Đặt</string>
+
+
+
+
+
+</resources>
