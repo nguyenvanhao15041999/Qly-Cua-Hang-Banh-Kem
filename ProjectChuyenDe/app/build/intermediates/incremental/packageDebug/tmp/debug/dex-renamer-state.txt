@@ -1,0 +1,7 @@
+#Fri Dec 04 04:33:26 ICT 2020
+base.0=E\:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+path.1=classes.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=E\:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex

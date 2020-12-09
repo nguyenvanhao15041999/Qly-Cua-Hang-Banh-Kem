@@ -1,0 +1,502 @@
+[
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\menu_nhanvien_menu.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\menu\\nhanvien_menu.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bonglan.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\bonglan.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tangluc.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\tangluc.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_logo.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\logo.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_person.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\person.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_help.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_help.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_up.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\up.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_milkchai.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\milkchai.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_perm_contact_calendar_24.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_baseline_perm_contact_calendar_24.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cake.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cake.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_home.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\home.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eye_nham.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\eye_nham.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_next.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\next.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_nhanviendanhsach.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\nhanviendanhsach.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_load.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\load.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cake1cay.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cake1cay.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_forgotpassword_activity.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\forgotpassword_activity.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_payblack.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\payblack.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_desk.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\desk.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_app_bar_main.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\app_bar_main.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_home.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar_signup.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\toolbar_signup.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_icecream.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\icecream.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_gioithieuapp.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\gioithieuapp.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_back.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\back.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_imagbanh.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\imagbanh.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\menu_quanly_menu.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\menu\\quanly_menu.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_account.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_account.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_load_activity.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\load_activity.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_out.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\anim\\fade_out.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_show_liststaff.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\show_liststaff.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_help_24.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_baseline_help_24.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_minion.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\minion.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_danhsach.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\danhsach.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_shopping.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\shopping.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_menu.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\menu.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_staranhien.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\staranhien.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_starhienhinh.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\starhienhinh.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_information.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_information.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tea.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\tea.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_content_main.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\content_main.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_infor.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\infor.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_exit_to_app_24.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_baseline_exit_to_app_24.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_menu.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_menu.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_contatct.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\contatct.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_side_nav_bar.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\side_nav_bar.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_boloc.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\boloc.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bolocnho.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\bolocnho.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cakequy.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cakequy.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_personnho.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\personnho.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cakecherry.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cakecherry.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_beer.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\beer.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_addmember.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\addmember.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tamgiac_down.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\tamgiac_down.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_nav_header_main.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\nav_header_main.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cakebacay.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cakebacay.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_banh.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\banh.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_signin.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_signin.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_eye_mo.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\eye_mo.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_listthongtinnhanvien.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\listthongtinnhanvien.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_colachai.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\colachai.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_teatranchau.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\teatranchau.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_table.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\table.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_dot.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\dot.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_takeaway.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\takeaway.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bill1.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\bill1.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_addplus.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\addplus.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_table_full.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\table_full.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_creamice.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\creamice.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\menu_nguoidung.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\menu\\nguoidung.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_desk1.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\desk1.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ban.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ban.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_calendar.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\calendar.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_add_alert_24.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_baseline_add_alert_24.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_person_24.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_baseline_person_24.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_baseline_home_24.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_baseline_home_24.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_list_staff.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\activity_list_staff.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_signup.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\activity_signup.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_down.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\down.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_sale.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\sale.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_show_listdesk.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\show_listdesk.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_timekeeping.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_timekeeping.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cakewedding.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cakewedding.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bacham.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\bacham.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_address.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\address.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_email.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\email.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_menufood.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\menufood.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bin.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\bin.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_table_rong.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\table_rong.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_bill.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\bill.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_tamgiac_up.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\tamgiac_up.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_loading.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\loading.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_milk.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\milk.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_date.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\date.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\menu_main.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_loop.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\anim\\fade_loop.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cocacola.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cocacola.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\anim_fade_in.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_hotline.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\hotline.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_pay.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_pay.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_cup.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\cup.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\navigation_mobile_navigation.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\navigation\\mobile_navigation.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\anim_bg_circle_rotate.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\anim\\bg_circle_rotate.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_thongtin.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\thongtin.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_thongkenhanvien.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\thongkenhanvien.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_show_timekeeping.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\show_timekeeping.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_listdesk.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\fragment_listdesk.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_back.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_back.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_beerlun.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\beerlun.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_lipton.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\lipton.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_banhmacaron.jpg.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\banhmacaron.jpg"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_thongke.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\thongke.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-ldpi_ic_launcher.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\mipmap-ldpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\layout_toolbar_forgotpassword.xml.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\layout\\toolbar_forgotpassword.xml"
+    },
+    {
+        "merged": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\build\\intermediates\\res\\merged\\debug\\drawable_thongke1.png.flat",
+        "source": "E:\\VanHao\\Qly-Cua-Hang-Banh-Kem\\ProjectChuyenDe\\app\\src\\main\\res\\drawable\\thongke1.png"
+    }
+]
