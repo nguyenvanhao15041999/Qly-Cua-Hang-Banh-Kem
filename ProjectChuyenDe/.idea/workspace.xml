@@ -31,19 +31,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00df819c-20e5-4105-964a-a34a2fde7c6c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projectchuyende/activity/forgotpassword/ForgotPassWordActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projectchuyende/activity/forgotpassword/ForgotPassWordActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/projectchuyende/ui/signin/SignInFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/projectchuyende/ui/signin/SignInFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/forgotpassword_activity.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/forgotpassword_activity.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/menu/nguoidung.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/menu/nguoidung.xml" afterDir="false" />
-    </list>
+    <list default="true" id="00df819c-20e5-4105-964a-a34a2fde7c6c" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[192.168.208.101:5555]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
