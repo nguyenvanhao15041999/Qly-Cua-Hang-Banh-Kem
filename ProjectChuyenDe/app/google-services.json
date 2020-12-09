@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "545338546592",
+    "firebase_url": "https://qlbk-55c4f.firebaseio.com",
+    "project_id": "qlbk-55c4f",
+    "storage_bucket": "qlbk-55c4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:545338546592:android:509bbcd109417bddc8acc5",
+        "android_client_info": {
+          "package_name": "com.example.projectchuyende"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "545338546592-pok88u3ljunvh625k3bsa3ap1oqmh8m1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMo0z_8vSKa5LaMD83jRxeE2Ta42xk3lM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "545338546592-pok88u3ljunvh625k3bsa3ap1oqmh8m1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

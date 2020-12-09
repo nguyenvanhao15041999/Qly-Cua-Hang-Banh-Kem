@@ -19,6 +19,7 @@
 
     <!--    string sign up-->
     <string name="edt_email">Enter your email...</string>
+    <string name="edt_hoten">Enter your your name...</string>
     <string name="edt_sdt">Enter your phonenumber...</string>
     <string name="edt_diachi">Enter your address...</string>
     <!--    Menu quan ly -->
@@ -30,7 +31,9 @@
     <string name="menu_dangxuat">Đăng xuất</string>
     <!--    string sign up-->
     <string name="edtTaikhoan">Nhập tài khoản....</string>
+    <string name="edtmatkhau">Nhập Mật Khẩu....</string>
     <string name="tv_email">Email</string>
+    <string name="tv_hoten">Họ Tên</string>
     <string name="tv_sdt">SDT</string>
     <string name="tv_diaChi">Địa chỉ</string>
     <string name="tv_btnSignup">Địa chỉ</string>
@@ -103,6 +106,19 @@
         <item>V3: Dành cho học sinh, sinh viên</item>
     </string-array>
 <!--    Toolbar -->
+
 <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
+    <string name="btn_save">Save</string>
+
+    <!-- Book desk and Book party   -->
+    <string name="tvMaBan">Mã Bàn</string>
+    <string name="tvMaTiec">Mã Tiệc</string>
+    <string name="tvHoTen">Họ và Tên</string>
+    <string name="tvSDT">SĐT</string>
+    <string name="tvDiaChi">Địa Chỉ</string>
+    <string name="radTruoc">Chọn Trước</string>
+    <string name="radSau">Chọn Sau</string>
+    <string name="btnDat">Đặt</string>
+    <string name="btnHuy">Huỷ</string>
 </resources>
