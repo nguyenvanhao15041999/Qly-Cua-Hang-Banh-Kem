@@ -41,6 +41,8 @@ public class List_staff extends Fragment {
         dataViewListStaff();
         ListStaffadapter = new ListStaffAdapter(getContext(), R.layout.show_liststaff, datalistStaff);
         lv_listStaff.setAdapter(ListStaffadapter);
+
+
         lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -53,6 +55,11 @@ public class List_staff extends Fragment {
                         Toast.makeText(getContext(),"ban xoa thanh cong",Toast.LENGTH_LONG).show();
                     }
                 });
+
+                AlertDialog dialog = builder.create();
+                // Display the alert dialog on interface
+                dialog.show();
+
             }
         });
     }

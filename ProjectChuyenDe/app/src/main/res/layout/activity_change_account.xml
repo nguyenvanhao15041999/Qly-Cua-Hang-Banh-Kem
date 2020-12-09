@@ -10,11 +10,7 @@
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/include"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        android:layout_height="100dp"
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -27,11 +23,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginRight="10dp"
-            android:gravity="center"
-            android:text="@string/tv_Manv"
-            android:textSize="20dp" />
+            android:layout_marginStart="20dp"/>
 
         <EditText
             android:id="@+id/txtmanv"
@@ -58,9 +50,7 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
-            android:gravity="center"
-            android:text="@string/tv_tennv"
-            android:textSize="20dp" />
+            android:layout_marginStart="10dp"/>
 
         <EditText
             android:id="@+id/txtnamenv"
@@ -84,9 +74,7 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
-            android:gravity="center"
-            android:text="@string/tv_chucvu"
-            android:textSize="20dp" />
+            android:layout_marginStart="10dp"/>
 
         <EditText
             android:id="@+id/txtchucvunv"
@@ -109,10 +97,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:gravity="center"
-            android:text="@string/tv_sdt"
-            android:textSize="20dp" />
+            android:layout_marginStart="20dp" />
 
         <EditText
             android:id="@+id/txtsdtnv"
@@ -136,10 +121,7 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="30dp"
-            android:gravity="center"
-            android:text="@string/tv_Gioitinh"
-            android:textSize="20dp" />
+            android:layout_marginStart="10dp" />
 
 
         <RadioGroup
@@ -179,10 +161,37 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="20dp"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:text="@string/tv_ngaysinh"
+        android:textSize="20dp" />
+        <EditText
+            android:id="@+id/txtngaysinh"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="35dp"
+            android:background="@color/colorWhite"
             android:gravity="center"
-            android:text="@string/tv_taikhoan"
+            android:hint="@string/edtngaysinh"
             android:textSize="20dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+/>
 
         <EditText
             android:id="@+id/txtAccount"
@@ -201,13 +210,13 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
 
+
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_marginStart="20dp"
-            android:gravity="center"
-            android:text="@string/tv_Password"
-            android:textSize="20dp" />
+            android:layout_marginStart="10dp"
+ />
 
         <EditText
             android:id="@+id/txtpass"

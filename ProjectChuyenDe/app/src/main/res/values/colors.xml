@@ -12,4 +12,7 @@
     <color name="colorBluelight">#0188FF</color>
     <color name="colorBlue">#0F7BDA</color>
     <color name="colorRed">#FF5722</color>
+    <color name="colorRedPink">#E41E61</color>
+    <color name="colorBlue">#E81261D8</color>
+    <color name="colorRed">#EA0808</color>
 </resources>
