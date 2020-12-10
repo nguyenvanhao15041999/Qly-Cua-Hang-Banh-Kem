@@ -135,6 +135,7 @@
 
     <string name="btn_save">Save</string>
 
+
     <!--string list desk-->
     <string name="txtTenban">Tên bàn (*)</string>
     <string name="txtSonguoi">Số người (*)</string>
@@ -147,6 +148,8 @@
     <!--    Toolbar -->
     <string name="barDatTiec">Đặt Tiệc</string>
     <string name="barDatBan">Đặt Bàn</string>
+
+
     <!--    forgot pass-->
 
     <!--    String Home-->
