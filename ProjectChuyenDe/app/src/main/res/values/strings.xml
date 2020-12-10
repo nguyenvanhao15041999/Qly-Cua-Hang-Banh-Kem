@@ -20,7 +20,6 @@
 
     <!--    string sign up-->
     <string name="edt_email">Enter your email...</string>
-    <string name="edt_hoten">Enter your your name...</string>
     <string name="edt_sdt">Enter your phonenumber...</string>
     <string name="edt_diachi">Enter your address...</string>
     <!--    Menu quan ly -->
@@ -34,7 +33,6 @@
     <string name="edtTaikhoan">Nhập tài khoản....</string>
     <string name="edtmatkhau">Nhập Mật Khẩu....</string>
     <string name="tv_email">Email</string>
-    <string name="tv_hoten">Họ Tên</string>
     <string name="tv_sdt">SDT</string>
     <string name="tv_diaChi">Địa chỉ</string>
     <string name="tv_btnSignup">Địa chỉ</string>
@@ -56,7 +54,8 @@
     <string name="btntaotaikhoan">Tạo tài khoản</string>
     <string name="motaSP2">Mô tả</string>
     <string name="btn_taikhoan">Tài khoản</string>
-    <string name="btn_save">Save</string>
+
+    <string name="edt_hoten">Enter your name</string>
     <string name="tv_ngaysinh">Ngày sinh</string>
     <string name="edtngaysinh">Enter your date...</string>
     <!--  string help-->
@@ -135,6 +134,8 @@
 
 <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
+
+    <string name="btn_save">Save</string>
 
     <!--string list desk-->
     <string name="txtTenban">Tên bàn (*)</string>

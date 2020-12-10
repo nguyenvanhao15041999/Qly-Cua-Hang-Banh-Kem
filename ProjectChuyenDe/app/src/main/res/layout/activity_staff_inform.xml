@@ -134,7 +134,12 @@
             android:layout_marginStart="20dp" />
 
         <EditText
-            android:id="@+id/txtgioitinh"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/txtgioitinh">
+
+        </EditText>
+        <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
@@ -206,8 +211,16 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
+
         <EditText
-            android:id="@+id/txtluong"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:id="@+id/txtluong">
+
+        </EditText>
+
+      <TextView
+
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
