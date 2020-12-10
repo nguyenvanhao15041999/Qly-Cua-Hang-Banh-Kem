@@ -8,10 +8,14 @@
     tools:context=".ui.account.Change_account">
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_height="100dp"
-
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
@@ -23,17 +27,18 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
+            android:text="@string/tv_Manv"
+            android:textSize="20dp"
             android:layout_marginStart="20dp"/>
 
-        <EditText
+        <TextView
             android:id="@+id/txtmanv"
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:layout_marginRight="10dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edtManv"
+            android:hint="@string/txt_manv"
             android:textSize="20dp" />
 
     </LinearLayout>
@@ -49,8 +54,9 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginStart="10dp"/>
+            android:text="@string/tv_tennv"
+            android:textSize="20dp"
+            android:layout_marginStart="20dp"/>
 
         <EditText
             android:id="@+id/txtnamenv"
@@ -59,7 +65,7 @@
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edtTennv"
+            android:hint="@string/txt_tennv"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -73,8 +79,9 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginStart="10dp"/>
+            android:text="@string/tv_chucvu"
+            android:textSize="20dp"
+            android:layout_marginStart="20dp"/>
 
         <EditText
             android:id="@+id/txtchucvunv"
@@ -83,7 +90,7 @@
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edtchucvu"
+            android:hint="@string/txt_chucvu"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -97,6 +104,8 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
+            android:text="@string/tv_sdt"
+            android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
         <EditText
@@ -106,7 +115,7 @@
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edt_sdt"
+            android:hint="@string/txt_sdt"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -120,8 +129,9 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginStart="10dp" />
+            android:textSize="20dp"
+            android:text="@string/tv_Gioitinh"
+            android:layout_marginStart="20dp" />
 
 
         <RadioGroup
@@ -158,15 +168,10 @@
         android:layout_marginTop="20dp"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"/>
     <TextView
         android:layout_width="100dp"
         android:layout_height="30dp"
-        android:layout_marginStart="10dp"
-        android:gravity="center"
+        android:layout_marginStart="20dp"
         android:text="@string/tv_ngaysinh"
         android:textSize="20dp" />
         <EditText
@@ -176,7 +181,7 @@
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edtngaysinh"
+            android:hint="@string/ngaysinh"
             android:textSize="20dp" />
 
     </LinearLayout>
@@ -190,7 +195,9 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="10dp"
+            android:text="@string/tv_taikhoan"
+            android:textSize="20dp"
+            android:layout_marginStart="20dp"
 />
 
         <EditText
@@ -200,23 +207,23 @@
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edtTaikhoan"
+            android:hint="@string/txt_taikhoan"
             android:textSize="20dp" />
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/linearLayout11"
+        android:id="@+id/linearLayout12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout10">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
 
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginStart="10dp"
- />
+            android:textSize="20dp"
+            android:text="@string/tv_Password"
+            android:layout_marginStart="20dp" />
 
         <EditText
             android:id="@+id/txtpass"
@@ -225,7 +232,7 @@
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:hint="@string/edtmatkhau"
+            android:hint="@string/"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -234,7 +241,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout12">
         <Button
             android:id="@+id/btnTao"
             android:layout_width="wrap_content"
