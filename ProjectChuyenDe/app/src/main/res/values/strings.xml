@@ -34,7 +34,6 @@
     <string name="edtmatkhau">Nhập Mật Khẩu....</string>
     <string name="tv_email">Email</string>
     <string name="tv_sdt">SDT</string>
-    <string name="tv_hoten">Họ tên</string>
     <string name="tv_diaChi">Địa chỉ</string>
     <string name="tv_btnSignup">Địa chỉ</string>
     <!-- string staff_information-->
@@ -55,6 +54,7 @@
     <string name="btntaotaikhoan">Tạo tài khoản</string>
     <string name="motaSP2">Mô tả</string>
     <string name="btn_taikhoan">Tài khoản</string>
+
     <string name="edt_hoten">Enter your name</string>
     <string name="tv_ngaysinh">Ngày sinh</string>
     <string name="edtngaysinh">Enter your date...</string>
@@ -133,6 +133,8 @@
     </string-array>
 
 <!--    forgot pass-->
+    <string name="tvForgotpassword">Forgot Password</string>
+
     <string name="btn_save">Save</string>
 
     <!--string list desk-->
@@ -141,13 +143,13 @@
     <string name="txtKhuvuc">Khu vực (*)</string>
     <string name="txthintTenban">Nhập tên bàn...</string>
     <string name="txthintSonguoi">Nhập số người</string>
+
     <string name="btnDongy"> Đồng ý </string>
 
     <!--    Toolbar -->
     <string name="barDatTiec">Đặt Tiệc</string>
     <string name="barDatBan">Đặt Bàn</string>
     <!--    forgot pass-->
-    <string name="tvForgotpassword">Forgot Password</string>
 
     <!--    String Home-->
     <string name="btnBanh">Bánh</string>
@@ -174,4 +176,8 @@
     <string name="txt_chucvu">Nhân viên quèn</string>
 
     <string name="menu_dangnhap">Đăng nhập</string>
+
+    <string name="txt_taikhoan">Thaiphan99er@gmail.com</string>
+    <string name="ngaysinh">7/10/1999</string>
+    <string name="txtgioitinh">Nam</string>
 </resources>
