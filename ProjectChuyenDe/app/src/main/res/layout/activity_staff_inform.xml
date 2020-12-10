@@ -31,10 +31,10 @@
             android:text="@string/tv_Manv"
             android:textSize="20dp" />
 
-        <EditText
-        <TextView
-            android:hint="@string/edtManv"
-            android:text="@string/txt_manv"/>
+<!--        <EditText-->
+<!--        <TextView-->
+<!--            android:hint="@string/edtManv"-->
+<!--            android:text="@string/txt_manv"/>-->
 
     </LinearLayout>
 
@@ -53,10 +53,10 @@
             android:text="@string/tv_tennv"
             android:textSize="20dp" />
 
-        <EditText
-		<TextView
-            android:hint="@string/edtTennv"
-            android:text="@string/txt_tennv"/>
+<!--        <EditText-->
+<!--		<TextView-->
+<!--            android:hint="@string/edtTennv"-->
+<!--            android:text="@string/txt_tennv"/>-->
     </LinearLayout>
 
     <LinearLayout
@@ -72,11 +72,11 @@
             android:gravity="center"
             android:text="@string/tv_chucvu"
             android:textSize="20dp" />
-        <EditText
-        <TextView
-            android:hint="@string/edtchucvu"
-            android:text="@string/txt_chucvu"
-			android:textSize="20dp" />
+<!--        <EditText-->
+<!--        <TextView-->
+<!--            android:hint="@string/edtchucvu"-->
+<!--            android:text="@string/txt_chucvu"-->
+<!--			android:textSize="20dp" />-->
     </LinearLayout>
 
     <LinearLayout
@@ -93,13 +93,13 @@
             android:text="@string/tv_sdt"
             android:textSize="20dp" />
 
-        <EditText
-        <TextView
-            android:hint="@string/edt_sdt"
+<!--        <EditText-->
+<!--        <TextView-->
+<!--            android:hint="@string/edt_sdt"-->
 
-            android:text="@string/txt_sdt"
+<!--            android:text="@string/txt_sdt"-->
 
-            android:textSize="20dp" />
+<!--            android:textSize="20dp" />-->
     </LinearLayout>
 
     <LinearLayout
@@ -116,7 +116,6 @@
             android:text="@string/tv_diaChi"
             android:textSize="20dp" />
 
-        <EditText
         <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -142,7 +141,6 @@
             android:textSize="20dp" />
 
 
-        <EditText
 
         <TextView
 
@@ -173,7 +171,7 @@
             android:textSize="20dp" />
 
 
-        <EditText
+<!--        <EditText-->
       <TextView
 
             android:layout_width="250dp"
