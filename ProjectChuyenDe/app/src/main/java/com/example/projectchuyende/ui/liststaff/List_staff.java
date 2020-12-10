@@ -86,10 +86,6 @@ public class List_staff extends Fragment {
     private void dataViewListStaff() {
         final Nhanvien nhanvien = new Nhanvien();
 
-        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference("Staff");
-        String NVID = mDatabase.push().getKey();
-        Nhanvien nhanvienfile = new Nhanvien("Võ Minh Tấn Vũ", "Nhân Viên");
-        mDatabase.child(NVID).setValue(nhanvienfile);
         nhanvien.setsStaffName("Phan duy thai");
         nhanvien.setsMember("Nhan vien");
         data_listStaff.add(nhanvien);

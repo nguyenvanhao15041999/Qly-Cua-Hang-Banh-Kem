@@ -139,6 +139,7 @@
             android:id="@+id/txtgioitinh">
 
         </EditText>
+
         <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -210,7 +211,6 @@
             android:text="@string/tv_luong"
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
-
 
         <EditText
             android:layout_width="100dp"
