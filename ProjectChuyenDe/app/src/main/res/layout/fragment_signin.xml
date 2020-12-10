@@ -129,7 +129,7 @@
             android:clickable="true"
             android:text="Quên mật khẩu ?"
             android:textAllCaps="false"
-            android:textColor="@color/colorBluelight"
+            android:textColor="@color/colorBlue"
             android:textSize="20sp"
             android:textStyle="italic" />
     </LinearLayout>
