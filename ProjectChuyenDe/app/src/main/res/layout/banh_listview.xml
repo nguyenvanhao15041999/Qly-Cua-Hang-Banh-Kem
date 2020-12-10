@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPink"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgAnhBanh"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:src="@drawable/banh"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="15dp">
+    </ImageView>
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTenBanh"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Bánh flan"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tvGiaBan"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="$150"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/tvDiaChi"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Thiên Ân"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="20dp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvGiam"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="50%"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:textSize="25dp"
+            android:textStyle="bold|italic"></TextView>
+    </LinearLayout>
+</LinearLayout>
