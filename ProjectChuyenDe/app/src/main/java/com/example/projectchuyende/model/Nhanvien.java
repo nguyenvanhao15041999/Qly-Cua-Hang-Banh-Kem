@@ -4,6 +4,14 @@ public class Nhanvien {
     String sStaffName;
     String  sMember;
 
+    public Nhanvien() {
+
+    }
+
+    public Nhanvien(String sStaffName, String sMember){
+        this.sStaffName=sStaffName;
+        this.sMember=sMember;
+    }
     @Override
     public String toString() {
         return "Nhanvien{" +
