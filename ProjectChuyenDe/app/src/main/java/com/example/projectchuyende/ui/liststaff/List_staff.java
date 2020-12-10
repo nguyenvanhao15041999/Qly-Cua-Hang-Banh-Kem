@@ -37,11 +37,15 @@ public class List_staff extends Fragment {
     ArrayList<Nhanvien> data_listStaff = new ArrayList<>();
     ListStaffAdapter ListStaffadapter;
 
+    DatabaseReference mdata;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.activity_list_staff, container, false);
         lv_listStaff = root.findViewById(R.id.lv_listStaff);
+        mdata=FirebaseDatabase.getInstance().getReference();
+        mdata.child("Hoten").setValue("Vovu");
         setEvent();
         return root;
 
@@ -50,6 +54,8 @@ public class List_staff extends Fragment {
         dataViewListStaff();
         ListStaffadapter = new ListStaffAdapter(getContext(), R.layout.show_liststaff, data_listStaff);
         lv_listStaff.setAdapter(ListStaffadapter);
+
+
 
 
         lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
