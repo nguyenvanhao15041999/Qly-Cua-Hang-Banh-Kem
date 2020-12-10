@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.ui.order.BookParty;
 import com.example.projectchuyende.ui.order.Bookdesk;
+import com.example.projectchuyende.ui.table.Table;
 
 public class HomeFragment extends Fragment {
     Button btnKhu, btnDatTiec;
@@ -29,7 +30,7 @@ public class HomeFragment extends Fragment {
         btnKhu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Bookdesk.class);
+                Intent intent = new Intent(getActivity(), Table.class);
                 getActivity().startActivity(intent);
             }
         });
