@@ -172,4 +172,6 @@
     <string name="txt_luong">0đ</string>
     <string name="txt_Email">Thaiphaner99@gmail.com</string>
     <string name="txt_chucvu">Nhân viên quèn</string>
+
+    <string name="menu_dangnhap">Đăng nhập</string>
 </resources>

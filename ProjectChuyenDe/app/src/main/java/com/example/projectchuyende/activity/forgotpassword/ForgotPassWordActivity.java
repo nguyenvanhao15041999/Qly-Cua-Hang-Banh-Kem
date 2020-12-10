@@ -17,8 +17,10 @@ import androidx.annotation.Nullable;
 
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.ui.signin.SignInFragment;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPassWordActivity extends Activity {
@@ -36,6 +38,9 @@ public class ForgotPassWordActivity extends Activity {
         Toolbar toolbar = findViewById(R.id.toolbar_forgotpassword);
         edtEmailToReset = findViewById(R.id.edtEmailToReset);
         btnReset = findViewById(R.id.btnReset);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+
         setControl();
 
     }
@@ -51,15 +56,15 @@ public class ForgotPassWordActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String email = edtEmailToReset.getText().toString();
-                firebaseAuth.sendPasswordResetEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+                firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(ForgotPassWordActivity.this, "Send reset link success!", Toast.LENGTH_SHORT).show();
-                    }
-                }).addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(ForgotPassWordActivity.this, "Send reset link fail!", Toast.LENGTH_SHORT).show();
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(ForgotPassWordActivity.this, "Check email to reset!", Toast.LENGTH_SHORT).show();
+                        }else{
+                            String mes = task.getException().getMessage();
+                            Toast.makeText(ForgotPassWordActivity.this, "Error: " + mes, Toast.LENGTH_SHORT).show();
+                        }
                     }
                 });
             }
