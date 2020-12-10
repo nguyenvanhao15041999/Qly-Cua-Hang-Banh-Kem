@@ -149,9 +149,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
-                android:background="@color/colorBlue"
-                android:text="@string/btnDat"
-                android:textColor="@color/colorWhite"
+                android:background="@color/colorB"
+                android:text=:textColor="@color/colorWhite"
                 android:textSize="15dp"></Button>
 
             <Button
