@@ -131,6 +131,9 @@
     </string-array>
 
     <!--    forgot pass-->
+
+
+<!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
 
     <string name="btn_save">Save</string>

@@ -52,5 +52,10 @@
         android:name="com.example.projectchuyende.ui.timekeeping.timekeeping"
         android:label="@string/menu_thongkengaycong"
         tools:layout="@layout/fragment_timekeeping" />
+    <fragment
+        android:id="@+id/nav_thongtin"
+        android:name="com.example.projectchuyende.ui.account.Staff_inform"
+        android:label="@string/menu_thongtinnhanvien"
+        tools:layout="@layout/activity_staff_inform" />
 
 </navigation>

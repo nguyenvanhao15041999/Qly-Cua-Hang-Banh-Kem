@@ -185,7 +185,7 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
-                android:background="@color/colorBlue"
+                android:background="@color/colorBluelight"
                 android:text="@string/btnDat"
                 android:textColor="@color/colorWhite"
                 android:textSize="15dp"></Button>
