@@ -224,11 +224,9 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="30dp"
-            android:textSize="20dp"
-            android:text="@string/edtmatkhau"
-            android:layout_marginStart="20dp" />
-
-
+            android:layout_marginStart="20dp"
+            android:text="@string/tv_Password"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/txtpass"

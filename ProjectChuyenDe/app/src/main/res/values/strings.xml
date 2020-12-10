@@ -30,8 +30,8 @@
     <string name="menu_thucdon">Thực đơn</string>
     <string name="menu_dangxuat">Đăng xuất</string>
     <!--    string sign up-->
-    <string name="edtTaikhoan">Nhập tài khoản....</string>
-    <string name="edtmatkhau">Nhập Mật Khẩu....</string>
+    <string name="edtTaikhoan">Enter your Username....</string>
+    <string name="edtmatkhau">Enter your Password....</string>
     <string name="tv_email">Email</string>
     <string name="tv_sdt">SDT</string>
     <string name="tv_diaChi">Địa chỉ</string>
@@ -181,4 +181,5 @@
     <string name="txt_taikhoan">Thaiphan99er@gmail.com</string>
     <string name="ngaysinh">7/10/1999</string>
     <string name="txtgioitinh">Nam</string>
+    <string name="btn_them">Thêm</string>
 </resources>
