@@ -83,7 +83,7 @@
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:gravity="center"
-            android:text="@string/tv_hoten"
+            android:text="@string/tvHoTen"
             android:textSize="20dp" />
 
         <EditText
