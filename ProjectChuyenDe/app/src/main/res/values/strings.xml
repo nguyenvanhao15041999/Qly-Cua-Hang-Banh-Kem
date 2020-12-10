@@ -20,6 +20,7 @@
 
     <!--    string sign up-->
     <string name="edt_email">Enter your email...</string>
+    <string name="edt_hoten">Enter your your name...</string>
     <string name="edt_sdt">Enter your phonenumber...</string>
     <string name="edt_diachi">Enter your address...</string>
     <!--    Menu quan ly -->
@@ -30,8 +31,11 @@
     <string name="menu_thucdon">Thực đơn</string>
     <string name="menu_dangxuat">Đăng xuất</string>
     <!--    string sign up-->
+    <string name="edtTaikhoan">Nhập tài khoản....</string>
+    <string name="edtmatkhau">Nhập Mật Khẩu....</string>
     <string name="edtTaikhoan">Enter your Acount</string>
     <string name="tv_email">Email</string>
+    <string name="tv_hoten">Họ Tên</string>
     <string name="tv_sdt">SDT</string>
     <string name="tv_hoten">Họ tên</string>
     <string name="tv_diaChi">Địa chỉ</string>
@@ -57,6 +61,8 @@
     <string name="btn_taikhoan">Tài khoản</string>
     <string name="edt_hoten">Enter your name</string>
     <string name="btn_save">Save</string>
+    <string name="tv_ngaysinh">Ngày sinh</string>
+    <string name="edtngaysinh">Enter your date...</string>
     <!--  string help-->
     <string name="txtdiachi">Địa chỉ: </string>
     <string name="txtSdt">1900xnxx </string>
@@ -131,6 +137,10 @@
         <item>V3: Dành cho học sinh, sinh viên</item>
     </string-array>
 
+<!--    forgot pass-->
+    <string name="tvForgotpassword">Forgot Password</string>
+    <string name="btn_save">Save</string>
+
     <!--string list desk-->
     <string name="txtTenban">Tên bàn (*)</string>
     <string name="txtSonguoi">Số người (*)</string>
@@ -141,7 +151,32 @@
     <string name="btnDongy"> Đồng ý </string>
 
     <!--    Toolbar -->
+    <string name="barDatTiec">Đặt Tiệc</string>
+    <string name="barDatBan">Đặt Bàn</string>
     <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
 
+    <!--    String Home-->
+    <string name="btnBanh">Bánh</string>
+    <string name="btnNuoc">Nước Uống</string>
+    <string name="btnKhu">Khu (Đặt Bàn)</string>
+    <string name="btnDatTiec">Đặt Tiệc</string>
+
+    <!--    String BookDesk and BookParty-->
+    <string name="tvMaBan">Mã Bàn</string>
+    <string name="tvMaTiec">Mã Tiệc</string>
+    <string name="tvHoTen">Họ và Tên</string>
+    <string name="tvSDT">SĐT</string>
+    <string name="tvDiaChi">Địa Chỉ</string>
+    <string name="radTruoc">Chọn Trước</string>
+    <string name="radSau">Chọn Sau</string>
+    <string name="btnDat">Đặt</string>
+    <string name="btnHuy">Huỷ</string>
+    <string name="txt_manv">17211TT2982</string>
+    <string name="txt_tennv">Phan Duy Thái</string>
+    <string name="txt_sdt">032985783</string>
+    <string name="txt_diachi">68/6/2c</string>
+    <string name="txt_luong">0đ</string>
+    <string name="txt_Email">Thaiphaner99@gmail.com</string>
+    <string name="txt_chucvu">Nhân viên quèn</string>
 </resources>

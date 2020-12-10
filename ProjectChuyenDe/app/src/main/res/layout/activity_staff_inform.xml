@@ -32,14 +32,9 @@
             android:textSize="20dp" />
 
         <EditText
-            android:id="@+id/edtAccount"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:background="@color/colorWhite"
-            android:gravity="center"
+        <TextView
             android:hint="@string/edtManv"
-            android:textSize="20dp" />
+            android:text="@string/txt_manv"/>
 
     </LinearLayout>
 
@@ -59,13 +54,9 @@
             android:textSize="20dp" />
 
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:background="@color/colorWhite"
-            android:gravity="center"
+		<TextView
             android:hint="@string/edtTennv"
-            android:textSize="20dp" />
+            android:text="@string/txt_tennv"/>
     </LinearLayout>
 
     <LinearLayout
@@ -81,15 +72,11 @@
             android:gravity="center"
             android:text="@string/tv_chucvu"
             android:textSize="20dp" />
-
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:background="@color/colorWhite"
-            android:gravity="center"
+        <TextView
             android:hint="@string/edtchucvu"
-            android:textSize="20dp" />
+            android:text="@string/txt_chucvu"
+			android:textSize="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -107,12 +94,11 @@
             android:textSize="20dp" />
 
         <EditText
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="40dp"
-            android:background="@color/colorWhite"
-            android:gravity="center"
+        <TextView
             android:hint="@string/edt_sdt"
+
+            android:text="@string/txt_sdt"
+
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -131,12 +117,14 @@
             android:textSize="20dp" />
 
         <EditText
+        <TextView
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
             android:hint="@string/edt_diachi"
+            android:text="@string/txt_diachi"
             android:textSize="20dp" />
     </LinearLayout>
     <LinearLayout
@@ -153,13 +141,21 @@
             android:text="@string/tv_email"
             android:textSize="20dp" />
 
+
         <EditText
+
+        <TextView
+
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
+
             android:hint="@string/edt_email"
+
+            android:text="@string/txt_Email"
+
             android:textSize="20dp" />
     </LinearLayout>
     <LinearLayout
@@ -176,13 +172,20 @@
             android:text="@string/tv_luong"
             android:textSize="20dp" />
 
+
         <EditText
+      <TextView
+
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="40dp"
             android:background="@color/colorWhite"
             android:gravity="center"
+
             android:hint="@string/edtluong"
+
+            android:text="@string/txt_luong"
+
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -190,7 +193,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
 
         <Button
