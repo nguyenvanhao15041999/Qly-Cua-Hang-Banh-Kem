@@ -92,9 +92,6 @@
     <string name="tv_Gioitinh">Giới tính</string>
 
 
-
-
-
     <!--    du lieu thang-->
     <string-array name="datathang">
         <item>1</item>
@@ -127,16 +124,20 @@
 
     <!--danh sach cac khu vuc-->
     <string-array name="Khuvuc">
-        <item>V1: Dành cho học sinh, sinh viên</item>
+        <item>V1: Dành cho khách hàng ăn tại quán</item>
         <item>V2: Dành cho học sinh, sinh viên</item>
-        <item>V3: Dành cho học sinh, sinh viên</item>
+        <item>V3: Dành cho nhân viên văn phòng</item>
+        <item>V4: Dành cho đặt tiệc</item>
     </string-array>
+
+    <!--    forgot pass-->
 
 
 <!--    forgot pass-->
     <string name="tvForgotpassword">Forgot Password</string>
 
     <string name="btn_save">Save</string>
+
 
     <!--string list desk-->
     <string name="txtTenban">Tên bàn (*)</string>
@@ -150,6 +151,8 @@
     <!--    Toolbar -->
     <string name="barDatTiec">Đặt Tiệc</string>
     <string name="barDatBan">Đặt Bàn</string>
+
+
     <!--    forgot pass-->
 
     <!--    String Home-->
@@ -168,6 +171,8 @@
     <string name="radSau">Chọn Sau</string>
     <string name="btnDat">Đặt</string>
     <string name="btnHuy">Huỷ</string>
+
+    <!--    -->
     <string name="txt_manv">17211TT2982</string>
     <string name="txt_tennv">Phan Duy Thái</string>
     <string name="txt_sdt">032985783</string>
@@ -176,10 +181,22 @@
     <string name="txt_Email">Thaiphaner99@gmail.com</string>
     <string name="txt_chucvu">Nhân viên quèn</string>
 
+    <!--    -->
     <string name="menu_dangnhap">Đăng nhập</string>
-
     <string name="txt_taikhoan">Thaiphan99er@gmail.com</string>
     <string name="ngaysinh">7/10/1999</string>
     <string name="txtgioitinh">Nam</string>
     <string name="btn_them">Thêm</string>
+
+
+    <!--  Bill  -->
+    <string name="tvMaHoaDon">Mã Hoá Đơn</string>
+    <string name="tvTongTien">TongTien</string>
+    <string name="tvTien">0đ</string>
+    <string name="btnThanhToan">Thanh Toán</string>
+
+    <!--  Table  -->
+    <string name="tvSuDung">Đang Sử Dụng</string>
+    <string name="tvBan">0 Bàn</string>
+    <string name="btnDatBan">Đặt Bàn</string>
 </resources>
