@@ -44,9 +44,13 @@ public class DeskAdapter extends ArrayAdapter {
 
         TextView tvDesk = viewDesk.findViewById(R.id.tv_numberDesk);
         ImageView imgDesk = viewDesk.findViewById(R.id.imgDesk);
-        final Desk desk = new Desk();
-        tvDesk.setText(desk.getsSothutu());
-        imgDesk.setImageResource(R.drawable.table_rong);
+        final Desk desk = dataDesk.get(position);
+        if (desk.getsTrangthai()=="Trống"){
+            imgDesk.setImageResource(R.drawable.table_rong);
+        }else {
+            imgDesk.setImageResource(R.drawable.table_full);
+        }
+
         return viewDesk;
     }
 }

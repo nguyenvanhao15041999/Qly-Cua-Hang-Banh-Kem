@@ -16,7 +16,7 @@ import com.example.projectchuyende.model.Nhanvien;
 
 import java.util.ArrayList;
 
-public class ListStaffAdapter extends ArrayAdapter {
+public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
     Context context;
     int resource;
     ArrayList<Nhanvien> dataNhanvien;
@@ -36,18 +36,25 @@ public class ListStaffAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View viewNhanvien;
-        if (convertView == null) {
-            viewNhanvien = View.inflate(parent.getContext(), resource, null);
-        } else viewNhanvien = convertView;
-        TextView NameStaff = viewNhanvien.findViewById(R.id.tv_nameStaff_LS);
-        TextView MemberStaff = viewNhanvien.findViewById(R.id.tv_MemberStaff_LS);
 
-        final Nhanvien nhanvien = this.dataNhanvien.get(position);
-        NameStaff.setText("Ten NV: " + nhanvien.getsStaffName());
-        MemberStaff.setText("Chuc Vu NV: " + nhanvien.getsMember());
-        ImageView menu_listStaff = viewNhanvien.findViewById(R.id.imgListStaff);
-        menu_listStaff.setImageResource(R.drawable.ban);
-        return viewNhanvien;
+        View viewNV=convertView;
+        
+        if (viewNV==null){
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            viewNV = inflater.inflate(R.layout.show_liststaff, null);
+        }
+        Nhanvien nhanvien=getItem(position);
+        if (nhanvien != null) {
+
+            TextView NameStaff = viewNV.findViewById(R.id.tv_nameStaff_LS);
+            TextView MemberStaff = viewNV.findViewById(R.id.tv_MemberStaff_LS);
+            ImageView imgStaff=viewNV.findViewById(R.id.imgListStaff);
+
+            NameStaff.setText("Ten NV: " + nhanvien.getName());
+            MemberStaff.setText("Chuc Vu NV: " + nhanvien.getChucvu());
+            imgStaff.setImageResource(R.drawable.ban);
+
+        }
+        return viewNV;
     }
 }

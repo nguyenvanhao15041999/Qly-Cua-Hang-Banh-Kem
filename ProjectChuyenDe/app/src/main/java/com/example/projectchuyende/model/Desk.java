@@ -1,20 +1,30 @@
 package com.example.projectchuyende.model;
 
 public class Desk {
-    String sSothutu;
+    String sSoban;
+    String sTrangthai;
 
     @Override
     public String toString() {
         return "Desk{" +
-                "sSothutu='" + sSothutu + '\'' +
+                "sSoban='" + sSoban + '\'' +
+                ", sTrangthai='" + sTrangthai + '\'' +
                 '}';
     }
 
-    public String getsSothutu() {
-        return sSothutu;
+    public String getsSoban() {
+        return sSoban;
     }
 
-    public void setsSothutu(String sSothutu) {
-        this.sSothutu = sSothutu;
+    public void setsSoban(String sSoban) {
+        this.sSoban = sSoban;
+    }
+
+    public String getsTrangthai() {
+        return sTrangthai;
+    }
+
+    public void setsTrangthai(String sTrangthai) {
+        this.sTrangthai = sTrangthai;
     }
 }
