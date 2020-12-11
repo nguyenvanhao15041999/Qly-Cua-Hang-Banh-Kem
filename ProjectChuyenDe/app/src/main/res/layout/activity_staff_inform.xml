@@ -59,7 +59,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp"/>
 
-        <EditText
+        <TextView
             android:id="@+id/txtnamenv"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -84,7 +84,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp"/>
 
-        <EditText
+        <TextView
             android:id="@+id/txtchucvunv"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -109,7 +109,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtsdtnv"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -132,14 +132,6 @@
             android:text="@string/tv_Gioitinh"
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
-
-
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:id="@+id/txtgioitinh">
-
-        </EditText>
 
         <TextView
             android:layout_width="250dp"
@@ -165,7 +157,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtmail"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -189,7 +181,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <EditText
+        <TextView
             android:id="@+id/txtDiaChi"
             android:layout_width="250dp"
             android:layout_height="40dp"
@@ -212,13 +204,6 @@
             android:text="@string/tv_luong"
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
-
-        <EditText
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:id="@+id/txtluong">
-
-        </EditText>
 
 
       <TextView

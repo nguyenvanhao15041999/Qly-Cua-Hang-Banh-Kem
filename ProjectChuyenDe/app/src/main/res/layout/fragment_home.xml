@@ -43,7 +43,7 @@
         </LinearLayout>
 
         <ListView
-            android:id="@+id/lvDanhsach"
+            android:id="@+id/lvDanhsachHome"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:layout_marginLeft="5dp"

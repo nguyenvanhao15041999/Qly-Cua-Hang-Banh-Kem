@@ -21,8 +21,8 @@ public class Change_account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_account);
         btn_taotaikhoan = findViewById(R.id.btnTao);
-        edtManv = findViewById(R.id.txtmanv);
-        edtTennv = findViewById(R.id.txtnamenv);
+      //edtManv = findViewById(R.id.txtmanv);
+        edtTennv = findViewById(R.id.txtHoTen);
         edtsdt = findViewById(R.id.txtsdtnv);
         edtTaikhoan = findViewById(R.id.txtAccount);
         edtmatkhau = findViewById(R.id.txtpass);
