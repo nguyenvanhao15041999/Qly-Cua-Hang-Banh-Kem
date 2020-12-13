@@ -7,6 +7,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
@@ -36,6 +38,25 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+
+        // Get controls of header of navigiontion
+        View headerView = navigationView.getHeaderView(0);
+        ImageView imgUserAva = (ImageView)headerView.findViewById(R.id.imgUserAva);
+        TextView tvEmpName = (TextView)headerView.findViewById(R.id.tvEmpName);
+        TextView tvEmpJobTitle = (TextView)headerView.findViewById(R.id.tvEmpJobTitle);
+
+        tvEmpJobTitle.setText("2");
+        tvEmpName.setText("1");
+
+        // Clear default menu and set it follow each user
+        navigationView.getMenu().clear();
+        navigationView.inflateMenu(R.menu.nguoidung);
+
+        // Menu item
+        Menu menuNav = navigationView.getMenu();
+        MenuItem nav_signout = menuNav.findItem(R.id.nav_signout);
+        nav_signout.setVisible(false);
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
