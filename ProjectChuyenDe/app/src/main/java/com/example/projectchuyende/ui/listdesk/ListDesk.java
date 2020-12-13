@@ -108,17 +108,5 @@ public class ListDesk extends Fragment {
     }
 
     private void dataviewDesk() {
-        Desk desk = new Desk();
-        desk.setsSothutu("ban 1");
-        dataDesk.add(desk);
-        Desk desk1 = new Desk();
-        desk1.setsSothutu("ban 2");
-        dataDesk.add(desk1);
-        Desk desk2 = new Desk();
-        desk2.setsSothutu("ban 3");
-        dataDesk.add(desk2);
-        Desk desk3 = new Desk();
-        desk3.setsSothutu("ban 4");
-        dataDesk.add(desk3);
     }
 }

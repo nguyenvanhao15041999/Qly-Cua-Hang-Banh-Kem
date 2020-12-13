@@ -21,15 +21,13 @@
             android:id="@+id/tv_nameStaff_LS"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Phan Duy Thai" />
+            android:layout_marginTop="10dp" />
 
         <TextView
             android:id="@+id/tv_MemberStaff_LS"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginTop="10dp"
-            android:text="Nhan vien" />
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
 </LinearLayout>

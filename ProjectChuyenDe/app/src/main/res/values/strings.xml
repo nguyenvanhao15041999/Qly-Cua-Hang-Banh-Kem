@@ -16,7 +16,7 @@
     <string name="menu_signup">Sign up</string>
     <!--  menu  nhanc vien -->
     <string name="menu_filter"> Filter </string>
-    <string name="menu_thongtinnhanvien"> Thông tin nhan vien </string>
+    <string name="menu_thongtinnhanvien"> Thông tin nhân viên </string>
 
     <!--    string sign up-->
     <string name="edt_email">Enter your email...</string>

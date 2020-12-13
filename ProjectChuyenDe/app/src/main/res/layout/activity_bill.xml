@@ -19,7 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal">
@@ -29,20 +29,21 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvMaHoaDon"
-                android:textSize="15dp"></TextView>
+                android:textSize="20dp"></TextView>
 
             <EditText
                 android:id="@+id/txtMaHoaDon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:textSize="15dp"></EditText>
+                android:background="@color/colorWhite"
+                android:textSize="20dp"></EditText>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal">
@@ -52,20 +53,21 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvHoTen"
-                android:textSize="15dp"></TextView>
+                android:textSize="20dp"></TextView>
 
             <EditText
                 android:id="@+id/txtHoTen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
                 android:layout_marginLeft="5dp"
-                android:textSize="15dp"></EditText>
+                android:textSize="20dp"></EditText>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
             android:orientation="horizontal">
@@ -75,20 +77,21 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvSDT"
-                android:textSize="15dp"></TextView>
+                android:textSize="20dp"></TextView>
 
             <EditText
                 android:id="@+id/txtSDT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
                 android:layout_marginLeft="5dp"
-                android:textSize="15dp"></EditText>
+                android:textSize="20dp"></EditText>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"
             android:layout_marginBottom="10dp"
@@ -99,14 +102,15 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvDiaChi"
-                android:textSize="15dp"></TextView>
+                android:textSize="20dp"></TextView>
 
             <EditText
                 android:id="@+id/txtDiaChi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:textSize="15dp"></EditText>
+                android:background="@color/colorWhite"
+                android:textSize="20dp"></EditText>
         </LinearLayout>
 
         <ListView
@@ -134,6 +138,8 @@
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvTien"
+                android:gravity="right"
+                android:background="@color/colorWhite"
                 android:layout_marginLeft="5dp"
                 android:textSize="20dp"></TextView>
         </LinearLayout>
