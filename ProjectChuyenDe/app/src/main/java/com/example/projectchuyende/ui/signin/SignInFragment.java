@@ -1,5 +1,6 @@
 package com.example.projectchuyende.ui.signin;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +23,7 @@ import com.example.projectchuyende.Preferences;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.activity.forgotpassword.ForgotPassWordActivity;
 import com.example.projectchuyende.activity.signup.SignUpActivity;
+import com.example.projectchuyende.model.User;
 import com.example.projectchuyende.validators.EmailValidator;
 import com.example.projectchuyende.validators.PasswordValidator;
 import com.example.projectchuyende.validators.UsernameValidator;
@@ -29,6 +31,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,6 +45,7 @@ public class SignInFragment extends Fragment {
     EditText edtPassword;
     Button btnSignin;
     private FirebaseAuth firebaseAuth;
+    Intent intent;
 
     @Nullable
     @Override
@@ -55,22 +59,26 @@ public class SignInFragment extends Fragment {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        intent = getActivity().getIntent();
+
         setEvent();
         return root;
+
+
     }
 
     public void setEvent() {
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), SignUpActivity.class);
+                intent.setClass(getActivity(), SignUpActivity.class);
                 getActivity().startActivity(intent);
             }
         });
         tvForgotpass.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), ForgotPassWordActivity.class);
+                intent.setClass(getActivity(), ForgotPassWordActivity.class);
                 getActivity().startActivity(intent);
             }
         });
@@ -97,15 +105,47 @@ public class SignInFragment extends Fragment {
         });
     }
 
-    private void login(String username, String password) {
+    private void login(final String username, String password) {
         firebaseAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
                     Log.d("signin", "Sign in success");
-                }else{
-                    Log.d("signin", "Sign in failed");
+                    MainActivity.isLogin = true;
+                } else {
+//                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference("PrivateUsers");
+//                    ref.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
+//                        @Override
+//                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+//
+//                        }
+//
+//                        @Override
+//                        public void onCancelled(@NonNull DatabaseError error) {
+//                            Toast.makeText(getActivity(), "Failed to login", Toast.LENGTH_SHORT).show();
+//                        }
+//                    });
                 }
+            }
+        });
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userID = user.getUid();
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
+        ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User nguoidung = snapshot.getValue(User.class);
+                Intent intent = getActivity().getIntent();
+                intent.setClass(getActivity(), MainActivity.class);
+                intent.putExtra("nguoidung", nguoidung);
+                getActivity().startActivity(intent);
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
             }
         });
     }

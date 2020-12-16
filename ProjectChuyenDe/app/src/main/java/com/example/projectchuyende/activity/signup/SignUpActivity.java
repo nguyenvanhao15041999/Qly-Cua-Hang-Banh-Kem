@@ -115,7 +115,7 @@ public class SignUpActivity extends Activity {
                     hashMap.put("email", email);
                     hashMap.put("address", address);
                     hashMap.put("phoneNumber", phoneNumber);
-                    hashMap.put("permisstion", permisstion);
+                    hashMap.put("permission", permisstion);
 
                     databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -127,10 +127,16 @@ public class SignUpActivity extends Activity {
                             }
                         }
                     });
+
+                    loadUserInfor();
                 } else {
                     Toast.makeText(SignUpActivity.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
+    private void loadUserInfor() {
+    }
+
 }
