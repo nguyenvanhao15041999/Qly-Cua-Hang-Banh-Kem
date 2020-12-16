@@ -3,6 +3,7 @@ package com.example.projectchuyende.ui.signin;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -88,19 +89,13 @@ public class SignInFragment extends Fragment {
             public void onClick(View v) {
                 String username = edtAccount.getText().toString(); // username = email
                 String password = edtPassword.getText().toString();
-
-//                EmailValidator emailValidator = new EmailValidator();
-//                PasswordValidator passwordValidator = new PasswordValidator();
-//
-//                if (emailValidator.validate(username) == false) {
-//                    return;
-//                } else if (passwordValidator.validate(password) == false) {
-//                    return;
-//                } else {
-//                    login(username, password);
-//                }
-
-                login(username, password);
+                if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)){
+                    login(username, password);
+                } else if(TextUtils.isEmpty(username)){
+                    edtAccount.setError("Account is invalid!");
+                } else if(TextUtils.isEmpty(password)) {
+                    edtPassword.setError("Password is invalid!");
+                }
             }
         });
     }
@@ -113,18 +108,7 @@ public class SignInFragment extends Fragment {
                     Log.d("signin", "Sign in success");
                     MainActivity.isLogin = true;
                 } else {
-//                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference("PrivateUsers");
-//                    ref.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
-//                        @Override
-//                        public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//                        }
-//
-//                        @Override
-//                        public void onCancelled(@NonNull DatabaseError error) {
-//                            Toast.makeText(getActivity(), "Failed to login", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
+                    Log.d("signin", "Sign in failed");
                 }
             }
         });
