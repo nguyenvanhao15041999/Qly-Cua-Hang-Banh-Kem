@@ -19,9 +19,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -29,23 +29,25 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvMaBan"
-                android:textSize="20dp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/txtMaBan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
-                android:layout_marginLeft="5dp"
-                android:textSize="20dp"></EditText>
+                android:layout_marginStart="5dp"
+                android:paddingStart="10dp"
+                android:hint="MB001"
+                android:textSize="20sp"></EditText>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -53,23 +55,25 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvHoTen"
-                android:textSize="20dp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/txtHoTen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
-                android:layout_marginLeft="5dp"
-                android:textSize="20dp"></EditText>
+                android:layout_marginStart="5dp"
+                android:paddingStart="10dp"
+                android:hint="Phan Duy Thái"
+                android:textSize="20sp"></EditText>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:orientation="horizontal">
 
             <TextView
@@ -77,23 +81,25 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvSDT"
-                android:textSize="20dp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/txtSDT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
-                android:layout_marginLeft="5dp"
-                android:textSize="20dp"></EditText>
+                android:layout_marginStart="5dp"
+                android:hint="0909xxxx"
+                android:paddingStart="10dp"
+                android:textSize="20sp"></EditText>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginEnd="5dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
@@ -102,15 +108,17 @@
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:text="@string/tvDiaChi"
-                android:textSize="20dp"></TextView>
+                android:textSize="20sp"></TextView>
 
             <EditText
                 android:id="@+id/txtDiaChi"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
-                android:layout_marginLeft="5dp"
-                android:textSize="20dp"></EditText>
+                android:layout_marginStart="5dp"
+                android:hint="Quận Thủ Đức, Tp.HCM"
+                android:paddingStart="10dp"
+                android:textSize="20sp"></EditText>
         </LinearLayout>
 
         <RadioGroup
@@ -127,18 +135,18 @@
                 android:id="@+id/radChonTruoc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
                 android:text="@string/radTruoc"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"></RadioButton>
 
             <RadioButton
                 android:id="@+id/radChonSau"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:text="@string/radSau"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:textStyle="bold"></RadioButton>
         </RadioGroup>
 
@@ -146,12 +154,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/details_fragment"
                 class="com.example.projectchuyende.ui.home.HomeFragment"
                 android:layout_width="match_parent"
                 android:layout_margin="10dp"
-                android:layout_height="match_parent"/>
+                android:layout_height="wrap_content"/>
         </FrameLayout>
 
         <LinearLayout
@@ -164,21 +172,21 @@
                 android:id="@+id/btnDat"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginEnd="30dp"
                 android:background="@color/colorBlue"
                 android:textColor="@color/colorWhite"
                 android:text="@string/btnDat"
-                android:textSize="15dp"></Button>
+                android:textSize="15sp"></Button>
 
             <Button
                 android:id="@+id/btnHuy"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="30dp"
+                android:layout_marginStart="30dp"
                 android:background="@color/colorRed"
                 android:text="@string/btnHuy"
                 android:textColor="@color/colorWhite"
-                android:textSize="15dp"></Button>
+                android:textSize="15sp"></Button>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>
