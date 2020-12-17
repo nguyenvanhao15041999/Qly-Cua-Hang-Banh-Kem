@@ -8,41 +8,31 @@
     android:orientation="vertical"
     tools:context=".ui.home.HomeFragment">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btnBanh"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:background="@color/colorRedPink"
-                android:text="@string/btnBanh"
-                android:textColor="@color/colorWhite"
-                android:textSize="20dp"></Button>
-
-            <Button
-                android:id="@+id/btnNuoc"
-                android:layout_width="200dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
-                android:background="@color/colorRedPink"
-                android:text="@string/btnNuoc"
-                android:textColor="@color/colorWhite"
-                android:textSize="20dp"></Button>
-        </LinearLayout>
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/btnBanh"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/colorRedPink"
+                    android:text="@string/btnBanh"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"></Button>
+
+<<<<<<< Updated upstream
         <ListView
             android:id="@+id/lvDanhsach"
             android:layout_width="match_parent"
@@ -50,26 +40,37 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="5dp"></ListView>
+=======
+                <Button
+                    android:id="@+id/btnNuoc"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/colorRedPink"
+                    android:text="@string/btnNuoc"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"></Button>
+            </LinearLayout>
+>>>>>>> Stashed changes
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="5dp"
-            android:gravity="center"
-            android:orientation="horizontal">
+            <ListView
+                android:id="@+id/lvDanhsachHome"
+                android:layout_width="match_parent"
+                android:layout_height="500dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="5dp"></ListView>
 
-            <Button
-                android:id="@+id/btnKhu"
-                android:layout_width="150dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:background="@color/colorGreenDank"
-                android:text="@string/btnKhu"
-                android:textColor="@color/colorWhite"
-                android:textSize="15dp"></Button>
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
+<<<<<<< Updated upstream
             <Button
                 android:id="@+id/btnDattiec"
                 android:layout_width="150dp"
@@ -79,6 +80,27 @@
                 android:text="@string/btnDattiec"
                 android:textColor="@color/colorWhite"
                 android:textSize="15dp"></Button>
+=======
+                <Button
+                    android:id="@+id/btnKhu"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorGreenDank"
+                    android:text="@string/btnKhu"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"></Button>
+
+                <Button
+                    android:id="@+id/btnDattiec"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorGreenDank"
+                    android:text="@string/btnDatTiec"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"></Button>
+            </LinearLayout>
+>>>>>>> Stashed changes
         </LinearLayout>
-    </LinearLayout>
 </ScrollView>
