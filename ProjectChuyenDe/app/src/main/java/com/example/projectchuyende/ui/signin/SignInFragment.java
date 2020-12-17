@@ -24,6 +24,8 @@ import com.example.projectchuyende.Preferences;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.activity.forgotpassword.ForgotPassWordActivity;
 import com.example.projectchuyende.activity.signup.SignUpActivity;
+import com.example.projectchuyende.model.Nhanvien;
+import com.example.projectchuyende.model.PrivateUser;
 import com.example.projectchuyende.model.User;
 import com.example.projectchuyende.validators.EmailValidator;
 import com.example.projectchuyende.validators.PasswordValidator;
@@ -89,11 +91,44 @@ public class SignInFragment extends Fragment {
             public void onClick(View v) {
                 String username = edtAccount.getText().toString(); // username = email
                 String password = edtPassword.getText().toString();
-                if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)){
-                    login(username, password);
-                } else if(TextUtils.isEmpty(username)){
+                if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
+                    if (EmailValidator.isValidEmail(username) == false) {
+                        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+                        DatabaseReference reference = firebaseDatabase.getReference("PrivateUsers");
+                        reference.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                PrivateUser privateUser = snapshot.getValue(PrivateUser.class);
+                                MainActivity.isLogin = true;
+                                DatabaseReference ref = firebaseDatabase.getReference("Nhan_Vien");
+                                ref.child(privateUser.getUserID()).addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        Nhanvien nhanvien = snapshot.getValue(Nhanvien.class);
+                                        Intent intent = getActivity().getIntent();
+                                        intent.setClass(getActivity(), MainActivity.class);
+                                        intent.putExtra("nhanvien", nhanvien);
+                                        getActivity().startActivity(intent);
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {
+                                        Toast.makeText(getActivity(), "Login failed 1!", Toast.LENGTH_SHORT).show();
+                                    }
+                                });
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                Toast.makeText(getActivity(), "Login failed 2!", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    } else {
+                        login(username, password);
+                    }
+                } else if (TextUtils.isEmpty(username)) {
                     edtAccount.setError("Account is invalid!");
-                } else if(TextUtils.isEmpty(password)) {
+                } else if (TextUtils.isEmpty(password)) {
                     edtPassword.setError("Password is invalid!");
                 }
             }
@@ -112,6 +147,7 @@ public class SignInFragment extends Fragment {
                 }
             }
         });
+
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userID = user.getUid();
@@ -132,6 +168,8 @@ public class SignInFragment extends Fragment {
 
             }
         });
-    }
 
+    }
 }
+
+
