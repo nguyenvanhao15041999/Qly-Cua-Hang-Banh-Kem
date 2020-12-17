@@ -29,12 +29,16 @@
             android:icon="@drawable/infor"
             android:title="@string/menu_infor" />
     </group>
-    <item>
+    <item android:title="">
         <menu>
             <item
                 android:id="@+id/nav_signin"
-                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:icon="@drawable/ic_baseline_login_24"
                 android:title="@string/menu_sign" />
+            <item
+                android:id="@+id/nav_signout"
+                android:icon="@drawable/ic_baseline_exit_to_app_24"
+                android:title="@string/tv_logout"/>
         </menu>
     </item>
 </menu>

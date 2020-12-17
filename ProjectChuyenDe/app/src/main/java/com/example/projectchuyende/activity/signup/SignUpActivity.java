@@ -2,6 +2,7 @@ package com.example.projectchuyende.activity.signup;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -73,29 +74,24 @@ public class SignUpActivity extends Activity {
                 String address = edtAddress.getText().toString();
                 String phoneNumber = edtPhoneNumber.getText().toString();
 
-//                UsernameValidator usernameValidator = new UsernameValidator();
-//                PasswordValidator passwordValidator = new PasswordValidator();
-//                EmailValidator emailValidator = new EmailValidator();
-//                AddressValidator addressValidator = new AddressValidator();
-//                PhoneNumberValidator phoneNumberValidator = new PhoneNumberValidator();
-//
-//                if (usernameValidator.validate(username) == false) {
-//                    return;
-//                } else if (passwordValidator.validate(password) == false) {
-//                    return;
-//                } else if (emailValidator.validate(email) == false) {
-//                    return;
-//                } else if (addressValidator.validate(address) == false) {
-//                    return;
-//                } else if (phoneNumberValidator.validate(phoneNumber) == false) {
-//                    return;
-//                } else {
-//                    String permisstion = "user";
-//                    register(username, password, email, address, phoneNumber, permisstion);
-//                }
-
                 String permisstion = "user";
-                register(username, password, email, address, phoneNumber, permisstion);
+
+                if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)
+                    && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(address)
+                    && !TextUtils.isEmpty(phoneNumber)){
+                    register(username, password, email, address, phoneNumber, permisstion);
+                } else if(TextUtils.isEmpty(username)){
+                    edtAccount.setError("Account is invalid!");
+                } else if(TextUtils.isEmpty(password)) {
+                    edtPassword.setError("Password is invalid!");
+                } else if(TextUtils.isEmpty(email)) {
+                    edtPassword.setError("Email is invalid!");
+                } else if(TextUtils.isEmpty(address)) {
+                    edtPassword.setError("Address is invalid!");
+                } else if(TextUtils.isEmpty(phoneNumber)) {
+                    edtPassword.setError("Phone Number is invalid!");
+                }
+
             }
         });
     }
@@ -115,7 +111,7 @@ public class SignUpActivity extends Activity {
                     hashMap.put("email", email);
                     hashMap.put("address", address);
                     hashMap.put("phoneNumber", phoneNumber);
-                    hashMap.put("permisstion", permisstion);
+                    hashMap.put("permission", permisstion);
 
                     databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -127,10 +123,13 @@ public class SignUpActivity extends Activity {
                             }
                         }
                     });
+
+
                 } else {
                     Toast.makeText(SignUpActivity.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
+
 }

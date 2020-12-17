@@ -199,4 +199,5 @@
     <string name="tvSuDung">Đang Sử Dụng</string>
     <string name="tvBan">0 Bàn</string>
     <string name="btnDatBan">Đặt Bàn</string>
+    <string name="tv_logout">Log out</string>
 </resources>
