@@ -3,25 +3,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/imgDesk"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/table_rong" />
 
-    <TextView
-        android:textSize="20dp"
-        android:layout_gravity=""
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tv_numberDesk"
-        android:text="Ban 1" />
-</LinearLayout>
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/imgDesk"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/table_rong" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_numberDesk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tv_numberSlot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 </LinearLayout>

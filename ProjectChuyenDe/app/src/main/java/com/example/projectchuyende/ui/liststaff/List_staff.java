@@ -72,46 +72,4 @@ public class List_staff extends Fragment {
         }
     }
 
-            /*firebaseallManager.LoadNhanvien(new FirebaseallManager.IListener() {
-                @Override
-                public void onSuccess() {
-                    arrdata_listStaff.addAll(firebaseallManager.getArrNhanvien());
-                    ListStaffadapter = new ListStaffAdapter(getActivity(), R.layout.show_liststaff, arrdata_listStaff);
-                    lv_listStaff.setAdapter(ListStaffadapter);
-                }
-
-                @Override
-                public void onFail() {
-
-                }
-            });
-        } else {
-            ListStaffadapter.notifyDataSetChanged();
-        }
-    }*/
-
-    /*lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
-                builderChucnang.setTitle("Chức năng");
-                final String[] danhsachChucnang = {"Thông tin", "Xóa"};
-                builderChucnang.setItems(danhsachChucnang, new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (danhsachChucnang[i]) {
-                            case "Thông tin":
-                                Intent intent = new Intent(getActivity(), Staff_inform.class);
-                                startActivity(intent);
-                                break;
-                            default:
-                                break;
-                        }
-                    }
-                });
-                AlertDialog dialogList_staff = builderChucnang.create();
-                dialogList_staff.show();
-            }
-        });*/
-
 }
