@@ -1,6 +1,7 @@
 package com.example.projectchuyende.ui.listdesk;
 
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,6 +21,8 @@ import androidx.fragment.app.Fragment;
 
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.DeskAdapter;
+import com.example.projectchuyende.adapter.ListStaffAdapter;
+import com.example.projectchuyende.firebaseallManager.FirebaseListDesk;
 import com.example.projectchuyende.model.Desk;
 import com.google.firebase.database.core.Context;
 
@@ -29,24 +32,40 @@ public class ListDesk extends Fragment {
     GridView gv_ListDesk;
     ArrayList<Desk> dataDesk = new ArrayList<>();
     DeskAdapter deskAdapter;
+    FirebaseListDesk firebaseListDesk;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_listdesk, container, false);
         gv_ListDesk = root.findViewById(R.id.gv_listDesk);
+        firebaseListDesk = new FirebaseListDesk(getActivity());
         setEvent();
         return root;
     }
 
     private void setEvent() {
-        dataviewDesk();
-        deskAdapter = new DeskAdapter(getContext(), R.layout.show_listdesk, dataDesk);
-        gv_ListDesk.setAdapter(deskAdapter);
+        if (deskAdapter == null) {
+            firebaseListDesk.LoadListDesk(new FirebaseListDesk.IListener() {
+                @Override
+                public void onSuccess() {
+                    dataDesk.addAll(firebaseListDesk.getArrDesk());
+                    deskAdapter = new DeskAdapter(getContext(), R.layout.show_listdesk, dataDesk);
+                    gv_ListDesk.setAdapter(deskAdapter);
+                }
+
+                @Override
+                public void onFail() {
+
+                }
+            });
+        } else {
+            deskAdapter.notifyDataSetChanged();
+        }
 
         gv_ListDesk.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
                 AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
                 builderChucnang.setTitle("Chức Năng");
                 final String[] chucnang = {"Sửa", "Xóa"};
@@ -61,35 +80,44 @@ public class ListDesk extends Fragment {
                                 builderSua.setView(customListdesk);
                                 final EditText txtTenbanLD = customListdesk.findViewById(R.id.txtTenBanLD_dialog);
                                 final EditText txtSonguoiLD = customListdesk.findViewById(R.id.txtSonguoiLD_dialog);
+                                final Spinner spKhuVucLD = customListdesk.findViewById(R.id.spKhuvucLD_dialog);
+
                                 final Button btnHuy = customListdesk.findViewById(R.id.btnCancelLD_dialog);
                                 Button btnDongy = customListdesk.findViewById(R.id.btnAcceptLD_dialog);
-                                final Spinner spKhuvuc = customListdesk.findViewById(R.id.spKhuvucLD_dialog);
+                                int index = -1;
+                                final Desk suadesk = dataDesk.get(vitri);
+                                txtTenbanLD.setText(suadesk.getTenBan());
+                                txtSonguoiLD.setText(String.valueOf(suadesk.getSoNguoi()));
+                                spKhuVucLD.setSelection(dataDesk.indexOf(suadesk.getKhuVuc()));
+
                                 btnDongy.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        Toast.makeText(getActivity(), "Tên bàn là: " + txtTenbanLD.getText().toString() + "\n"
-                                                + "Số người: " + txtSonguoiLD.getText().toString() + "\n"
-                                                + "Khu vực: " + spKhuvuc.getSelectedItem().toString(), Toast.LENGTH_LONG).show();
+                                        firebaseListDesk.SuaBan(suadesk.getMaBan(), suadesk, new FirebaseListDesk.IListener() {
+                                            @Override
+                                            public void onSuccess() {
+                                                Toast.makeText(getActivity(), "Sửa sản phẩm thành công!", Toast.LENGTH_SHORT).show();
+                                            }
+
+                                            @Override
+                                            public void onFail() {
+
+                                            }
+                                        });
                                     }
                                 });
+
                                 btnHuy.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        final AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
-                                        builder.setTitle("Bạn có muốn thoát?");
-                                        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        AlertDialog.Builder builderSua = new AlertDialog.Builder(getActivity());
+                                        builderSua.setTitle("Warning!");
+                                        builderSua.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                             @Override
-                                            public void onClick(DialogInterface dialog, int i) {
+                                            public void onClick(DialogInterface dialogInterf, int i) {
+
                                             }
                                         });
-                                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialogInterface, int i) {
-                                           dialogInterface.cancel();
-                                            }
-                                        });
-                                        AlertDialog dialog=builder.create();
-                                        dialog.show();
                                     }
                                 });
                                 AlertDialog dialogSua = builderSua.create();
@@ -105,8 +133,5 @@ public class ListDesk extends Fragment {
                 dialogChucnang.show();
             }
         });
-    }
-
-    private void dataviewDesk() {
     }
 }

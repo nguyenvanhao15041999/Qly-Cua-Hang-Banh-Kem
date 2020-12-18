@@ -1,6 +1,7 @@
 package com.example.projectchuyende.adapter;
 
 import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -16,7 +17,7 @@ import com.example.projectchuyende.model.Desk;
 
 import java.util.ArrayList;
 
-public class DeskAdapter extends ArrayAdapter {
+public class DeskAdapter extends ArrayAdapter<Desk> {
     @NonNull
     Context context;
     int resource;
@@ -37,19 +38,29 @@ public class DeskAdapter extends ArrayAdapter {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View viewDesk;
-        if (convertView == null) {
-            viewDesk = View.inflate(parent.getContext(), resource, null);
-        } else viewDesk = convertView;
-
-        TextView tvDesk = viewDesk.findViewById(R.id.tv_numberDesk);
-        ImageView imgDesk = viewDesk.findViewById(R.id.imgDesk);
-        final Desk desk = dataDesk.get(position);
-        if (desk.getsTrangthai()=="Trống"){
-            imgDesk.setImageResource(R.drawable.table_rong);
-        }else {
-            imgDesk.setImageResource(R.drawable.table_full);
+        View viewDesk = convertView;
+        if (viewDesk == null) {
+            LayoutInflater layoutInflater = LayoutInflater.from(getContext());
+            viewDesk = layoutInflater.inflate(R.layout.show_listdesk, null);
         }
+        Desk desk = getItem(position);
+
+        if (desk!=null){
+            TextView tvDesk = viewDesk.findViewById(R.id.tv_numberDesk);
+            TextView tvSlot = viewDesk.findViewById(R.id.tv_numberSlot);
+            ImageView imgDesk = viewDesk.findViewById(R.id.imgDesk);
+
+            tvDesk.setText(desk.getTenBan());
+            tvSlot.setText(" Số lượng người: "+String.valueOf(desk.getSoNguoi()));
+            if (desk.isTinhTrang()==true){
+                imgDesk.setImageResource(R.drawable.table_full);
+            }else {
+                imgDesk.setImageResource(R.drawable.table_rong);
+            }
+        }
+
+
+
 
         return viewDesk;
     }

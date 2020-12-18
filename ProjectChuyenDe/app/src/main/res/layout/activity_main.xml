@@ -23,9 +23,7 @@
         app:itemTextColor="@color/colorBlack"
         app:itemIconTint="@color/colorLightBlue"
         app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/nhanvien_menu"/>
-
-
+        app:menu="@menu/quanly_menu" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

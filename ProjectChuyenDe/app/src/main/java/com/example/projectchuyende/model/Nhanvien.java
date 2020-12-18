@@ -6,6 +6,24 @@ public class Nhanvien implements Serializable {
     private String Name;
     private String Chucvu;
     private Long Age;
+    private String ImgURL;
+    private String MaNV;
+
+    public String getMaNV() {
+        return MaNV;
+    }
+
+    public void setMaNV(String maNV) {
+        MaNV = maNV;
+    }
+
+    public String getImgURL() {
+        return ImgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        ImgURL = imgURL;
+    }
 
     public Nhanvien() {
 
@@ -16,11 +34,11 @@ public class Nhanvien implements Serializable {
         this.Name = Name;
     }
 
-    public Nhanvien(String Name, String Chucvu, Long Age) {
+    public Nhanvien(String Name, String Chucvu, String ImgURL) {
         super();
         this.Name = Name;
         this.Chucvu = Chucvu;
-        this.Age = Age;
+        this.ImgURL = ImgURL;
     }
 
     public String getName() {
@@ -52,7 +70,9 @@ public class Nhanvien implements Serializable {
         return "Nhanvien{" +
                 "Name='" + Name + '\'' +
                 ", Chucvu='" + Chucvu + '\'' +
-                ", Age='" + Age + '\'' +
+                ", Age=" + Age +
+                ", ImgURL='" + ImgURL + '\'' +
+                ", MaNV='" + MaNV + '\'' +
                 '}';
     }
 }

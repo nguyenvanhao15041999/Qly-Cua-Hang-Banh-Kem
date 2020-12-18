@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.projectchuyende.MainActivity;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.ListStaffAdapter;
 import com.example.projectchuyende.firebaseallManager.FirebaseallManager;
@@ -70,27 +71,8 @@ public class List_staff extends Fragment {
         } else {
             ListStaffadapter.notifyDataSetChanged();
         }
-    }
 
-            /*firebaseallManager.LoadNhanvien(new FirebaseallManager.IListener() {
-                @Override
-                public void onSuccess() {
-                    arrdata_listStaff.addAll(firebaseallManager.getArrNhanvien());
-                    ListStaffadapter = new ListStaffAdapter(getActivity(), R.layout.show_liststaff, arrdata_listStaff);
-                    lv_listStaff.setAdapter(ListStaffadapter);
-                }
-
-                @Override
-                public void onFail() {
-
-                }
-            });
-        } else {
-            ListStaffadapter.notifyDataSetChanged();
-        }
-    }*/
-
-    /*lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
@@ -101,7 +83,7 @@ public class List_staff extends Fragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsachChucnang[i]) {
                             case "Thông tin":
-                                Intent intent = new Intent(getActivity(), Staff_inform.class);
+                                Intent intent = new Intent(getContext(), Staff_inform.class);
                                 startActivity(intent);
                                 break;
                             default:
@@ -112,6 +94,6 @@ public class List_staff extends Fragment {
                 AlertDialog dialogList_staff = builderChucnang.create();
                 dialogList_staff.show();
             }
-        });*/
-
+        });
+    }
 }

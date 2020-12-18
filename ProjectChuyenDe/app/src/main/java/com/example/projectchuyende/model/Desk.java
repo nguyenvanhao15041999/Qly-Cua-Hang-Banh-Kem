@@ -1,30 +1,76 @@
 package com.example.projectchuyende.model;
 
 public class Desk {
-    String sSoban;
-    String sTrangthai;
+    private String TenBan;
+    private String KhuVuc;
+    private boolean TinhTrang;
+    private String MaBan;
+    private int SoNguoi;
+
+    public Desk() {
+
+    }
+
+    public Desk(String TenBan, boolean TinhTrang, int SoNguoi,String KhuVuc ) {
+        super();
+        this.TenBan = TenBan;
+        this.TinhTrang = TinhTrang;
+        this.SoNguoi=SoNguoi;
+        this.KhuVuc=KhuVuc;
+    }
+    public Desk (String MaBan){
+        super();
+        this.MaBan=MaBan;
+    }
 
     @Override
     public String toString() {
         return "Desk{" +
-                "sSoban='" + sSoban + '\'' +
-                ", sTrangthai='" + sTrangthai + '\'' +
+                "TenBan='" + TenBan + '\'' +
+                ", KhuVuc='" + KhuVuc + '\'' +
+                ", TinhTrang=" + TinhTrang +
+                ", MaBan='" + MaBan + '\'' +
+                ", SoNguoi=" + SoNguoi +
                 '}';
     }
 
-    public String getsSoban() {
-        return sSoban;
+    public String getTenBan() {
+        return TenBan;
     }
 
-    public void setsSoban(String sSoban) {
-        this.sSoban = sSoban;
+    public void setTenBan(String tenBan) {
+        TenBan = tenBan;
     }
 
-    public String getsTrangthai() {
-        return sTrangthai;
+    public String getKhuVuc() {
+        return KhuVuc;
     }
 
-    public void setsTrangthai(String sTrangthai) {
-        this.sTrangthai = sTrangthai;
+    public void setKhuVuc(String khuVuc) {
+        KhuVuc = khuVuc;
+    }
+
+    public boolean isTinhTrang() {
+        return TinhTrang;
+    }
+
+    public void setTinhTrang(boolean tinhTrang) {
+        TinhTrang = tinhTrang;
+    }
+
+    public String getMaBan() {
+        return MaBan;
+    }
+
+    public void setMaBan(String maBan) {
+        MaBan = maBan;
+    }
+
+    public int getSoNguoi() {
+        return SoNguoi;
+    }
+
+    public void setSoNguoi(int soNguoi) {
+        SoNguoi = soNguoi;
     }
 }

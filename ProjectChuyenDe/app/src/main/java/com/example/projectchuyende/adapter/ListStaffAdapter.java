@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import com.bumptech.glide.Glide;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.model.Nhanvien;
 
@@ -38,7 +39,7 @@ public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View viewNV=convertView;
-        
+
         if (viewNV==null){
             LayoutInflater inflater = LayoutInflater.from(getContext());
             viewNV = inflater.inflate(R.layout.show_liststaff, null);
@@ -50,9 +51,9 @@ public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
             TextView MemberStaff = viewNV.findViewById(R.id.tv_MemberStaff_LS);
             ImageView imgStaff=viewNV.findViewById(R.id.imgListStaff);
 
-            NameStaff.setText("Ten NV: " + nhanvien.getName());
-            MemberStaff.setText("Chuc Vu NV: " + nhanvien.getChucvu());
-            imgStaff.setImageResource(R.drawable.ban);
+            NameStaff.setText("Tên NV : " + nhanvien.getName());
+            MemberStaff.setText("Chức Vụ NV : " + nhanvien.getChucvu());
+            Glide.with(getContext()).load(nhanvien.getImgURL()).into(imgStaff);
 
         }
         return viewNV;
