@@ -39,7 +39,7 @@ public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         View viewNV=convertView;
-        
+
         if (viewNV==null){
             LayoutInflater inflater = LayoutInflater.from(getContext());
             viewNV = inflater.inflate(R.layout.show_liststaff, null);

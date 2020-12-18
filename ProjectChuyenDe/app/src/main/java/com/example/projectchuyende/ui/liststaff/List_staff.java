@@ -19,6 +19,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.projectchuyende.MainActivity;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.ListStaffAdapter;
 import com.example.projectchuyende.firebaseallManager.FirebaseallManager;
@@ -70,6 +71,29 @@ public class List_staff extends Fragment {
         } else {
             ListStaffadapter.notifyDataSetChanged();
         }
-    }
 
+        lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
+                builderChucnang.setTitle("Chức năng");
+                final String[] danhsachChucnang = {"Thông tin", "Xóa"};
+                builderChucnang.setItems(danhsachChucnang, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (danhsachChucnang[i]) {
+                            case "Thông tin":
+                                Intent intent = new Intent(getContext(), Staff_inform.class);
+                                startActivity(intent);
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                });
+                AlertDialog dialogList_staff = builderChucnang.create();
+                dialogList_staff.show();
+            }
+        });
+    }
 }
