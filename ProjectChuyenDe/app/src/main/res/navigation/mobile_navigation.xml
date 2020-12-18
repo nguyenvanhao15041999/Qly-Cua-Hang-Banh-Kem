@@ -57,5 +57,10 @@
         android:name="com.example.projectchuyende.ui.account.Staff_inform"
         android:label="@string/menu_thongtinnhanvien"
         tools:layout="@layout/activity_staff_inform" />
+    <fragment
+        android:id="@+id/nav_taikhoanquanly"
+        android:name="com.example.projectchuyende.ui.creatermanager.CreateManager"
+        android:label="@string/menu_taikhoanquanly"
+        tools:layout="@layout/create_manager_fragment" />
 
 </navigation>

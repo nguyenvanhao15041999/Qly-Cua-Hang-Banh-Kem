@@ -1,6 +1,8 @@
 package com.example.projectchuyende.model;
 
-public class Nhanvien {
+import java.io.Serializable;
+
+public class Nhanvien implements Serializable {
     private String Name;
     private String Chucvu;
     private Long Age;

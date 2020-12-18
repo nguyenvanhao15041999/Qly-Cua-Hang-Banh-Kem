@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
@@ -15,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.BanhAdapter;
 import com.example.projectchuyende.model.Banh;
+import com.example.projectchuyende.ui.account.Product_chi_tiet;
 import com.example.projectchuyende.ui.order.BookParty;
 import com.example.projectchuyende.ui.order.Bookdesk;
 import com.example.projectchuyende.ui.table.Table;
@@ -30,6 +32,7 @@ public class HomeFragment extends Fragment {
     ArrayList<Banh> data_banh = new ArrayList<>();
 
     BanhAdapter customAdapter_banh;
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         btnKhu = root.findViewById(R.id.btnKhu);
@@ -49,7 +52,7 @@ public class HomeFragment extends Fragment {
         //Gọi dữ liệu lên màn hình
         customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
         lvDanhSach.setAdapter(customAdapter_banh);
-
+        
         btnKhu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -1,16 +1,12 @@
 package com.example.projectchuyende.validators;
 
+import android.text.TextUtils;
+import android.util.Patterns;
+
 import java.util.regex.Pattern;
 
 public class EmailValidator {
-    private Pattern pattern;
-    public static final String EMAIL_PATTERN = "^[\\w-\\+]+(\\.[\\w]+)*@[\\w-]+(\\.[\\w]+)*(\\.[a-z]{2,})$";
-
-    public EmailValidator() {
-        pattern = Pattern.compile(EMAIL_PATTERN);
-    }
-
-    public boolean validate(String emailStr) {
-        return pattern.matcher(emailStr).matches();
+    public static boolean isValidEmail(CharSequence target) {
+        return (Patterns.EMAIL_ADDRESS.matcher(target).matches());
     }
 }

@@ -22,6 +22,10 @@
     <string name="edt_email">Enter your email...</string>
     <string name="edt_sdt">Enter your phonenumber...</string>
     <string name="edt_diachi">Enter your address...</string>
+<!--    admin-->
+    <string name="menu_taikhoanquanly">Tạo tài khoản quản lý</string>
+    <string name="edtTk">Enter account...</string>
+    <string name="menu_createmanager">Tạo tài khoản quản lý</string>
     <!--    Menu quan ly -->
     <string name="menu_danhsachnhanvien">Danh sách nhân viên</string>
     <string name="menu_taonhanvien">Tạo nhân viên</string>

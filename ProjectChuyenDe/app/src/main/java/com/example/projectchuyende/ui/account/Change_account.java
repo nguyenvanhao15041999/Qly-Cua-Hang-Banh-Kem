@@ -13,20 +13,20 @@ import com.example.projectchuyende.R;
 import com.example.projectchuyende.model.Nhanvien;
 
 public class Change_account extends AppCompatActivity {
-    Button btn_taotaikhoan;
+    Button btntaotaikhoan;
     EditText edtManv, edtTennv, edtsdt, edtmatkhau, edtTaikhoan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_change_account);
-        btn_taotaikhoan = findViewById(R.id.btnTao);
-      //edtManv = findViewById(R.id.txtmanv);
+        btntaotaikhoan = findViewById(R.id.btnTao);
+       // edtManv = findViewById(R.id.txtManv);
         edtTennv = findViewById(R.id.txtHoTen);
         edtsdt = findViewById(R.id.txtsdtnv);
         edtTaikhoan = findViewById(R.id.txtAccount);
         edtmatkhau = findViewById(R.id.txtpass);
-        btn_taotaikhoan.setOnClickListener(new View.OnClickListener() {
+        btntaotaikhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Nhanvien nhanvien = new Nhanvien();
@@ -45,6 +45,7 @@ public class Change_account extends AppCompatActivity {
                         Toast.makeText(Change_account.this, "Điền ít nhất 5 ký tự cho tất cả các trường!!!", Toast.LENGTH_SHORT).show();
 
                     }
+
                 }
             }
 
@@ -57,7 +58,7 @@ public class Change_account extends AppCompatActivity {
 //        String sdt = edtsdt.getText().toString();
 //        String taikhoan = edtTaikhoan.getText().toString();
 //        String password = edtmatkhau.getText().toString();
-//        // Nhanvien nhanvien = new Nhanvien("",manv, tennv, sdt,taikhoan, password);
-//        //return nhanvien;
+//        //Nhanvien nhanvien = new Nhanvien("",manv, tennv, sdt,taikhoan, password);
+//        return Nhanvien;
 //    }
 }

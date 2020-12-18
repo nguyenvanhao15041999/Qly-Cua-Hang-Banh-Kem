@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
@@ -9,23 +9,15 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_thongtin"
-            android:icon="@drawable/ic_baseline_perm_contact_calendar_24"
-            android:title="@string/menu_thongtinnhanvien" />
-        <item
-            android:id="@+id/nav_thongke"
-            android:icon="@drawable/thongkenhanvien"
-            android:title="@string/menu_thongke" />
-        <item
-            android:id="@+id/nav_danhsachban"
-            android:icon="@drawable/desk"
-            android:title="@string/menu_danhsachban" />
-        <item
+            android:id="@+id/nav_taikhoanquanly"
+            android:icon="@drawable/listthongtinnhanvien"
+            android:title="@string/menu_taikhoanquanly" />
+
             android:id="@+id/nav_trogiup"
             android:icon="@drawable/ic_baseline_help_24"
             android:title="@string/menu_help" />
         <item
-            android:id="@+id/nav_gioithieu"
+            android:id="@+id/nav_thongtin"
             android:icon="@drawable/infor"
             android:title="@string/menu_infor" />
     </group>
@@ -38,7 +30,9 @@
             <item
                 android:id="@+id/nav_signout"
                 android:icon="@drawable/ic_baseline_exit_to_app_24"
-                android:title="@string/tv_logout"/>
+                android:title="@string/menu_signup"/>
         </menu>
     </item>
+
+
 </menu>

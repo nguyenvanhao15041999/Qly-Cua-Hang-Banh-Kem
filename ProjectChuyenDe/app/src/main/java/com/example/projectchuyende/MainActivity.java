@@ -10,10 +10,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.model.User;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -30,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public static Boolean isLogin = false;
-    private User user;
     private DrawerLayout drawer;
     private NavigationView navigationView;
     private View headerView;
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvEmpJobTitle;
     private Menu menuNav;
     private MenuItem nav_signout, nav_signin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,31 +76,81 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        if(isLogin == true) {
+        if (isLogin == true) {
             isLogin = false;
+            if (getIntent().getSerializableExtra("nguoidung") != null) {
+                User user = (User) getIntent().getSerializableExtra("nguoidung");
+                navigationView.getMenu().clear();
+                navigationView.inflateMenu(R.menu.nguoidung);
 
-            navigationView.getMenu().clear();
-            navigationView.inflateMenu(R.menu.nguoidung);
+                // Menu item
+                nav_signout = menuNav.findItem(R.id.nav_signout);
+                nav_signout.setVisible(true);
 
-            // Menu item
-            nav_signout = menuNav.findItem(R.id.nav_signout);
-            nav_signout.setVisible(true);
+                nav_signin = menuNav.findItem(R.id.nav_signin);
+                nav_signin.setVisible(false);
 
-            nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                @Override
-                public boolean onMenuItemClick(MenuItem item) {
-                    finishAffinity();
-                    return false;
+                nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+//                        FirebaseAuth.getInstance().signOut();
+                        finishAffinity();
+                        return false;
+                    }
+                });
+
+                tvEmpName.setText(user.getUsername());
+                if (user.getPermission().equals("user")) {
+                    tvEmpJobTitle.setText("Khách Hàng");
                 }
-            });
+            } else if (getIntent().getSerializableExtra("nhanvien") != null) {
+                isLogin = false;
 
-            nav_signin = menuNav.findItem(R.id.nav_signin);
-            nav_signin.setVisible(false);
+                Nhanvien nhanvien = (Nhanvien) getIntent().getSerializableExtra("nhanvien");
 
-            user = (User) getIntent().getSerializableExtra("nguoidung");
-            tvEmpName.setText(user.getUsername());
-            if(user.getPermission().equals("user")){
-                tvEmpJobTitle.setText("Khach hang");
+                if (nhanvien.getChucvu().equals("Nhân Viên")) {
+                    navigationView.getMenu().clear();
+                    navigationView.inflateMenu(R.menu.nhanvien_menu);
+                    // Menu item
+                    nav_signout = menuNav.findItem(R.id.nav_signout);
+                    nav_signout.setVisible(true);
+
+                    nav_signin = menuNav.findItem(R.id.nav_signin);
+                    nav_signin.setVisible(false);
+
+                    nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+                            finishAffinity();
+                            return false;
+
+                        }
+                    });
+
+                    tvEmpName.setText(nhanvien.getName());
+                    tvEmpJobTitle.setText(nhanvien.getChucvu());
+                } else if (nhanvien.getChucvu().equals("Quản Lý")) {
+                    navigationView.getMenu().clear();
+                    navigationView.inflateMenu(R.menu.quanly_menu);
+                    // Menu item
+                    nav_signout = menuNav.findItem(R.id.nav_signout);
+                    nav_signout.setVisible(true);
+
+                    nav_signin = menuNav.findItem(R.id.nav_signin);
+                    nav_signin.setVisible(false);
+
+                    nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                        @Override
+                        public boolean onMenuItemClick(MenuItem item) {
+                            finishAffinity();
+                            return false;
+                        }
+                    });
+
+                    tvEmpName.setText(nhanvien.getName());
+                    tvEmpJobTitle.setText(nhanvien.getChucvu());
+                }
+
             }
         }
     }
@@ -130,4 +183,6 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
 }
