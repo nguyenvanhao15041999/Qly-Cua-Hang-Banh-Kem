@@ -200,8 +200,30 @@
     <string name="btnThanhToan">Thanh Toán</string>
 
     <!--  Table  -->
-    <string name="tvSuDung">Đang Sử Dụng</string>
+    <string name="txtThongTin">Thông Tin Bàn</string>
     <string name="tvBan">0 Bàn</string>
     <string name="btnDatBan">Đặt Bàn</string>
     <string name="tv_logout">Log out</string>
+    <string name="tvSuDung">Sử Dụng</string>
+    <!--  Thông tin bàn  -->
+    <string name="edtSoNguoi">001</string>
+    <string name="edtKhuVuc">Mot</string>
+    <string name="edtTenBan">Tên Bàn</string>
+    <!--  Phương Thức Thanh Toán  -->
+    <string name="radTrucTiep">Trực Tiếp</string>
+    <string name="radChuyenKhoan">Chuyển Khoản</string>
+    <string name="edtDanhGia">Đánh Giá</string>
+
+    <!--  Phương Thức Thanh Toán  -->
+    <string name="txtTenSanPham">Tên Sản Phẩm</string>
+    <string name="txtLoaiSanPham">Loại Sản Phẩm</string>
+    <string name="txtDiaChi">Địa Chỉ</string>
+    <string name="txtGia">Giá</string>
+    <string name="txtHinhAnh">Hình Ảnh</string>
+    <string name="btnSuaMon">Sửa Món</string>
+
+
+
+
+
 </resources>
