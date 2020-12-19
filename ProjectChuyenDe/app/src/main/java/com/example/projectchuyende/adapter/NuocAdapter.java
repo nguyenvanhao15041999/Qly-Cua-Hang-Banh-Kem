@@ -8,21 +8,19 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.model.Banh;
-import com.example.projectchuyende.ui.home.HomeFragment;
+import com.example.projectchuyende.model.Nuoc;
 
 import java.util.ArrayList;
 
-public class BanhAdapter extends ArrayAdapter {
+public class NuocAdapter extends ArrayAdapter {
     //Hàm Custom
     Context context;
     int resource;
-    ArrayList<Banh> data;
+    ArrayList<Nuoc> data;
 
-    public BanhAdapter(Context context, int resource, ArrayList<Banh> data) {
+    public NuocAdapter(Context context, int resource, ArrayList<Nuoc> data) {
         super(context, resource, data);
         this.context = context;
         this.resource = resource;
@@ -48,12 +46,12 @@ public class BanhAdapter extends ArrayAdapter {
         ImageView imgAnhBanh = view.findViewById(R.id.imgAnh);
 
         //Xử lý dữ liệu
-        Banh banh = data.get(position);
-        tvTenSP.setText(banh.getTenBanh());
-        tvGiaCa.setText(banh.getGiaCa());
-        tvDiaChi.setText(banh.getDiaChi());
-        tvGiam.setText(banh.getGiam());
-        imgAnhBanh.setImageResource(R.drawable.banh);
+        Nuoc nuoc = data.get(position);
+        tvTenSP.setText(nuoc.getTenNuoc());
+        tvGiaCa.setText(nuoc.getGiaCa());
+        tvDiaChi.setText(nuoc.getDiaChi());
+        tvGiam.setText(nuoc.getGiam());
+        imgAnhBanh.setImageResource(R.drawable.cocacola);
         return view;
     }
 }
