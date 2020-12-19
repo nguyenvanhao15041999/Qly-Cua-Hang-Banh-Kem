@@ -10,6 +10,7 @@ import android.app.DownloadManager;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.location.Location;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -83,7 +84,7 @@ public class List_staff extends Fragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsachChucnang[i]) {
                             case "Thông tin":
-                                Intent intent = new Intent(getContext(), Staff_inform.class);
+                                Intent intent = new Intent(getActivity(), Staff_inform.class);
                                 startActivity(intent);
                                 break;
                             default:

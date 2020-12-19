@@ -1,8 +1,10 @@
 package com.example.projectchuyende.ui.listdesk;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +35,8 @@ public class ListDesk extends Fragment {
     ArrayList<Desk> dataDesk = new ArrayList<>();
     DeskAdapter deskAdapter;
     FirebaseListDesk firebaseListDesk;
+    Desk desk;
+    Dialog dialog;
 
     @Nullable
     @Override
@@ -45,6 +49,7 @@ public class ListDesk extends Fragment {
     }
 
     private void setEvent() {
+
         if (deskAdapter == null) {
             firebaseListDesk.LoadListDesk(new FirebaseListDesk.IListener() {
                 @Override
@@ -66,37 +71,41 @@ public class ListDesk extends Fragment {
         gv_ListDesk.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
-                AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
+                final AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
                 builderChucnang.setTitle("Chức Năng");
-                final String[] chucnang = {"Sửa", "Xóa"};
+                final String[] chucnang = {"Thêm", "Sửa", "Xóa"};
+                final AlertDialog.Builder builderThem = new AlertDialog.Builder(getActivity());
+                builderThem.setTitle(" Thêm bàn ");
                 final AlertDialog.Builder builderSua = new AlertDialog.Builder(getActivity());
                 builderSua.setTitle(" Sửa bàn ");
                 builderChucnang.setItems(chucnang, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(final DialogInterface dialogInterface, int i) {
                         switch (chucnang[i]) {
-                            case "Sửa":
+                            case "Thêm":
                                 View customListdesk = getLayoutInflater().inflate(R.layout.dialog_listdesk_custom, null);
-                                builderSua.setView(customListdesk);
+                                builderThem.setView(customListdesk);
                                 final EditText txtTenbanLD = customListdesk.findViewById(R.id.txtTenBanLD_dialog);
                                 final EditText txtSonguoiLD = customListdesk.findViewById(R.id.txtSonguoiLD_dialog);
                                 final Spinner spKhuVucLD = customListdesk.findViewById(R.id.spKhuvucLD_dialog);
 
-                                final Button btnHuy = customListdesk.findViewById(R.id.btnCancelLD_dialog);
-                                Button btnDongy = customListdesk.findViewById(R.id.btnAcceptLD_dialog);
-                                int index = -1;
-                                final Desk suadesk = dataDesk.get(vitri);
-                                txtTenbanLD.setText(suadesk.getTenBan());
-                                txtSonguoiLD.setText(String.valueOf(suadesk.getSoNguoi()));
-                                spKhuVucLD.setSelection(dataDesk.indexOf(suadesk.getKhuVuc()));
-
+                                final Button btnDong = customListdesk.findViewById(R.id.btnCancelLD_dialog);
+                                final Button btnDongy = customListdesk.findViewById(R.id.btnAcceptLD_dialog);
+                                desk = new Desk();
                                 btnDongy.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        firebaseListDesk.SuaBan(suadesk.getMaBan(), suadesk, new FirebaseListDesk.IListener() {
+
+                                        desk.setTenBan(txtTenbanLD.getText().toString());
+                                        desk.setSoNguoi(Integer.parseInt(txtSonguoiLD.getText().toString()));
+                                        desk.setKhuVuc(spKhuVucLD.getSelectedItem().toString());
+                                        desk.setTinhTrang(false);
+                                        dataDesk.add(desk);
+
+                                        firebaseListDesk.ThemBan(desk, new FirebaseListDesk.IListener() {
                                             @Override
                                             public void onSuccess() {
-                                                Toast.makeText(getActivity(), "Sửa sản phẩm thành công!", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getActivity(), "Thêm Thành Công!", Toast.LENGTH_SHORT).show();
                                             }
 
                                             @Override
@@ -104,27 +113,84 @@ public class ListDesk extends Fragment {
 
                                             }
                                         });
+                                        dataDesk.clear();
+                                        deskAdapter.notifyDataSetChanged();
                                     }
                                 });
 
-                                btnHuy.setOnClickListener(new View.OnClickListener() {
+                                btnDong.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        AlertDialog.Builder builderSua = new AlertDialog.Builder(getActivity());
-                                        builderSua.setTitle("Warning!");
-                                        builderSua.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        dialog=new Dialog(getContext());
+                                        dialog.onBackPressed();
+                                    }
+                                });
+                                AlertDialog dialogThem = builderThem.create();
+                                dialogThem.show();
+                                break;
+
+                            case "Sửa":
+                                View customSua = getLayoutInflater().inflate(R.layout.dialog_listdesk_custom, null);
+                                builderSua.setView(customSua);
+
+                                int index = -1;
+
+                                final EditText txtTenbanLD1 = customSua.findViewById(R.id.txtTenBanLD_dialog);
+                                final EditText txtSonguoiLD1 = customSua.findViewById(R.id.txtSonguoiLD_dialog);
+                                final Spinner spKhuVucLD1 = customSua.findViewById(R.id.spKhuvucLD_dialog);
+
+                                Button btnDong1 = customSua.findViewById(R.id.btnCancelLD_dialog);
+                                final Button btnDongy1 = customSua.findViewById(R.id.btnAcceptLD_dialog);
+
+                                desk = dataDesk.get(vitri);
+
+                                txtTenbanLD1.setText(desk.getTenBan());
+                                txtSonguoiLD1.setText(String.valueOf(desk.getSoNguoi()));
+                                spKhuVucLD1.setSelection(dataDesk.indexOf(desk.getKhuVuc()));
+                                dataDesk.clear();
+                                btnDongy1.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        desk.setTenBan(txtTenbanLD1.getText().toString());
+                                        desk.setSoNguoi(Integer.parseInt(txtSonguoiLD1.getText().toString()));
+                                        desk.setKhuVuc(spKhuVucLD1.getSelectedItem().toString());
+                                        desk.setTinhTrang(false);
+
+                                        firebaseListDesk.SuaBan(desk.getMaBan(), desk, new FirebaseListDesk.IListener() {
                                             @Override
-                                            public void onClick(DialogInterface dialogInterf, int i) {
+                                            public void onSuccess() {
+                                                Toast.makeText(getActivity(), "Đã Sửa", Toast.LENGTH_LONG).show();
+                                            }
+
+                                            @Override
+                                            public void onFail() {
 
                                             }
                                         });
+                                        deskAdapter.notifyDataSetChanged();
                                     }
                                 });
+
+
                                 AlertDialog dialogSua = builderSua.create();
                                 dialogSua.show();
                                 break;
                             default:
-                                Toast.makeText(getActivity(), "Da xoa", Toast.LENGTH_LONG).show();
+                                desk = dataDesk.get(vitri);
+                                final String idMaBan = desk.getMaBan();
+                                firebaseListDesk.xoaBan(idMaBan, new FirebaseListDesk.IListener() {
+                                    @Override
+                                    public void onSuccess() {
+                                        Toast.makeText(getActivity(), "Da xoa", Toast.LENGTH_LONG).show();
+                                    }
+
+                                    @Override
+                                    public void onFail() {
+
+                                    }
+                                });
+                                dataDesk.clear();
+                                deskAdapter.notifyDataSetChanged();
                                 break;
                         }
                     }
@@ -133,5 +199,10 @@ public class ListDesk extends Fragment {
                 dialogChucnang.show();
             }
         });
+    }
+
+    private Desk createDesk() {
+        Desk desk = new Desk();
+        return desk;
     }
 }

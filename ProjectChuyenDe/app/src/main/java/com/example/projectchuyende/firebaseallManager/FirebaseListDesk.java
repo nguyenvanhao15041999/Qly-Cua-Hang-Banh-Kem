@@ -131,4 +131,20 @@ public class FirebaseListDesk {
             }
         });
     }
+
+    public void xoaBan(String id, final IListener listener){
+        showLoading(true);
+        mDatabaseDesk.child(ThongTinBan).child(id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                listener.onSuccess();
+                showLoading(false);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onFail();
+            }
+        });
+    }
 }
