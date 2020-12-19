@@ -3,26 +3,22 @@ package com.example.projectchuyende.ui.home;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.BanhAdapter;
 import com.example.projectchuyende.adapter.NuocAdapter;
 import com.example.projectchuyende.model.Banh;
 import com.example.projectchuyende.model.Nuoc;
-import com.example.projectchuyende.ui.account.Product_chi_tiet;
 import com.example.projectchuyende.ui.order.BookParty;
-import com.example.projectchuyende.ui.order.Bookdesk;
 import com.example.projectchuyende.ui.table.Table;
-
 import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
@@ -48,7 +44,6 @@ public class HomeFragment extends Fragment {
     }
 
     public void setEvent() {
-
         //Gọi hàm tạo
         KhoiTao();
 
@@ -85,15 +80,10 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //Gọi dữ liệu lên màn hình
-                customAdapter_nuoc = new NuocAdapter(getContext(), R.layout.banh_listview, data_nuoc);
+                customAdapter_nuoc = new NuocAdapter(getContext(), R.layout.nuoc_listview, data_nuoc);
                 lvDanhSach.setAdapter(customAdapter_nuoc);
             }
         });
-
-
-
-
-
     }
 
     // Tạo dữ liệu

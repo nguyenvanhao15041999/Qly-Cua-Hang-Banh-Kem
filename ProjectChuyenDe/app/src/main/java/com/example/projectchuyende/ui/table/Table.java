@@ -1,10 +1,13 @@
 package com.example.projectchuyende.ui.table;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,6 +24,7 @@ public class Table extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_table);
         Toolbar toolbar = findViewById(R.id.toolbartable);
+        setSupportActionBar(toolbar);
         imgBack= findViewById(R.id.imgBack);
         btnDatBan = findViewById(R.id.btnDatBan);
         setSupportActionBar(toolbar);
