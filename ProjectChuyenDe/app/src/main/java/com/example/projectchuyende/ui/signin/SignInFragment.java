@@ -2,13 +2,22 @@ package com.example.projectchuyende.ui.signin;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.provider.CalendarContract;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,8 +37,6 @@ import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.model.PrivateUser;
 import com.example.projectchuyende.model.User;
 import com.example.projectchuyende.validators.EmailValidator;
-import com.example.projectchuyende.validators.PasswordValidator;
-import com.example.projectchuyende.validators.UsernameValidator;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -41,12 +48,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 public class SignInFragment extends Fragment {
     Button btnSignup;
     TextView tvForgotpass;
     EditText edtAccount;
+    TextView textView;
     EditText edtPassword;
     Button btnSignin;
+    CheckBox chkPass;
     private FirebaseAuth firebaseAuth;
     Intent intent;
 
@@ -57,17 +69,69 @@ public class SignInFragment extends Fragment {
         btnSignup = root.findViewById(R.id.btnSignup);
         tvForgotpass = root.findViewById(R.id.tvForgotpassword);
         edtAccount = root.findViewById(R.id.edtAccount);
+        textView = root.findViewById(R.id.textView);
+
         edtPassword = root.findViewById(R.id.edtPassword);
         btnSignin = root.findViewById(R.id.btnSignin);
-
+        chkPass = root.findViewById(R.id.showPasss);
         firebaseAuth = FirebaseAuth.getInstance();
-
         intent = getActivity().getIntent();
-
+        validateEmail();
+        showPassword();
         setEvent();
         return root;
 
+    }
+    public final static boolean isValidEmail(CharSequence target) {
+        if (TextUtils.isEmpty(target)) {
+            return false;
+        } else {
+            return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
+        }
+    }
+    // Validate emmail
+    public void validateEmail() {
+        //final String email = edtAccount.getText().toString().trim();
+        final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        edtAccount.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
 
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(isValidEmail(edtAccount.getText().toString().trim())){
+                    Toast.makeText(getContext(), "Ban nhap dung email", Toast.LENGTH_SHORT).show();
+                    textView.setText("Đúng email");
+                    textView.setTextColor(Color.parseColor("   #00FF00"));
+                }else{
+                    Toast.makeText(getContext(), "Ban nhap sai email", Toast.LENGTH_SHORT).show();
+                    textView.setText("Nhập sai email");
+                    textView.setTextColor(Color.parseColor("#FF0000"));
+                }
+            }
+        });
+    }
+
+    public void showPassword() {
+        chkPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (!b) {
+                    // hide password
+                    edtPassword.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
+                } else {
+                    // show password
+                    edtPassword.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
+            }
+        });
     }
 
     public void setEvent() {
