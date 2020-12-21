@@ -5,7 +5,12 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
+import com.example.projectchuyende.model.Desk;
 import com.example.projectchuyende.model.Nhanvien;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -46,18 +51,20 @@ public class FirebaseallManager {
         arrNhanvien = new ArrayList<>();
     }
 
-    public void showLoading(boolean isShow){
-        if(dialog != null){
-            if(isShow){
+    public void showLoading(boolean isShow) {
+        if (dialog != null) {
+            if (isShow) {
                 dialog.show();
-            }else {
+            } else {
                 if (dialog.isShowing()) {
                     dialog.dismiss();
                 }
             }
         }
     }
-    public void loadDSNhanVien(final IListener listener){
+
+
+    public void loadDSNhanVien(final IListener listener) {
         showLoading(true);
         mDatabase.child(Nhan_Vien).addValueEventListener(new ValueEventListener() {
             @Override
@@ -79,6 +86,56 @@ public class FirebaseallManager {
         });
     }
 
+    public void ThemNhanvien(Nhanvien nhanvien, final FirebaseallManager.IListener iListener) {
+        showLoading(true);
+        String id = mDatabase.child(Nhan_Vien).push().getKey();
+        nhanvien.setMaNV(id);
+        mDatabase.child(Nhan_Vien).child(nhanvien.getMaNV()).setValue(nhanvien).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                showLoading(false);
+                iListener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                iListener.onFail();
+            }
+        });
+    }
+
+    public void SuaNhanvien(String ID, Nhanvien nhanvien, final FirebaseallManager.IListener iListener) {
+        showLoading(true);
+        mDatabase.child(Nhan_Vien).child(ID).setValue(nhanvien).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                iListener.onSuccess();
+                showLoading(false);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                iListener.onFail();
+            }
+        });
+    }
+
+    public void xoaNhanvien(String id, final FirebaseallManager.IListener listener){
+        showLoading(true);
+        mDatabase.child(Nhan_Vien).child(id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                listener.onSuccess();
+                showLoading(false);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onFail();
+            }
+        });
+    }
+
     public interface IListener {
         void onSuccess();
 
@@ -90,4 +147,6 @@ public class FirebaseallManager {
 
         void onFail();
     }
+
+
 }

@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
-import android.content.Intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -128,7 +130,7 @@ public class ListDesk extends Fragment {
                                 btnDong.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        builderThem.setNegativeButton("OK",null);
+
                                     }
                                 });
                                 AlertDialog dialogThem = builderThem.create();
@@ -205,10 +207,5 @@ public class ListDesk extends Fragment {
                 dialogChucnang.show();
             }
         });
-    }
-
-    private Desk createDesk() {
-        Desk desk = new Desk();
-        return desk;
     }
 }

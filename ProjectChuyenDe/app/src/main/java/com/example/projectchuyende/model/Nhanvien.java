@@ -5,9 +5,41 @@ import java.io.Serializable;
 public class Nhanvien implements Serializable {
     private String Name;
     private String Chucvu;
-    private Long Age;
     private String ImgURL;
     private String MaNV;
+    private String DiaChi;
+    private String Email;
+    private Long Luong;
+    private String SDT;
+    private String gioiTinh;
+
+    public Nhanvien() {
+
+    }
+
+    public Nhanvien(String MaNV) {
+        super();
+        this.MaNV = MaNV;
+    }
+
+    public Nhanvien(String Name, String Chucvu, String ImgURL) {
+        super();
+        this.Name = Name;
+        this.Chucvu = Chucvu;
+        this.ImgURL = ImgURL;
+    }
+
+    public Nhanvien(String MaNV, String Name, String ChucVu, String SDT, String gioiTinh, String Email, String DiaChi, Long Luong) {
+        super();
+        this.MaNV = MaNV;
+        this.Name = Name;
+        this.Chucvu = ChucVu;
+        this.SDT = SDT;
+        this.gioiTinh = gioiTinh;
+        this.Email = Email;
+        this.DiaChi = DiaChi;
+        this.Luong = Luong;
+    }
 
     public String getMaNV() {
         return MaNV;
@@ -23,22 +55,6 @@ public class Nhanvien implements Serializable {
 
     public void setImgURL(String imgURL) {
         ImgURL = imgURL;
-    }
-
-    public Nhanvien() {
-
-    }
-
-    public Nhanvien(String Name) {
-        super();
-        this.Name = Name;
-    }
-
-    public Nhanvien(String Name, String Chucvu, String ImgURL) {
-        super();
-        this.Name = Name;
-        this.Chucvu = Chucvu;
-        this.ImgURL = ImgURL;
     }
 
     public String getName() {
@@ -57,12 +73,44 @@ public class Nhanvien implements Serializable {
         Chucvu = chucvu;
     }
 
-    public Long getAge() {
-        return Age;
+    public String getDiaChi() {
+        return DiaChi;
     }
 
-    public void setAge(Long age) {
-        Age = age;
+    public void setDiaChi(String diaChi) {
+        DiaChi = diaChi;
+    }
+
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public Long getLuong() {
+        return Luong;
+    }
+
+    public void setLuong(Long luong) {
+        Luong = luong;
+    }
+
+    public String getSDT() {
+        return SDT;
+    }
+
+    public void setSDT(String SDT) {
+        this.SDT = SDT;
+    }
+
+    public String getGioiTinh() {
+        return gioiTinh;
+    }
+
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
     @Override
@@ -70,9 +118,13 @@ public class Nhanvien implements Serializable {
         return "Nhanvien{" +
                 "Name='" + Name + '\'' +
                 ", Chucvu='" + Chucvu + '\'' +
-                ", Age=" + Age +
                 ", ImgURL='" + ImgURL + '\'' +
                 ", MaNV='" + MaNV + '\'' +
+                ", DiaChi='" + DiaChi + '\'' +
+                ", Email='" + Email + '\'' +
+                ", Luong=" + Luong +
+                ", SDT='" + SDT + '\'' +
+                ", gioiTinh='" + gioiTinh + '\'' +
                 '}';
     }
 }

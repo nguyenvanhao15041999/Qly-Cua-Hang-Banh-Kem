@@ -85,7 +85,7 @@ public class List_staff extends Fragment {
                         switch (danhsachChucnang[i]) {
                             case "Thông tin":
                                 Intent intent = new Intent(getActivity(), Staff_inform.class);
-                                startActivity(intent);
+                                getActivity().startActivity(intent);
                                 break;
                             default:
                                 break;
