@@ -41,15 +41,15 @@ public class BanhAdapter extends ArrayAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = LayoutInflater.from(getContext()).inflate(resource, null);
         //Khai báo
-        TextView tvTenSP = view.findViewById(R.id.tvTenSP);
+        TextView tvTenBanh = view.findViewById(R.id.tvTenBanh);
         TextView tvGiaCa = view.findViewById(R.id.tvGiaBan);
         TextView tvDiaChi = view.findViewById(R.id.tvDiaChi);
         TextView tvGiam = view.findViewById(R.id.tvGiam);
-        ImageView imgAnhBanh = view.findViewById(R.id.imgAnh);
+        ImageView imgAnhBanh = view.findViewById(R.id.imgAnhBanh);
 
         //Xử lý dữ liệu
         Banh banh = data.get(position);
-        tvTenSP.setText(banh.getTenBanh());
+        tvTenBanh.setText(banh.getTenBanh());
         tvGiaCa.setText(banh.getGiaCa());
         tvDiaChi.setText(banh.getDiaChi());
         tvGiam.setText(banh.getGiam());

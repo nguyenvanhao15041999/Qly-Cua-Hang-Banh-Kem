@@ -54,9 +54,9 @@
         tools:layout="@layout/fragment_timekeeping" />
     <fragment
         android:id="@+id/nav_thongtin"
-        android:name="com.example.projectchuyende.ui.account.Staff_inform"
-        android:label="@string/menu_thongtinnhanvien"
-        tools:layout="@layout/activity_staff_inform" />
+        android:name="com.example.projectchuyende.ui.information.Information"
+        android:label="@string/menu_infor"
+        tools:layout="@layout/fragment_information" />
     <fragment
         android:id="@+id/nav_taikhoanquanly"
         android:name="com.example.projectchuyende.ui.creatermanager.CreateManager"
