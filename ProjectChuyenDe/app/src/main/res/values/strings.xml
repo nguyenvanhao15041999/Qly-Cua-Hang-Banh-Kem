@@ -214,15 +214,16 @@
     <string name="radChuyenKhoan">Chuyển Khoản</string>
     <string name="edtDanhGia">Đánh Giá</string>
 
-    <!--  Phương Thức Thanh Toán  -->
+    <!--  Sửa Món  -->
     <string name="txtTenSanPham">Tên Sản Phẩm</string>
     <string name="txtLoaiSanPham">Loại Sản Phẩm</string>
     <string name="txtDiaChi">Địa Chỉ</string>
     <string name="txtGia">Giá</string>
     <string name="txtHinhAnh">Hình Ảnh</string>
     <string name="btnSuaMon">Sửa Món</string>
-
-
+    <!--  Tạo Món  -->
+    <string name="txtKhuyenMai">Khuyến Mãi</string>
+    <string name="btnTaoMon">Tạo Món</string>
 
 
 
