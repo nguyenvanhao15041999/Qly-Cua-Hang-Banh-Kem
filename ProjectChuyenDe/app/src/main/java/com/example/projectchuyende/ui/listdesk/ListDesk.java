@@ -95,34 +95,40 @@ public class ListDesk extends Fragment {
                                 btnDongy.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
+                                        if (txtTenbanLD.length() == 0 && txtSonguoiLD.length() == 0) {
+                                            Toast.makeText(getActivity(), "Mời nhập thông tin!", Toast.LENGTH_SHORT).show();
+                                        } else {
+                                            desk.setTenBan(txtTenbanLD.getText().toString());
+                                            desk.setSoNguoi(Integer.parseInt(txtSonguoiLD.getText().toString()));
+                                            desk.setKhuVuc(spKhuVucLD.getSelectedItem().toString());
+                                            desk.setTinhTrang(false);
+                                            dataDesk.add(desk);
 
-                                        desk.setTenBan(txtTenbanLD.getText().toString());
-                                        desk.setSoNguoi(Integer.parseInt(txtSonguoiLD.getText().toString()));
-                                        desk.setKhuVuc(spKhuVucLD.getSelectedItem().toString());
-                                        desk.setTinhTrang(false);
-                                        dataDesk.add(desk);
+                                            firebaseListDesk.ThemBan(desk, new FirebaseListDesk.IListener() {
+                                                @Override
+                                                public void onSuccess() {
+                                                    Toast.makeText(getActivity(), "Thêm Thành Công!", Toast.LENGTH_SHORT).show();
+                                                    txtTenbanLD.setText("");
+                                                    txtSonguoiLD.setText(null);
+                                                    spKhuVucLD.setSelection(0);
+                                                }
 
-                                        firebaseListDesk.ThemBan(desk, new FirebaseListDesk.IListener() {
-                                            @Override
-                                            public void onSuccess() {
-                                                Toast.makeText(getActivity(), "Thêm Thành Công!", Toast.LENGTH_SHORT).show();
-                                            }
+                                                @Override
+                                                public void onFail() {
 
-                                            @Override
-                                            public void onFail() {
-
-                                            }
-                                        });
-                                        dataDesk.clear();
-                                        deskAdapter.notifyDataSetChanged();
+                                                }
+                                            });
+                                            dataDesk.clear();
+                                            deskAdapter.notifyDataSetChanged();
+                                        }
                                     }
+
                                 });
 
                                 btnDong.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        dialog=new Dialog(getContext());
-                                        dialog.onBackPressed();
+                                        builderThem.setNegativeButton("OK",null);
                                     }
                                 });
                                 AlertDialog dialogThem = builderThem.create();

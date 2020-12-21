@@ -15,7 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="@string/txtTenban" />
+            android:text="@string/txtTenbanLD" />
 
         <EditText
             android:id="@+id/txtTenBanLD_dialog"
@@ -34,7 +34,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:text="@string/txtTenban" />
+            android:text="@string/txtSonguoiLD" />
 
         <EditText
             android:id="@+id/txtSonguoiLD_dialog"
@@ -54,7 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:text="@string/txtKhuvuc" />
+            android:text="@string/txtKhuvucLD" />
 
         <Spinner
             android:id="@+id/spKhuvucLD_dialog"

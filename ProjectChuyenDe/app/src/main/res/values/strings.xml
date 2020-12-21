@@ -144,9 +144,9 @@
 
 
     <!--string list desk-->
-    <string name="txtTenban">Tên bàn (*)</string>
-    <string name="txtSonguoi">Số người (*)</string>
-    <string name="txtKhuvuc">Khu vực (*)</string>
+    <string name="txtTenbanLD">Tên bàn (*)</string>
+    <string name="txtSonguoiLD">Số người (*)</string>
+    <string name="txtKhuvucLD">Khu vực (*)</string>
     <string name="txthintTenban">Nhập tên bàn...</string>
     <string name="txthintSonguoi">Nhập số người</string>
 
