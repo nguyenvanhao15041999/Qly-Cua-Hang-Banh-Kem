@@ -66,9 +66,9 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="20dp"
-                android:background="@color/colorGreenDank"
+                android:background="@color/colorWhite"
                 android:text="@string/btnKhu"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlack"
                 android:textSize="15dp"></Button>
 
             <Button
@@ -76,9 +76,9 @@
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:background="@color/colorGreenDank"
+                android:background="@color/colorWhite"
                 android:text="@string/btnDatTiec"
-                android:textColor="@color/colorWhite"
+                android:textColor="@color/colorBlack"
                 android:textSize="15dp"></Button>
         </LinearLayout>
     </LinearLayout>

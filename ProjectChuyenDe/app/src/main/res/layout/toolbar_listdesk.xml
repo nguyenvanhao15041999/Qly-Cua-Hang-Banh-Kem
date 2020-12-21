@@ -45,7 +45,7 @@
         android:layout_toRightOf="@+id/imgArrowLeft"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text="Danh Sách Bàn"
+        android:text="Chi Tiết Bàn"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/textSize" />
@@ -66,6 +66,6 @@
         app:mrl_rippleOverlay="true"
         app:mrl_ripplePersistent="false"
         app:mrl_rippleRoundedCorners="30dp">
-
     </com.balysv.materialripple.MaterialRippleLayout>
-    </androidx.appcompat.widget.Toolbar>
+
+</androidx.appcompat.widget.Toolbar>
