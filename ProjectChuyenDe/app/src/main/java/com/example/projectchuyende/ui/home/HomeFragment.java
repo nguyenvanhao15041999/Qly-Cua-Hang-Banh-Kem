@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toolbar;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import com.example.projectchuyende.R;
@@ -32,6 +34,7 @@ public class HomeFragment extends Fragment {
     BanhAdapter customAdapter_banh;
     NuocAdapter customAdapter_nuoc;
 
+
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         btnKhu = root.findViewById(R.id.btnKhu);
@@ -40,6 +43,7 @@ public class HomeFragment extends Fragment {
         btnNuocUong = root.findViewById(R.id.btnNuoc);
         lvDanhSach = root.findViewById(R.id.lvDanhsachHome);
         setEvent();
+
         return root;
     }
 
@@ -50,7 +54,16 @@ public class HomeFragment extends Fragment {
         //Gọi dữ liệu lên màn hình
         customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
         lvDanhSach.setAdapter(customAdapter_banh);
-        
+
+//        lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+//                Intent intent = new Intent(getContext(), Product_chi_tiet.class);
+//                lvDanhSach.getContext().startActivity(intent);
+//
+//            }
+//        });
+
         btnKhu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
