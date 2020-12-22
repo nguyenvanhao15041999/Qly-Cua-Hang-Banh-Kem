@@ -18,7 +18,7 @@
         android:src="@drawable/banh"></ImageView>
 
     <LinearLayout
-        android:layout_width="150dp"
+        android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:gravity="center"
@@ -26,36 +26,36 @@
 
         <TextView
             android:id="@+id/tvTenBanh"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Bánh flan"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:textSize="20dp"></TextView>
+            android:textSize="18dp"></TextView>
 
         <TextView
             android:id="@+id/tvGiaBan"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="$150"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:textSize="20dp"></TextView>
+            android:textSize="18dp"></TextView>
 
         <TextView
             android:id="@+id/tvDiaChi"
-            android:layout_width="150dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Thiên Ân"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginLeft="5dp"
-            android:textSize="20dp"></TextView>
+            android:textSize="18dp"></TextView>
     </LinearLayout>
 
     <LinearLayout
@@ -73,7 +73,7 @@
             android:layout_marginTop="35dp"
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
-            android:textSize="25dp"
+            android:textSize="20sp"
             android:textStyle="bold|italic"></TextView>
     </LinearLayout>
 </LinearLayout>

@@ -30,6 +30,7 @@ public class Staff_inform extends Fragment {
         btn_taikhoan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = new Intent(getActivity(), Change_account.class);
                 getActivity().startActivity(intent);
             }

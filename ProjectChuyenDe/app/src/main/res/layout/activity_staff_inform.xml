@@ -37,7 +37,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_manv"
             android:textSize="20dp" />
@@ -64,7 +64,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_tennv"
             android:textSize="20dp" />
@@ -89,7 +89,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_chucvu"
             android:textSize="20dp" />
@@ -114,7 +114,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_sdt"
             android:textSize="20dp" />
@@ -137,7 +137,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txtgioitinh"
             android:textSize="20dp" />
@@ -162,7 +162,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_Email"
             android:textSize="20dp" />
@@ -186,7 +186,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_diachi"
             android:textSize="20dp" />
@@ -210,7 +210,7 @@
             android:layout_width="250dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
-            android:background="@color/colorWhite"
+            android:background="@color/colorBlue"
             android:gravity="center"
             android:hint="@string/txt_luong"
             android:textSize="20dp" />
