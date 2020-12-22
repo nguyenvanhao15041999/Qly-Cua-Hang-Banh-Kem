@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.model.Banh;
 import com.example.projectchuyende.model.Nuoc;
@@ -37,21 +38,28 @@ public class NuocAdapter extends ArrayAdapter {
     //Hàm getView
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = LayoutInflater.from(getContext()).inflate(resource, null);
-        //Khai báo
-        TextView tvTenNuoc = view.findViewById(R.id.tvTenNuoc);
-        TextView tvGiaCa = view.findViewById(R.id.tvGiaBan);
-        TextView tvDiaChi = view.findViewById(R.id.tvDiaChi);
-        TextView tvGiam = view.findViewById(R.id.tvGiam);
-        ImageView imgAnhNuoc = view.findViewById(R.id.imgAnhNuoc);
+        View viewNuoc=convertView;
 
-        //Xử lý dữ liệu
-        Nuoc nuoc = data.get(position);
-        tvTenNuoc.setText(nuoc.getTenNuoc());
-        tvGiaCa.setText(nuoc.getGiaCa());
-        tvDiaChi.setText(nuoc.getDiaChi());
-        tvGiam.setText(nuoc.getGiam());
-        imgAnhNuoc.setImageResource(R.drawable.cocacola);
-        return view;
+        if (viewNuoc==null){
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            viewNuoc = inflater.inflate(R.layout.nuoc_listview, null);
+        }
+        Nuoc nuoc= (Nuoc) getItem(position);
+
+        if (nuoc != null) {
+
+            TextView TenBanh = viewNuoc.findViewById(R.id.tvTenNuoc);
+            TextView GiaCa = viewNuoc.findViewById(R.id.tvGiaBan);
+            TextView DiaChi = viewNuoc.findViewById(R.id.tvDiaChi);
+            TextView Giam = viewNuoc.findViewById(R.id.tvGiam);
+            ImageView imgAnhNuoc=viewNuoc.findViewById(R.id.imgAnhNuoc);
+
+            TenBanh.setText(nuoc.getTenNuoc());
+            DiaChi.setText(nuoc.getDiaChi());
+            GiaCa.setText(nuoc.getGiaCa());
+            Giam.setText(nuoc.getGiam());
+            Glide.with(getContext()).load(nuoc.getImgAnhNuoc()).into(imgAnhNuoc);
+        }
+        return viewNuoc;
     }
 }
