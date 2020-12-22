@@ -63,7 +63,7 @@ public class Nuoc {
     }
 
     public void setImgAnhNuoc(String imgAnhNuoc) {
-        imgAnhNuoc = imgAnhNuoc;
+        ImgAnhNuoc = imgAnhNuoc;
     }
 
     @Override
