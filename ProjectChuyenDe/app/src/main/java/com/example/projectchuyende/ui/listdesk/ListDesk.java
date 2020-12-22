@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,7 +76,7 @@ public class ListDesk extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
                 final AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
                 builderChucnang.setTitle("Chức Năng");
-                final String[] chucnang = {"Thêm", "Sửa", "Xóa"};
+                final String[] chucnang = {"Thông tin","Thêm", "Sửa", "Xóa"};
                 final AlertDialog.Builder builderThem = new AlertDialog.Builder(getActivity());
                 builderThem.setTitle(" Thêm bàn ");
                 final AlertDialog.Builder builderSua = new AlertDialog.Builder(getActivity());
@@ -84,6 +85,15 @@ public class ListDesk extends Fragment {
                     @Override
                     public void onClick(final DialogInterface dialogInterface, int i) {
                         switch (chucnang[i]) {
+                            case "Thông tin":
+                                Intent intent=new Intent(getActivity(),ThongTinban.class);
+                                desk=dataDesk.get(vitri);
+                                intent.putExtra("Tenban",desk.getTenBan());
+                                intent.putExtra("Songuoi",String.valueOf(desk.getSoNguoi()));
+                                intent.putExtra("Khuvuc",desk.getKhuVuc());
+                                intent.putExtra("Tinhtrang",desk.isTinhTrang());
+                                startActivity(intent);
+                                break;
                             case "Thêm":
                                 View customListdesk = getLayoutInflater().inflate(R.layout.dialog_listdesk_custom, null);
                                 builderThem.setView(customListdesk);

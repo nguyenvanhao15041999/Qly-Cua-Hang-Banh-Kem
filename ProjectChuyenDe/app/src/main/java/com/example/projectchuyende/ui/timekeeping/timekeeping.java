@@ -25,11 +25,10 @@ public class timekeeping extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_timekeeping, container, false);
-        lv_timeKeeping= root.findViewById(R.id.lv_timeKeeping);
-        setEvent();
-        // Inflate the layout for this fragment
+        lv_timeKeeping = root.findViewById(R.id.lv_timeKeeping);
 
-        return  root;
+        setEvent();
+        return root;
 
     }
 
@@ -37,7 +36,6 @@ public class timekeeping extends Fragment {
         TimeKeepingadapter = new ArrayAdapter(getContext(), R.layout.show_timekeeping, datatimeKeeping);
         lv_timeKeeping.setAdapter(TimeKeepingadapter);
     }
-
 
 
 }

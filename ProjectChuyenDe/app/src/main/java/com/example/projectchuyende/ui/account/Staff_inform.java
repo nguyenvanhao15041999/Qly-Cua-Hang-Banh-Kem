@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.example.projectchuyende.R;
 
@@ -20,6 +21,7 @@ public class Staff_inform extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.activity_staff_inform, container, false);
         btn_taikhoan = root.findViewById(R.id.btntaikhoan);
+
         setEvent();
         return root;
     }
