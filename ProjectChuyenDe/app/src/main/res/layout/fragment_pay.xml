@@ -57,7 +57,7 @@
 
                 <RadioButton
 
-                    android:id="@+id/radNam"
+                    android:id="@+id/radTrucTiep"
                     android:layout_width="200dp"
                     android:text="@string/radTrucTiep"
                     android:textStyle="bold"
@@ -67,7 +67,7 @@
                 </RadioButton>
                 <RadioButton
 
-                    android:id="@+id/radNu"
+                    android:id="@+id/radChuyenKhoan"
                     android:layout_width="200dp"
                     android:text="@string/radChuyenKhoan"
                     android:textStyle="bold"
@@ -79,7 +79,7 @@
         </LinearLayout>
 
 
-        <EditText
+        <TextView
             android:id="@+id/edtDanhGia"
             android:layout_width="340dp"
             android:layout_height="300dp"
