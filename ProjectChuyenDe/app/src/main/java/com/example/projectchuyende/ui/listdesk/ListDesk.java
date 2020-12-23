@@ -40,19 +40,36 @@ public class ListDesk extends Fragment {
     FirebaseListDesk firebaseListDesk;
     Desk desk;
     Dialog dialog;
+    Spinner spKhuvuc;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_listdesk, container, false);
         gv_ListDesk = root.findViewById(R.id.gv_listDesk);
+        spKhuvuc = root.findViewById(R.id.SplistDesk);
         firebaseListDesk = new FirebaseListDesk(getActivity());
+
+        spKhuvuc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                if (i == 0) {
+                    displayDesk();
+                } else {
+                    filter();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
         setEvent();
         return root;
     }
 
     private void setEvent() {
-
         if (deskAdapter == null) {
             firebaseListDesk.LoadListDesk(new FirebaseListDesk.IListener() {
                 @Override
@@ -76,7 +93,7 @@ public class ListDesk extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
                 final AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
                 builderChucnang.setTitle("Chức Năng");
-                final String[] chucnang = {"Thông tin","Thêm", "Sửa", "Xóa"};
+                final String[] chucnang = {"Thông tin", "Thêm", "Sửa", "Xóa"};
                 final AlertDialog.Builder builderThem = new AlertDialog.Builder(getActivity());
                 builderThem.setTitle(" Thêm bàn ");
                 final AlertDialog.Builder builderSua = new AlertDialog.Builder(getActivity());
@@ -86,12 +103,12 @@ public class ListDesk extends Fragment {
                     public void onClick(final DialogInterface dialogInterface, int i) {
                         switch (chucnang[i]) {
                             case "Thông tin":
-                                Intent intent=new Intent(getActivity(),ThongTinban.class);
-                                desk=dataDesk.get(vitri);
-                                intent.putExtra("Tenban",desk.getTenBan());
-                                intent.putExtra("Songuoi",String.valueOf(desk.getSoNguoi()));
-                                intent.putExtra("Khuvuc",desk.getKhuVuc());
-                                intent.putExtra("Tinhtrang",desk.isTinhTrang());
+                                Intent intent = new Intent(getActivity(), ThongTinban.class);
+                                desk = dataDesk.get(vitri);
+                                intent.putExtra("Tenban", desk.getTenBan());
+                                intent.putExtra("Songuoi", String.valueOf(desk.getSoNguoi()));
+                                intent.putExtra("Khuvuc", desk.getKhuVuc());
+                                intent.putExtra("Tinhtrang", desk.isTinhTrang());
                                 startActivity(intent);
                                 break;
                             case "Thêm":
@@ -140,7 +157,7 @@ public class ListDesk extends Fragment {
                                 btnDong.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        AlertDialog.Builder yesno= new AlertDialog.Builder(getActivity());
+                                        AlertDialog.Builder yesno = new AlertDialog.Builder(getActivity());
                                         yesno.setTitle("Thông báo!");
                                         yesno.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
                                             @Override
@@ -224,6 +241,39 @@ public class ListDesk extends Fragment {
                 });
                 AlertDialog dialogChucnang = builderChucnang.create();
                 dialogChucnang.show();
+            }
+        });
+    }
+
+    public void filter() {
+        String keyword = dataDesk.get(spKhuvuc.getSelectedItemPosition()).getMaBan();
+        ArrayList<Desk> temp = new ArrayList<>();
+        if (keyword.isEmpty()) {
+            displayDesk();
+        } else {
+            for (Desk dk : dataDesk) {
+                if (dk.getMaBan().toLowerCase().trim().equals(keyword.trim().toLowerCase())) {
+                    temp.add(dk);
+                }
+            }
+            deskAdapter = new DeskAdapter(getContext(), R.layout.show_listdesk, dataDesk);
+            gv_ListDesk.setAdapter(deskAdapter);
+        }
+    }
+
+    public void displayDesk() {
+        firebaseListDesk.LoadListDesk(new FirebaseListDesk.IListener() {
+            @Override
+            public void onSuccess() {
+                dataDesk.clear();
+                dataDesk.addAll(firebaseListDesk.getArrDesk());
+                deskAdapter = new DeskAdapter(getContext(), R.layout.show_listdesk, dataDesk);
+                gv_ListDesk.setAdapter(deskAdapter);
+            }
+
+            @Override
+            public void onFail() {
+
             }
         });
     }

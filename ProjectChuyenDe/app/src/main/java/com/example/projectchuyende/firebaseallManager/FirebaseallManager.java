@@ -2,6 +2,7 @@ package com.example.projectchuyende.firebaseallManager;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.Uri;
 
 import androidx.annotation.NonNull;
 
@@ -18,8 +19,10 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class FirebaseallManager {
     public static final String Nhan_Vien = "Nhan_Vien";
@@ -120,7 +123,7 @@ public class FirebaseallManager {
         });
     }
 
-    public void xoaNhanvien(String id, final FirebaseallManager.IListener listener){
+    public void xoaNhanvien(String id, final FirebaseallManager.IListener listener) {
         showLoading(true);
         mDatabase.child(Nhan_Vien).child(id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
@@ -135,6 +138,31 @@ public class FirebaseallManager {
             }
         });
     }
+
+    public void uploadFile(Uri uri, final IListenerUploadFile listener) {
+        showLoading(true);
+        final StorageReference reference = storageReference.child("img/" + UUID.randomUUID().toString());
+        reference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                reference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                    @Override
+                    public void onSuccess(Uri uri) {
+                        Uri downloadUrl = uri;
+                        String imgURL = downloadUrl.toString();
+                        listener.onSuccess(imgURL);
+                    }
+                });
+                showLoading(false);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onFail();
+            }
+        });
+    }
+
 
     public interface IListener {
         void onSuccess();

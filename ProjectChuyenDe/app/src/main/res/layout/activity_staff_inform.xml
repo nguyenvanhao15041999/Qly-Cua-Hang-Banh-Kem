@@ -8,7 +8,7 @@
     tools:context=".ui.account.Staff_inform">
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="100dp"
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
