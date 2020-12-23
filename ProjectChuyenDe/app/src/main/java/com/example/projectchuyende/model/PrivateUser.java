@@ -1,23 +1,25 @@
 package com.example.projectchuyende.model;
 
-public class PrivateUser {
-    private String userID;
+import java.io.Serializable;
+
+public class PrivateUser implements Serializable {
+    private String user;
     private String password;
 
     public PrivateUser() {
     }
 
-    public PrivateUser(String userID, String password) {
-        this.userID = userID;
+    public PrivateUser(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
-    public String getUserID() {
-        return userID;
+    public String getUser() {
+        return user;
     }
 
-    public void setUserID(String userID) {
-        this.userID = userID;
+    public void setUser(String user) {
+        this.user = user;
     }
 
     public String getPassword() {

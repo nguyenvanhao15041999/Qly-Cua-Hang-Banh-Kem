@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.projectchuyende.model.Dialog;
 import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.model.User;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -45,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvEmpJobTitle;
     private Menu menuNav;
     private MenuItem nav_signout, nav_signin;
-
 
 
     @Override
@@ -101,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
 //                        FirebaseAuth.getInstance().signOut();
-                        getIntent().putExtra("nguoidung", (String) null);
-                        finishAffinity();
+//                        getIntent().putExtra("nguoidung", (String) null);
+//                        finishAffinity();
+                        dialog();
                         return false;
                     }
                 });
@@ -129,8 +130,7 @@ public class MainActivity extends AppCompatActivity {
                     nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
-                            getIntent().putExtra("nhanvien", (String) null);
-                            finishAffinity();
+                            dialog();
                             return false;
 
                         }
@@ -151,16 +151,37 @@ public class MainActivity extends AppCompatActivity {
                     nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
-                            getIntent().putExtra("nhanvien", (String) null);
-                            finishAffinity();
+                            dialog();
                             return false;
                         }
                     });
 
                     tvEmpName.setText(nhanvien.getName());
                     tvEmpJobTitle.setText(nhanvien.getChucvu());
-                } else if ()
+                }
 
+            } else if (getIntent().getStringExtra("admin") != null) {
+                String username = getIntent().getStringExtra("admin");
+
+                navigationView.getMenu().clear();
+                navigationView.inflateMenu(R.menu.admin_menu);
+                // Menu item
+                nav_signout = menuNav.findItem(R.id.nav_signout);
+                nav_signout.setVisible(true);
+
+                nav_signin = menuNav.findItem(R.id.nav_signin);
+                nav_signin.setVisible(false);
+
+                nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        dialog();
+                        return false;
+                    }
+                });
+
+                tvEmpName.setText(username);
+                tvEmpJobTitle.setText("Admin");
             }
         }
     }
@@ -195,6 +216,30 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void dialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Thông báo!");
+        builder.setMessage("Bạn có muôn đăng xuất và thoát chương trình?");
+        builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                FirebaseAuth.getInstance().signOut();
+                getIntent().putExtra("nguoidung", (String) null);
+                Intent intent = new Intent();
+                intent.setClass(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+
+        builder.create().show();
+    }
 
 
 }
