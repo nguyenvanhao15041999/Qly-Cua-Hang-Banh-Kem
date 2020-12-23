@@ -8,11 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-
+import com.bumptech.glide.Glide;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.model.Banh;
-import com.example.projectchuyende.ui.home.HomeFragment;
 
 import java.util.ArrayList;
 
@@ -20,40 +18,50 @@ public class BanhAdapter extends ArrayAdapter {
     //Hàm Custom
     Context context;
     int resource;
-    ArrayList<Banh> data;
+    ArrayList<Banh> data_Banh;
 
-    public BanhAdapter(Context context, int resource, ArrayList<Banh> data) {
-        super(context, resource, data);
+    public BanhAdapter(Context context, int resource, ArrayList<Banh> data_Banh) {
+        super(context, resource, data_Banh);
         this.context = context;
         this.resource = resource;
-        this.data = data;
+        this.data_Banh = data_Banh;
     }
 
 
     //Hàm getCount
     @Override
     public int getCount() {
-        return data.size();
+        return data_Banh.size();
     }
 
     //Hàm getView
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View view = LayoutInflater.from(getContext()).inflate(resource, null);
-        //Khai báo
-        TextView tvTenBanh = view.findViewById(R.id.tvTenBanh);
-        TextView tvGiaCa = view.findViewById(R.id.tvGiaBan);
-        TextView tvDiaChi = view.findViewById(R.id.tvDiaChi);
-        TextView tvGiam = view.findViewById(R.id.tvGiam);
-        ImageView imgAnhBanh = view.findViewById(R.id.imgAnhBanh);
 
-        //Xử lý dữ liệu
-        Banh banh = data.get(position);
-        tvTenBanh.setText(banh.getTenBanh());
-        tvGiaCa.setText(banh.getGiaCa());
-        tvDiaChi.setText(banh.getDiaChi());
-        tvGiam.setText(banh.getGiam());
-        imgAnhBanh.setImageResource(R.drawable.banh);
-        return view;
+        View viewBanh=convertView;
+
+        if (viewBanh==null){
+            LayoutInflater inflater = LayoutInflater.from(getContext());
+            viewBanh = inflater.inflate(R.layout.banh_listview, null);
+        }
+        Banh banh= (Banh) getItem(position);
+
+        if (banh != null) {
+
+            TextView TenBanh = viewBanh.findViewById(R.id.tvTenBanh);
+            TextView GiaCa = viewBanh.findViewById(R.id.tvGiaBan);
+            TextView DiaChi = viewBanh.findViewById(R.id.tvDiaChi);
+            TextView Giam = viewBanh.findViewById(R.id.tvGiam);
+            ImageView imgAnhBanh=viewBanh.findViewById(R.id.imgAnhBanh);
+
+
+            TenBanh.setText(banh.getTenBanh());
+            DiaChi.setText(banh.getDiaChi());
+            GiaCa.setText(banh.getGiaCa());
+            Giam.setText(banh.getGiam());
+            Glide.with(getContext()).load(banh.getImgAnhBanh()).into(imgAnhBanh);
+
+        }
+        return viewBanh;
     }
 }

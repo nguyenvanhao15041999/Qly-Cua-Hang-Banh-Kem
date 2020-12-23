@@ -15,16 +15,16 @@
 
         <Spinner
             android:id="@+id/SpChonthang"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
             android:entries="@array/datathang" />
-
         <Spinner
             android:id="@+id/SpChonnam"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:entries="@array/datanam"/>
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:entries="@array/datanam" />
+
     </LinearLayout>
 
     <ListView

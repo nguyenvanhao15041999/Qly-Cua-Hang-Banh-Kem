@@ -4,24 +4,27 @@ public class Desk {
     private String TenBan;
     private String KhuVuc;
     private boolean TinhTrang;
-    private String MaBan;
+    private String maBan;
     private int SoNguoi;
 
     public Desk() {
 
     }
 
-    public Desk(String TenBan, boolean TinhTrang, int SoNguoi,String KhuVuc ) {
+    public Desk(String maBan) {
         super();
+        this.maBan = maBan;
+    }
+
+    public Desk(String TenBan, boolean TinhTrang, int SoNguoi, String KhuVuc, String maBan) {
+        super();
+        this.maBan = maBan;
         this.TenBan = TenBan;
         this.TinhTrang = TinhTrang;
-        this.SoNguoi=SoNguoi;
-        this.KhuVuc=KhuVuc;
+        this.SoNguoi = SoNguoi;
+        this.KhuVuc = KhuVuc;
     }
-    public Desk (String MaBan){
-        super();
-        this.MaBan=MaBan;
-    }
+
 
     @Override
     public String toString() {
@@ -29,7 +32,7 @@ public class Desk {
                 "TenBan='" + TenBan + '\'' +
                 ", KhuVuc='" + KhuVuc + '\'' +
                 ", TinhTrang=" + TinhTrang +
-                ", MaBan='" + MaBan + '\'' +
+                ", MaBan='" + maBan + '\'' +
                 ", SoNguoi=" + SoNguoi +
                 '}';
     }
@@ -59,11 +62,11 @@ public class Desk {
     }
 
     public String getMaBan() {
-        return MaBan;
+        return maBan;
     }
 
     public void setMaBan(String maBan) {
-        MaBan = maBan;
+        this.maBan = maBan;
     }
 
     public int getSoNguoi() {

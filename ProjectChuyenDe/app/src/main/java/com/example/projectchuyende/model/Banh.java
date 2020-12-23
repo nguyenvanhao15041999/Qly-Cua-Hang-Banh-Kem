@@ -1,7 +1,38 @@
 package com.example.projectchuyende.model;
 
 public class Banh {
-    String tenBanh, giaCa, diaChi, giam;
+    private String diaChi;
+    private String tenBanh;
+    private String giaCa;
+    private String giam;
+    private String ImgAnhBanh;
+
+
+    public Banh() {
+
+    }
+
+    public Banh(String tenBanh) {
+        super();
+        this.tenBanh= tenBanh;
+    }
+
+    public Banh(String tenBanh, String diaChi, String giaCa, String giam, String imgAnhBanh) {
+        super();
+        this.tenBanh = tenBanh;
+        this.diaChi = diaChi;
+        this.giaCa = giaCa;
+        this.giam = giam;
+        this.ImgAnhBanh = imgAnhBanh;
+    }
+
+    public String getDiaChi() {
+        return diaChi;
+    }
+
+    public void setDiaChi(String diaChi) {
+        this.diaChi = diaChi;
+    }
 
     public String getTenBanh() {
         return tenBanh;
@@ -19,14 +50,6 @@ public class Banh {
         this.giaCa = giaCa;
     }
 
-    public String getDiaChi() {
-        return diaChi;
-    }
-
-    public void setDiaChi(String diaChi) {
-        this.diaChi = diaChi;
-    }
-
     public String getGiam() {
         return giam;
     }
@@ -35,13 +58,23 @@ public class Banh {
         this.giam = giam;
     }
 
+    public String getImgAnhBanh() {
+        return ImgAnhBanh;
+    }
+
+    public void setImgAnhBanh(String imgAnhBanh) {
+        ImgAnhBanh = imgAnhBanh;
+    }
+
     @Override
     public String toString() {
         return "Banh{" +
-                "tenBanh='" + tenBanh + '\'' +
+                "diaChi='" + diaChi + '\'' +
+                ", tenBanh='" + tenBanh + '\'' +
                 ", giaCa='" + giaCa + '\'' +
-                ", diaChi='" + diaChi + '\'' +
                 ", giam='" + giam + '\'' +
+                ", ImgAnhBanh='" + ImgAnhBanh + '\'' +
                 '}';
     }
 }
+

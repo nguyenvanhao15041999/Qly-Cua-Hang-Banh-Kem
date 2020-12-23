@@ -38,7 +38,7 @@ public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
-        View viewNV=convertView;
+        View viewNV = convertView;
 
         if (viewNV==null){
             LayoutInflater inflater = LayoutInflater.from(getContext());

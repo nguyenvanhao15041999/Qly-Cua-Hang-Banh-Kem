@@ -3,11 +3,10 @@ package com.example.projectchuyende.ui.liststaff;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
-import android.app.DownloadManager;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,22 +14,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.projectchuyende.MainActivity;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.ListStaffAdapter;
 import com.example.projectchuyende.firebaseallManager.FirebaseallManager;
 import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.ui.account.Staff_inform;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
@@ -39,7 +31,7 @@ public class List_staff extends Fragment {
     ArrayList<Nhanvien> arrdata_listStaff = new ArrayList<>();
     ListStaffAdapter ListStaffadapter;
     FirebaseallManager firebaseallManager;
-
+    Nhanvien nhanvien;
 
     @Nullable
     @Override
@@ -47,6 +39,7 @@ public class List_staff extends Fragment {
         View root = inflater.inflate(R.layout.activity_list_staff, container, false);
         lv_listStaff = root.findViewById(R.id.lv_listStaff);
         firebaseallManager = new FirebaseallManager(getActivity());
+
         setEvent();
         return root;
 
@@ -74,7 +67,7 @@ public class List_staff extends Fragment {
 
         lv_listStaff.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
                 AlertDialog.Builder builderChucnang = new AlertDialog.Builder(getActivity());
                 builderChucnang.setTitle("Chức năng");
                 final String[] danhsachChucnang = {"Thông tin", "Xóa"};
@@ -83,10 +76,24 @@ public class List_staff extends Fragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsachChucnang[i]) {
                             case "Thông tin":
-                                Intent intent = new Intent(getContext(), Staff_inform.class);
-                                startActivity(intent);
+                                Staff_inform staff_inform = new Staff_inform();
+                                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                                fragmentTransaction.replace(R.id.chuyentrang, staff_inform);
+                                fragmentTransaction.commit();
                                 break;
                             default:
+                                nhanvien=arrdata_listStaff.get(vitri);
+                                firebaseallManager.xoaNhanvien(nhanvien.getMaNV(), new FirebaseallManager.IListener() {
+                                    @Override
+                                    public void onSuccess() {
+                                        Toast.makeText(getActivity(),"Xóa thành công",Toast.LENGTH_SHORT).show();
+                                    }
+
+                                    @Override
+                                    public void onFail() {
+
+                                    }
+                                });
                                 break;
                         }
                     }

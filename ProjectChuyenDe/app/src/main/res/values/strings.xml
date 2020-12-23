@@ -128,10 +128,11 @@
 
     <!--danh sach cac khu vuc-->
     <string-array name="Khuvuc">
-        <item>V1: Dành cho khách hàng ăn tại quán</item>
-        <item>V2: Dành cho học sinh, sinh viên</item>
-        <item>V3: Dành cho nhân viên văn phòng</item>
-        <item>V4: Dành cho đặt tiệc</item>
+        <item> Trống (*)</item>
+        <item> V1: Dành cho khách hàng ăn tại quán </item>
+        <item> V2: Dành cho học sinh, sinh viên </item>
+        <item> V3: Dành cho nhân viên văn phòng </item>
+        <item> V4: Dành cho đặt tiệc </item>
     </string-array>
 
     <!--    forgot pass-->
@@ -144,13 +145,18 @@
 
 
     <!--string list desk-->
-    <string name="txtTenban">Tên bàn (*)</string>
-    <string name="txtSonguoi">Số người (*)</string>
-    <string name="txtKhuvuc">Khu vực (*)</string>
+    <string name="txtTenban"> Tên bàn </string>
+    <string name="txtSonguoi"> Số người </string>
+    <string name="txtKhuvuc"> Khu vực </string>
+    <string name="txtTenbanLD">Tên bàn (*)</string>
+    <string name="txtSonguoiLD">Số người (*)</string>
+    <string name="txtKhuvucLD">Khu vực (*)</string>
     <string name="txthintTenban">Nhập tên bàn...</string>
-    <string name="txthintSonguoi">Nhập số người</string>
+    <string name="txthintSonguoi">Nhập số người...</string>
+    <string name="btnThemTTB"> Thêm</string>
 
     <string name="btnDongy"> Đồng ý </string>
+    <string name="btnDong">Đóng</string>
 
     <!--    Toolbar -->
     <string name="barDatTiec">Đặt Tiệc</string>

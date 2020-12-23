@@ -1,22 +1,29 @@
 package com.example.projectchuyende.model;
 
 public class Nuoc {
-    String tenNuoc, giaCa, diaChi, giam;
+    private String diaChi;
+    private String tenNuoc;
+    private String giaCa;
+    private String giam;
+    private String ImgAnhNuoc;
 
-    public String getTenNuoc() {
-        return tenNuoc;
+
+    public Nuoc() {
+
     }
 
-    public void setTenNuoc(String tenNuoc) {
+    public Nuoc(String tenNuoc) {
+        super();
+        this.tenNuoc= tenNuoc;
+    }
+
+    public Nuoc(String tenNuoc, String diaChi, String giaCa, String giam, String imgAnhNuoc) {
+        super();
         this.tenNuoc = tenNuoc;
-    }
-
-    public String getGiaCa() {
-        return giaCa;
-    }
-
-    public void setGiaCa(String giaCa) {
+        this.diaChi = diaChi;
         this.giaCa = giaCa;
+        this.giam = giam;
+        this.ImgAnhNuoc = imgAnhNuoc;
     }
 
     public String getDiaChi() {
@@ -27,6 +34,22 @@ public class Nuoc {
         this.diaChi = diaChi;
     }
 
+    public String getTenNuoc() {
+        return tenNuoc;
+    }
+
+    public void setTenNuoc(String tenBanh) {
+        this.tenNuoc = tenBanh;
+    }
+
+    public String getGiaCa() {
+        return giaCa;
+    }
+
+    public void setGiaCa(String giaCa) {
+        this.giaCa = giaCa;
+    }
+
     public String getGiam() {
         return giam;
     }
@@ -35,13 +58,23 @@ public class Nuoc {
         this.giam = giam;
     }
 
+    public String getImgAnhNuoc() {
+        return ImgAnhNuoc;
+    }
+
+    public void setImgAnhNuoc(String imgAnhNuoc) {
+        ImgAnhNuoc = imgAnhNuoc;
+    }
+
     @Override
     public String toString() {
-        return "Banh{" +
-                "tenNuoc='" + tenNuoc + '\'' +
+        return "Nuoc{" +
+                "diaChi='" + diaChi + '\'' +
+                ", tenNuoc='" + tenNuoc + '\'' +
                 ", giaCa='" + giaCa + '\'' +
-                ", diaChi='" + diaChi + '\'' +
                 ", giam='" + giam + '\'' +
+                ", ImgAnhNuoc='" + ImgAnhNuoc + '\'' +
                 '}';
     }
 }
+
