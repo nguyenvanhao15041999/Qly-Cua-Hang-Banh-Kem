@@ -35,7 +35,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <TextView
+        <EditText
             android:id="@+id/edtTenSanPham"
             android:layout_width="350dp"
             android:layout_height="40dp"
@@ -59,7 +59,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <TextView
+        <EditText
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:id="@+id/edtLoaiSanPham"
@@ -86,7 +86,7 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <TextView
+        <EditText
             android:id="@+id/edtDiaChi"
             android:layout_width="350dp"
             android:layout_height="40dp"
@@ -111,8 +111,8 @@
             android:textSize="20dp"
             android:layout_marginStart="20dp" />
 
-        <TextView
-            android:id="@+id/txtGia"
+        <EditText
+            android:id="@+id/edtGia"
             android:layout_width="350dp"
             android:layout_height="40dp"
             android:layout_marginStart="35dp"
@@ -136,10 +136,10 @@
             android:layout_marginStart="20dp" />
 
 
-        <TextView
+        <EditText
             android:layout_width="350dp"
             android:layout_height="100dp"
-            android:id="@+id/txtHinhAnh"
+            android:id="@+id/edtHinhAnh"
             android:layout_marginStart="35dp"
             android:background="@color/colorWhite"
             android:gravity="center"
@@ -158,6 +158,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/btnSuaMon"
-             />
+            />
     </LinearLayout>
 </LinearLayout>

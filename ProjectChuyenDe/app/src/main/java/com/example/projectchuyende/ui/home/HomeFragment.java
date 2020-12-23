@@ -1,5 +1,7 @@
 package com.example.projectchuyende.ui.home;
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -8,10 +10,14 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
+
+import com.example.projectchuyende.MainActivity;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.BanhAdapter;
 import com.example.projectchuyende.adapter.NuocAdapter;
@@ -39,8 +45,13 @@ public class HomeFragment extends Fragment {
         btnBanh = root.findViewById(R.id.btnBanh);
         btnNuocUong = root.findViewById(R.id.btnNuoc);
         lvDanhSach = root.findViewById(R.id.lvDanhsachHome);
+        //lvDanhSach.setOnItemLongClickListener(new ItemLongClickRemove());
         setEvent();
+
+
         return root;
+
+
     }
 
     public void setEvent() {
@@ -50,7 +61,7 @@ public class HomeFragment extends Fragment {
         //Gọi dữ liệu lên màn hình
         customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
         lvDanhSach.setAdapter(customAdapter_banh);
-        
+
         btnKhu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,6 +95,8 @@ public class HomeFragment extends Fragment {
                 lvDanhSach.setAdapter(customAdapter_nuoc);
             }
         });
+
+
     }
 
     // Tạo dữ liệu
@@ -170,4 +183,59 @@ public class HomeFragment extends Fragment {
         data_nuoc.add(nuoc4);
     }
 
+    /**private class ItemLongClickRemove implements AdapterView.OnItemLongClickListener {
+        @Override
+        public boolean onItemLongClick(AdapterView parent, View view, final int position, long id) {
+            //Tạo đối tượng
+            AlertDialog.Builder b = new AlertDialog.Builder(getActivity());
+//Thiết lập tiêu đề
+            b.setTitle("Xác nhận");
+            b.setMessage("Bạn có đồng ý thoát chương trình không?");
+// Nút Ok
+            b.setPositiveButton("Đồng ý", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                   // finish();
+                }
+            });
+//Nút Cancel
+            b.setNegativeButton("Không đồng ý", new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+            });
+//Tạo dialog
+            AlertDialog al = b.create();
+//Hiển thị
+            al.show();
+
+            return (true);
+
+        }
+    }*/
+
+    /**private class ItemLongClickRemove implements AdapterView.OnItemLongClickListener {
+        @Override
+        public boolean onItemLongClick(AdapterView parent, View view, final int position, long id) {
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+            alertDialogBuilder.setMessage("Bán có muốn xóa sản phẩm này!");
+            alertDialogBuilder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    // xóa sp đang nhấn giữ
+                    SaleManager.get().getProducts().remove(position);
+                    //cập nhật lại listview
+                    adapter.notifyDataSetChanged();
+
+                }
+            });
+            alertDialogBuilder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //không làm gì
+                }
+            });
+            alertDialogBuilder.show();
+            return true;
+        }
+    }*/
 }

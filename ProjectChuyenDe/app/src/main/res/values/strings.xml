@@ -22,7 +22,7 @@
     <string name="edt_email">Enter your email...</string>
     <string name="edt_sdt">Enter your phonenumber...</string>
     <string name="edt_diachi">Enter your address...</string>
-<!--    admin-->
+    <!--    admin-->
     <string name="menu_taikhoanquanly">Tạo tài khoản quản lý</string>
     <string name="edtTk">Enter account...</string>
     <string name="menu_createmanager">Tạo tài khoản quản lý</string>
@@ -224,7 +224,6 @@
     <!--  Tạo Món  -->
     <string name="txtKhuyenMai">Khuyến Mãi</string>
     <string name="btnTaoMon">Tạo Món</string>
-
 
 
 </resources>
