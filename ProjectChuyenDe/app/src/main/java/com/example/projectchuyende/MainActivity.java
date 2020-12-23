@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.projectchuyende.model.Dialog;
+import com.example.projectchuyende.model.Nhan_Vien;
 import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.model.User;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -115,9 +116,9 @@ public class MainActivity extends AppCompatActivity {
             } else if (getIntent().getSerializableExtra("nhanvien") != null) {
                 isLogin = false;
 
-                Nhanvien nhanvien = (Nhanvien) getIntent().getSerializableExtra("nhanvien");
+                Nhan_Vien nhanvien = (Nhan_Vien) getIntent().getSerializableExtra("nhanvien");
 
-                if (nhanvien.getChucvu().equals("Nhân Viên")) {
+                if (nhanvien.getChucvu().equals("Nhân viên")) {
                     navigationView.getMenu().clear();
                     navigationView.inflateMenu(R.menu.nhanvien_menu);
                     // Menu item
@@ -136,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
 
-                    tvEmpName.setText(nhanvien.getName());
+                    tvEmpName.setText(nhanvien.getUser());
                     tvEmpJobTitle.setText(nhanvien.getChucvu());
                 } else if (nhanvien.getChucvu().equals("Quản Lý")) {
                     navigationView.getMenu().clear();
@@ -156,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     });
 
-                    tvEmpName.setText(nhanvien.getName());
+                    tvEmpName.setText(nhanvien.getUser());
                     tvEmpJobTitle.setText(nhanvien.getChucvu());
                 }
 

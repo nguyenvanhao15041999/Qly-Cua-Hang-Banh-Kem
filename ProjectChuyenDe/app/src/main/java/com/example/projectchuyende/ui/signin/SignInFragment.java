@@ -34,6 +34,7 @@ import com.example.projectchuyende.Preferences;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.activity.forgotpassword.ForgotPassWordActivity;
 import com.example.projectchuyende.activity.signup.SignUpActivity;
+import com.example.projectchuyende.model.Nhan_Vien;
 import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.model.PrivateUser;
 import com.example.projectchuyende.model.User;
@@ -249,7 +250,7 @@ public class SignInFragment extends Fragment {
             User nguoidung = snapshot.getValue(User.class);
             intent.putExtra(mess, nguoidung);
         } else if (mess.equals("nhanvien")) {
-            Nhanvien nhanvien = snapshot.getValue(Nhanvien.class);
+            Nhan_Vien nhanvien = snapshot.getValue(Nhan_Vien.class);
             intent.putExtra(mess, nhanvien);
         }
 
