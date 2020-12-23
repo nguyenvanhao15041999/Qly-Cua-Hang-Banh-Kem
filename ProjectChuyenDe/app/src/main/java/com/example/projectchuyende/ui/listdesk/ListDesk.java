@@ -140,7 +140,16 @@ public class ListDesk extends Fragment {
                                 btnDong.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-
+                                        AlertDialog.Builder yesno= new AlertDialog.Builder(getActivity());
+                                        yesno.setTitle("Thông báo!");
+                                        yesno.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogyesno, int i) {
+                                                dialogInterface.dismiss();
+                                            }
+                                        });
+                                        yesno.create();
+                                        yesno.show();
                                     }
                                 });
                                 AlertDialog dialogThem = builderThem.create();

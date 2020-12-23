@@ -152,10 +152,11 @@
     <string name="txtSonguoiLD">Số người (*)</string>
     <string name="txtKhuvucLD">Khu vực (*)</string>
     <string name="txthintTenban">Nhập tên bàn...</string>
-    <string name="txthintSonguoi">Nhập số người</string>
+    <string name="txthintSonguoi">Nhập số người...</string>
     <string name="btnThemTTB"> Thêm</string>
 
     <string name="btnDongy"> Đồng ý </string>
+    <string name="btnDong">Đóng</string>
 
     <!--    Toolbar -->
     <string name="barDatTiec">Đặt Tiệc</string>
