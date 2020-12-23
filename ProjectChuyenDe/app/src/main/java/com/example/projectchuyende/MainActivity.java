@@ -94,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
 //                        FirebaseAuth.getInstance().signOut();
+                        getIntent().putExtra("nguoidung", (String) null);
                         finishAffinity();
                         return false;
                     }
@@ -121,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
                     nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
+                            getIntent().putExtra("nhanvien", (String) null);
                             finishAffinity();
                             return false;
 
@@ -142,6 +144,7 @@ public class MainActivity extends AppCompatActivity {
                     nav_signout.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
                         @Override
                         public boolean onMenuItemClick(MenuItem item) {
+                            getIntent().putExtra("nhanvien", (String) null);
                             finishAffinity();
                             return false;
                         }
@@ -149,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
 
                     tvEmpName.setText(nhanvien.getName());
                     tvEmpJobTitle.setText(nhanvien.getChucvu());
-                }
+                } else if ()
 
             }
         }
