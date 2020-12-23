@@ -54,6 +54,7 @@ public class BanhAdapter extends ArrayAdapter {
             TextView Giam = viewBanh.findViewById(R.id.tvGiam);
             ImageView imgAnhBanh=viewBanh.findViewById(R.id.imgAnhBanh);
 
+
             TenBanh.setText(banh.getTenBanh());
             DiaChi.setText(banh.getDiaChi());
             GiaCa.setText(banh.getGiaCa());
