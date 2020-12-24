@@ -19,6 +19,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,6 +34,7 @@ import com.example.projectchuyende.Preferences;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.activity.forgotpassword.ForgotPassWordActivity;
 import com.example.projectchuyende.activity.signup.SignUpActivity;
+import com.example.projectchuyende.model.Nhan_Vien;
 import com.example.projectchuyende.model.Nhanvien;
 import com.example.projectchuyende.model.PrivateUser;
 import com.example.projectchuyende.model.User;
@@ -48,6 +50,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -61,6 +64,8 @@ public class SignInFragment extends Fragment {
     CheckBox chkPass;
     private FirebaseAuth firebaseAuth;
     Intent intent;
+    RadioGroup rbtngChonLoaiTK;
+    FirebaseUser user;
 
     @Nullable
     @Override
@@ -70,11 +75,14 @@ public class SignInFragment extends Fragment {
         tvForgotpass = root.findViewById(R.id.tvForgotpassword);
         edtAccount = root.findViewById(R.id.edtAccount);
         textView = root.findViewById(R.id.textView);
+        rbtngChonLoaiTK = root.findViewById(R.id.rbtngChonLoaiTK);
 
         edtPassword = root.findViewById(R.id.edtPassword);
         btnSignin = root.findViewById(R.id.btnSignin);
         chkPass = root.findViewById(R.id.showPasss);
+
         firebaseAuth = FirebaseAuth.getInstance();
+
         intent = getActivity().getIntent();
         validateEmail();
         showPassword();
@@ -82,6 +90,7 @@ public class SignInFragment extends Fragment {
         return root;
 
     }
+
     public final static boolean isValidEmail(CharSequence target) {
         if (TextUtils.isEmpty(target)) {
             return false;
@@ -89,6 +98,7 @@ public class SignInFragment extends Fragment {
             return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
         }
     }
+
     // Validate emmail
     public void validateEmail() {
         //final String email = edtAccount.getText().toString().trim();
@@ -105,14 +115,12 @@ public class SignInFragment extends Fragment {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if(isValidEmail(edtAccount.getText().toString().trim())){
-                    Toast.makeText(getContext(), "Ban nhap dung email", Toast.LENGTH_SHORT).show();
-                    textView.setText("Đúng email");
-                    textView.setTextColor(Color.parseColor("   #00FF00"));
-                }else{
-                    Toast.makeText(getContext(), "Ban nhap sai email", Toast.LENGTH_SHORT).show();
+                if (isValidEmail(edtAccount.getText().toString().trim())) {
+                    textView.setText("Nhập Đúng email");
+
+                } else {
                     textView.setText("Nhập sai email");
-                    textView.setTextColor(Color.parseColor("#FF0000"));
+
                 }
             }
         });
@@ -156,40 +164,30 @@ public class SignInFragment extends Fragment {
                 String username = edtAccount.getText().toString(); // username = email
                 String password = edtPassword.getText().toString();
                 if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
-                    if (EmailValidator.isValidEmail(username) == false) {
-                        final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-                        DatabaseReference reference = firebaseDatabase.getReference("PrivateUsers");
-                        reference.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                PrivateUser privateUser = snapshot.getValue(PrivateUser.class);
-                                MainActivity.isLogin = true;
-                                DatabaseReference ref = firebaseDatabase.getReference("Nhan_Vien");
-                                ref.child(privateUser.getUserID()).addListenerForSingleValueEvent(new ValueEventListener() {
-                                    @Override
-                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                        Nhanvien nhanvien = snapshot.getValue(Nhanvien.class);
-                                        Intent intent = getActivity().getIntent();
-                                        intent.setClass(getActivity(), MainActivity.class);
-                                        intent.putExtra("nhanvien", nhanvien);
-                                        getActivity().startActivity(intent);
-                                    }
-
-                                    @Override
-                                    public void onCancelled(@NonNull DatabaseError error) {
-                                        Toast.makeText(getActivity(), "Login failed 1!", Toast.LENGTH_SHORT).show();
-                                    }
-                                });
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError error) {
-                                Toast.makeText(getActivity(), "Login failed 2!", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    } else {
-                        login(username, password);
+                    switch (rbtngChonLoaiTK.getCheckedRadioButtonId()) {
+                        case R.id.rbtnKH: {
+                            String table = "Users";
+                            String mess = "nguoidung";
+                            login(username, password, table, mess);
+                        }
+                        break;
+                        case R.id.rbtnNV: {
+                            String table = "Nhan_Vien";
+                            String mess = "nhanvien";
+                            login(username, password, table, mess);
+                        }
+                        break;
+                        case R.id.rbtnAdmin: {
+                            String table = "PrivateUsers";
+                            String mess = "admin";
+                            login(username, password, table, mess);
+                        }
+                        break;
+                        default: {
+                            Toast.makeText(getActivity(), "Chọn loại tài khoản đăng nhập!", Toast.LENGTH_SHORT).show();
+                        }
                     }
+
                 } else if (TextUtils.isEmpty(username)) {
                     edtAccount.setError("Account is invalid!");
                 } else if (TextUtils.isEmpty(password)) {
@@ -199,40 +197,72 @@ public class SignInFragment extends Fragment {
         });
     }
 
-    private void login(final String username, String password) {
+
+    private void login(final String username, String password, final String table, final String mess) {
         firebaseAuth.signInWithEmailAndPassword(username, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                     Log.d("signin", "Sign in success");
+                    Toast.makeText(getActivity(), "Sign in success", Toast.LENGTH_SHORT).show();
+                    user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    if (user.getUid() != null) {
+                        String userID = user.getUid();
+
+                        DatabaseReference ref = FirebaseDatabase.getInstance().getReference(table);
+                        ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+                            @Override
+                            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                if(mess.equals("admin")){
+                                    changeIntent(mess, username);
+                                }else {
+                                    changeIntent(mess, snapshot);
+                                }
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError error) {
+                                Toast.makeText(getActivity(), "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    } else {
+                        Toast.makeText(getActivity(), "Connecting to database is failed!", Toast.LENGTH_SHORT).show();
+                    }
+
                     MainActivity.isLogin = true;
                 } else {
                     Log.d("signin", "Sign in failed");
+                    Toast.makeText(getActivity(), "Sign in failed", Toast.LENGTH_SHORT).show();
                 }
             }
         });
 
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String userID = user.getUid();
 
-        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Users");
-        ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User nguoidung = snapshot.getValue(User.class);
-                Intent intent = getActivity().getIntent();
-                intent.setClass(getActivity(), MainActivity.class);
-                intent.putExtra("nguoidung", nguoidung);
-                getActivity().startActivity(intent);
-            }
+    }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+    private void changeIntent(String mess, DataSnapshot snapshot) {
+        Intent intent = getActivity().getIntent();
+        intent.setClass(getActivity(), MainActivity.class);
 
-            }
-        });
+        if (mess.equals("nguoidung")) {
+            User nguoidung = snapshot.getValue(User.class);
+            intent.putExtra(mess, nguoidung);
+        } else if (mess.equals("nhanvien")) {
+            Nhan_Vien nhanvien = snapshot.getValue(Nhan_Vien.class);
+            intent.putExtra(mess, nhanvien);
+        }
 
+        getActivity().startActivity(intent);
+
+    }
+
+    private void changeIntent(String mess, String username){
+        Intent intent = getActivity().getIntent();
+        intent.setClass(getActivity(), MainActivity.class);
+        intent.putExtra(mess, username);
+        getActivity().startActivity(intent);
     }
 }
 

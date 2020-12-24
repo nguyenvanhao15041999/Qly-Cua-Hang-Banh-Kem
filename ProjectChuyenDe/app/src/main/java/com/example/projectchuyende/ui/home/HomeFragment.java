@@ -86,16 +86,16 @@ public class HomeFragment extends Fragment {
 
         //
         if (customAdapter_nuoc == null) {
-            FirebaseNuoc.LoadDSNuoc(new FirebaseNuoc.IListener() {
-                @Override
-                public void onSuccess() {
-                    data_nuoc.addAll(FirebaseNuoc.getArrNuoc());
-                    customAdapter_nuoc = new NuocAdapter(getActivity(), R.layout.nuoc_listview, data_nuoc);
-                    lvDanhSach.setAdapter(customAdapter_nuoc);
-                }
-                @Override
-                public void onFail() {}
-            });
+//            FirebaseNuoc.LoadDSNuoc(new FirebaseNuoc.IListener() {
+//                @Override
+//                public void onSuccess() {
+//                    data_nuoc.addAll(FirebaseNuoc.getArrNuoc());
+//                    customAdapter_nuoc = new NuocAdapter(getActivity(), R.layout.nuoc_listview, data_nuoc);
+//                    lvDanhSach.setAdapter(customAdapter_nuoc);
+//                }
+//                @Override
+//                public void onFail() {}
+//            });
         }
         else {customAdapter_banh.notifyDataSetChanged();
         }

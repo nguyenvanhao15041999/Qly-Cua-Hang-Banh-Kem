@@ -231,5 +231,9 @@
     <string name="txtKhuyenMai">Khuyến Mãi</string>
     <string name="btnTaoMon">Tạo Món</string>
 
+    <!-- Chọn loại tài khoản -->
+    <string name="rbtnNV">Nhân viên</string>
+    <string name="rbtnKH">Khách hàng</string>
+    <string name="rbtnAdmin">Admimn</string>
 
 </resources>
