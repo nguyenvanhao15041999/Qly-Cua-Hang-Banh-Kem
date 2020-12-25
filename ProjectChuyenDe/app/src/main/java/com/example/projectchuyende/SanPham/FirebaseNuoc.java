@@ -24,14 +24,10 @@ public class FirebaseNuoc {
     StorageReference storageReference;
 
     ArrayList<Nuoc> arrNuoc;
-
-
     public ArrayList<Nuoc> getArrNuoc() { return arrNuoc; }
-
     public void setArrNuoc(ArrayList<Nuoc> arrNuoc) {
         this.arrNuoc = arrNuoc;
     }
-
     private ProgressDialog dialog;
 
     public FirebaseNuoc(Context context) {
@@ -47,16 +43,15 @@ public class FirebaseNuoc {
 
     public interface IListener {
         void onSuccess();
-
         void onFail();
     }
 
     public interface IListenerUploadFile {
         void onSuccess(String url);
-
         void onFail();
     }
 
+    //Xử lý truyền dữ liệu Nước Uống từ Firebase xuống
     public void LoadDSNuoc(final FirebaseNuoc.IListener iListener) {
         mDatabaseNuoc.child(SanPhamNuoc).addValueEventListener(new ValueEventListener() {
             @Override
