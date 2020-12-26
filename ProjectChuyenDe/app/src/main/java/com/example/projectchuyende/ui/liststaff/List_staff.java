@@ -78,7 +78,7 @@ public class List_staff extends Fragment {
                             case "Thông tin":
                                 Staff_inform staff_inform = new Staff_inform();
                                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.chuyentrang, staff_inform);
+                                fragmentTransaction.replace(R.id.lnListstaff, staff_inform);
                                 fragmentTransaction.commit();
                                 break;
                             default:

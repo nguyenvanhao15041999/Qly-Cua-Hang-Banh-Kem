@@ -61,7 +61,7 @@ public class Change_account extends AppCompatActivity {
                 String manv = edtManv.getText().toString();
                 String tennv = edtTennv.getText().toString();
                 String sdt = edtsdt.getText().toString();
-                String user = edtsdt.getText().toString();
+                String user = edtTaikhoan.getText().toString();
                 String password = edtmatkhau.getText().toString();
                 String email = edt_email.getText().toString();
                 String address = edtAdress.getText().toString();
@@ -100,7 +100,7 @@ public class Change_account extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                     String userId = firebaseUser.getUid();
-                    databaseReference = FirebaseDatabase.getInstance().getReference("User_NhanVien").child(userId);
+                    databaseReference = FirebaseDatabase.getInstance().getReference("Nhan_Vien").child(userId);
 
                     HashMap<String, String> hashMap = new HashMap<>();
                     hashMap.put("userId", userId);
