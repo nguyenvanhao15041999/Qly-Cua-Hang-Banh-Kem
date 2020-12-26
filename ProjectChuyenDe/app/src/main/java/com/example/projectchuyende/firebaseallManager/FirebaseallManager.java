@@ -6,8 +6,7 @@ import android.net.Uri;
 
 import androidx.annotation.NonNull;
 
-import com.example.projectchuyende.model.Desk;
-import com.example.projectchuyende.model.Nhanvien;
+import com.example.projectchuyende.model.Nhan_Vien;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -32,13 +31,13 @@ public class FirebaseallManager {
     FirebaseStorage storage;
     StorageReference storageReference;
 
-    ArrayList<Nhanvien> arrNhanvien;
+    ArrayList<Nhan_Vien> arrNhanvien;
 
-    public ArrayList<Nhanvien> getArrNhanvien() {
+    public ArrayList<Nhan_Vien> getArrNhanvien() {
         return arrNhanvien;
     }
 
-    public void setArrNhanvien(ArrayList<Nhanvien> arrNhanvien) {
+    public void setArrNhanvien(ArrayList<Nhan_Vien> arrNhanvien) {
         this.arrNhanvien = arrNhanvien;
     }
 
@@ -72,10 +71,10 @@ public class FirebaseallManager {
         mDatabase.child(Nhan_Vien).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                Nhanvien nhanvien;
-                arrNhanvien = new ArrayList<Nhanvien>();
+                Nhan_Vien nhanvien;
+                arrNhanvien = new ArrayList<Nhan_Vien>();
                 for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    nhanvien = ds.getValue(Nhanvien.class);
+                    nhanvien = ds.getValue(Nhan_Vien.class);
                     arrNhanvien.add(nhanvien);
                 }
                 listener.onSuccess();
@@ -89,11 +88,11 @@ public class FirebaseallManager {
         });
     }
 
-    public void ThemNhanvien(Nhanvien nhanvien, final FirebaseallManager.IListener iListener) {
+    public void ThemNhanvien(Nhan_Vien nhanvien, final FirebaseallManager.IListener iListener) {
         showLoading(true);
         String id = mDatabase.child(Nhan_Vien).push().getKey();
-        nhanvien.setMaNV(id);
-        mDatabase.child(Nhan_Vien).child(nhanvien.getMaNV()).setValue(nhanvien).addOnSuccessListener(new OnSuccessListener<Void>() {
+        nhanvien.setUserId(id);
+        mDatabase.child(Nhan_Vien).child(nhanvien.getUserId()).setValue(nhanvien).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 showLoading(false);
@@ -107,7 +106,7 @@ public class FirebaseallManager {
         });
     }
 
-    public void SuaNhanvien(String ID, Nhanvien nhanvien, final FirebaseallManager.IListener iListener) {
+    public void SuaNhanvien(String ID, Nhan_Vien nhanvien, final FirebaseallManager.IListener iListener) {
         showLoading(true);
         mDatabase.child(Nhan_Vien).child(ID).setValue(nhanvien).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
