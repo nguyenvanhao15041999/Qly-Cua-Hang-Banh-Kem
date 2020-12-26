@@ -57,6 +57,7 @@
         android:layout_gravity="end"
         app:mrl_rippleAlpha="0.1"
         app:mrl_rippleColor="@color/colorBlack"
+
         app:mrl_rippleDelayClick="true"
         app:mrl_rippleDimension="10dp"
         app:mrl_rippleDuration="400"

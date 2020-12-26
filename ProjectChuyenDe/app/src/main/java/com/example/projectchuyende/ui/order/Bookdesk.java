@@ -1,6 +1,7 @@
 package com.example.projectchuyende.ui.order;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -13,6 +14,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,7 +39,9 @@ public class Bookdesk extends AppCompatActivity {
         btnDat= findViewById(R.id.btnDat);
         btnHuy= findViewById(R.id.btnHuy);
         setSupportActionBar(toolbar);
+
         setEvent();
+        ActionBar actionBar = getSupportActionBar();
     }
 
     public void setEvent() {
@@ -78,5 +82,30 @@ public class Bookdesk extends AppCompatActivity {
                     dialog.show();
                 }
             });
-        }
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    //thoat app
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.exit:
+                Intent intent = new Intent(Intent.ACTION_MAIN);
+                intent.addCategory(Intent.CATEGORY_HOME);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+

@@ -25,17 +25,13 @@ public class FirebaseBanh {
     StorageReference storageReference;
 
     ArrayList<Banh> arrBanh;
-
     public ArrayList<Banh> getArrBanh() {
         return arrBanh;
     }
-
     public void setArrBanh(ArrayList<Banh> arrBanh) {
         this.arrBanh = arrBanh;
     }
-
     private ProgressDialog dialog;
-
     public FirebaseBanh(Context context) {
         this.context = context;
         dialog = new ProgressDialog(context);
@@ -46,19 +42,17 @@ public class FirebaseBanh {
         arrBanh = new ArrayList<>();
     }
 
-
     public interface IListener {
         void onSuccess();
-
         void onFail();
     }
 
     public interface IListenerUploadFile {
         void onSuccess(String url);
-
         void onFail();
     }
 
+    //Xử lý truyền dữ liệu Bánh từ Firebase xuống
     public void LoadDSBanh(final FirebaseBanh.IListener iListener) {
         mDatabaseBanh.child(SanPhamBanh).addValueEventListener(new ValueEventListener() {
             @Override
