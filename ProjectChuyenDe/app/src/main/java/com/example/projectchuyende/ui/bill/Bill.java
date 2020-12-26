@@ -69,5 +69,7 @@ public class Bill extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+
     }
 }
