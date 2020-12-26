@@ -4,34 +4,31 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.adapter.ListStaffAdapter;
 import com.example.projectchuyende.firebaseallManager.FirebaseallManager;
-import com.example.projectchuyende.model.Nhanvien;
+import com.example.projectchuyende.model.Nhan_Vien;
 import com.example.projectchuyende.ui.account.Staff_inform;
 
 import java.util.ArrayList;
 
 public class List_staff extends Fragment {
     ListView lv_listStaff;
-    ArrayList<Nhanvien> arrdata_listStaff = new ArrayList<>();
+    ArrayList<Nhan_Vien> arrdata_listStaff = new ArrayList<>();
     ListStaffAdapter ListStaffadapter;
     FirebaseallManager firebaseallManager;
-    Nhanvien nhanvien;
+    Nhan_Vien nhanvien;
 
     @Nullable
     @Override
@@ -78,12 +75,12 @@ public class List_staff extends Fragment {
                             case "Thông tin":
                                 Staff_inform staff_inform = new Staff_inform();
                                 FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
-                                fragmentTransaction.replace(R.id.chuyentrang, staff_inform);
+                                fragmentTransaction.replace(R.id.lnListstaff, staff_inform);
                                 fragmentTransaction.commit();
                                 break;
                             default:
                                 nhanvien=arrdata_listStaff.get(vitri);
-                                firebaseallManager.xoaNhanvien(nhanvien.getMaNV(), new FirebaseallManager.IListener() {
+                                firebaseallManager.xoaNhanvien(nhanvien.getUserId(), new FirebaseallManager.IListener() {
                                     @Override
                                     public void onSuccess() {
                                         Toast.makeText(getActivity(),"Xóa thành công",Toast.LENGTH_SHORT).show();

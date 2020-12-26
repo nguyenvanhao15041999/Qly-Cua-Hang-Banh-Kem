@@ -3,9 +3,7 @@ package com.example.projectchuyende.ui.account;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -14,8 +12,6 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.example.projectchuyende.R;
-import com.example.projectchuyende.activity.signup.SignUpActivity;
-import com.example.projectchuyende.model.Nhanvien;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -61,7 +57,7 @@ public class Change_account extends AppCompatActivity {
                 String manv = edtManv.getText().toString();
                 String tennv = edtTennv.getText().toString();
                 String sdt = edtsdt.getText().toString();
-                String user = edtsdt.getText().toString();
+                String user = edtTaikhoan.getText().toString();
                 String password = edtmatkhau.getText().toString();
                 String email = edt_email.getText().toString();
                 String address = edtAdress.getText().toString();
@@ -100,7 +96,7 @@ public class Change_account extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                     String userId = firebaseUser.getUid();
-                    databaseReference = FirebaseDatabase.getInstance().getReference("User_NhanVien").child(userId);
+                    databaseReference = FirebaseDatabase.getInstance().getReference("Nhan_Vien").child(userId);
 
                     HashMap<String, String> hashMap = new HashMap<>();
                     hashMap.put("userId", userId);

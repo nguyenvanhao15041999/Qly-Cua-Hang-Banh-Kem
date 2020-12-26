@@ -13,16 +13,16 @@ import androidx.annotation.Nullable;
 
 import com.bumptech.glide.Glide;
 import com.example.projectchuyende.R;
-import com.example.projectchuyende.model.Nhanvien;
+import com.example.projectchuyende.model.Nhan_Vien;
 
 import java.util.ArrayList;
 
-public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
+public class ListStaffAdapter extends ArrayAdapter<Nhan_Vien> {
     Context context;
     int resource;
-    ArrayList<Nhanvien> dataNhanvien;
+    ArrayList<Nhan_Vien> dataNhanvien;
 
-    public ListStaffAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Nhanvien> dataNhanvien) {
+    public ListStaffAdapter(@NonNull Context context, int resource, @NonNull ArrayList<Nhan_Vien> dataNhanvien) {
         super(context, resource, dataNhanvien);
         this.context = context;
         this.resource = resource;
@@ -40,18 +40,18 @@ public class ListStaffAdapter extends ArrayAdapter<Nhanvien> {
 
         View viewNV = convertView;
 
-        if (viewNV==null){
+        if (viewNV == null) {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             viewNV = inflater.inflate(R.layout.show_liststaff, null);
         }
-        Nhanvien nhanvien=getItem(position);
+        Nhan_Vien nhanvien = getItem(position);
         if (nhanvien != null) {
 
             TextView NameStaff = viewNV.findViewById(R.id.tv_nameStaff_LS);
             TextView MemberStaff = viewNV.findViewById(R.id.tv_MemberStaff_LS);
-            ImageView imgStaff=viewNV.findViewById(R.id.imgListStaff);
+            ImageView imgStaff = viewNV.findViewById(R.id.imgListStaff);
 
-            NameStaff.setText("Tên NV : " + nhanvien.getName());
+            NameStaff.setText("Tên NV : " + nhanvien.getTennv());
             MemberStaff.setText("Chức Vụ NV : " + nhanvien.getChucvu());
             Glide.with(getContext()).load(nhanvien.getImgURL()).into(imgStaff);
 
