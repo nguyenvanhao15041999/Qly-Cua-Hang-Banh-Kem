@@ -12,12 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".ui.editFood.EditFood"></activity>
-
-        <activity android:name=".ui.listdesk.ThongTinban"></activity>
+        <activity android:name=".ui.statistical.Thongke"></activity>
+        <activity android:name=".ui.editFood.EditFood" />
+        <activity android:name=".ui.listdesk.ThongTinban" />
         <activity android:name=".ui.liststaff.FromLStoSInfo" />
-
         <activity android:name=".ui.table.Table" />
         <activity android:name=".ui.bill.Bill" />
         <activity android:name=".ui.account.Product_chi_tiet" />

@@ -1,17 +1,13 @@
 package com.example.projectchuyende.ui.signin;
 
-import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
-import android.util.Patterns;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,19 +22,13 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.example.projectchuyende.MainActivity;
-import com.example.projectchuyende.Preferences;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.activity.forgotpassword.ForgotPassWordActivity;
 import com.example.projectchuyende.activity.signup.SignUpActivity;
 import com.example.projectchuyende.model.Nhan_Vien;
-import com.example.projectchuyende.model.Nhanvien;
-import com.example.projectchuyende.model.PrivateUser;
 import com.example.projectchuyende.model.User;
-import com.example.projectchuyende.validators.EmailValidator;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -49,10 +39,6 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-import java.util.Objects;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SignInFragment extends Fragment {
     Button btnSignup;

@@ -2,7 +2,7 @@
 <androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbarbookdesk"
+    android:id="@+id/toolbartable"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:layout_alignParentTop="true"
@@ -45,10 +45,27 @@
         android:layout_toRightOf="@+id/imgArrowLeft"
         android:ellipsize="end"
         android:maxLines="1"
-        android:text="Đặt Bàn"
+        android:text="Thống Kê"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/textSize" />
 
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/rippleMenu"
+        android:layout_width="?attr/actionBarSize"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="end"
+        app:mrl_rippleAlpha="0.1"
+        app:mrl_rippleColor="@color/colorBlack"
+        app:mrl_rippleDelayClick="true"
+        app:mrl_rippleDimension="10dp"
+        app:mrl_rippleDuration="400"
+        app:mrl_rippleFadeDuration="75"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleInAdapter="false"
+        app:mrl_rippleOverlay="true"
+        app:mrl_ripplePersistent="false"
+        app:mrl_rippleRoundedCorners="30dp">
 
+    </com.balysv.materialripple.MaterialRippleLayout>
     </androidx.appcompat.widget.Toolbar>
