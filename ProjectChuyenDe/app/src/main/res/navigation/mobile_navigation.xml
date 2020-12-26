@@ -55,12 +55,16 @@
     <fragment
         android:id="@+id/nav_thongtin"
         android:name="com.example.projectchuyende.ui.account.Staff_inform"
-        android:label="@string/menu_infor"
+        android:label="@string/menu_thongtinnhanvien"
         tools:layout="@layout/activity_staff_inform" />
     <fragment
         android:id="@+id/nav_taikhoanquanly"
         android:name="com.example.projectchuyende.ui.creatermanager.CreateManager"
         android:label="@string/menu_taikhoanquanly"
         tools:layout="@layout/create_manager_fragment" />
-
+    <fragment
+        android:id="@+id/nav_taonhanvien"
+        android:name="com.example.projectchuyende.ui.account.Change_account"
+        android:label="@string/menu_taonhanvien"
+        tools:layout="@layout/activity_change_account" />
 </navigation>

@@ -13,6 +13,10 @@
             android:icon="@drawable/listthongtinnhanvien"
             android:title="@string/menu_danhsachnhanvien" />
         <item
+            android:id="@+id/nav_taonhanvien"
+            android:icon="@drawable/ic_baseline_person_add_24"
+            android:title="@string/menu_taonhanvien" />
+        <item
             android:id="@+id/nav_thongkengaycong"
             android:icon="@drawable/thongke1"
             android:title="@string/menu_thongkengaycong" />
