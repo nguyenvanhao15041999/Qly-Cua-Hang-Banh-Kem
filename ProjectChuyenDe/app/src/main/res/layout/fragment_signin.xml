@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPink"
     tools:context=".ui.signin.SignInFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPink">
+        android:layout_height="match_parent"
+     >
 
         <ImageView
             android:id="@+id/imageView"
@@ -229,8 +230,6 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:text="@string/rbtnAdmin" />
-
         </RadioGroup>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
