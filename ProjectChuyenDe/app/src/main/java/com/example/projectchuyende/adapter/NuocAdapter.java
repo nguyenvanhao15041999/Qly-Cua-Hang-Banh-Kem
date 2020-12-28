@@ -53,12 +53,14 @@ public class NuocAdapter extends ArrayAdapter {
             TextView DiaChi = viewNuoc.findViewById(R.id.tvDiaChi);
             TextView Giam = viewNuoc.findViewById(R.id.tvGiam);
             ImageView imgAnhNuoc=viewNuoc.findViewById(R.id.imgAnhNuoc);
+            ImageView imgSale=viewNuoc.findViewById(R.id.imgSale);
 
             TenBanh.setText(nuoc.getTenNuoc());
             DiaChi.setText(nuoc.getDiaChi());
             GiaCa.setText(nuoc.getGiaCa());
             Giam.setText(nuoc.getGiam());
             Glide.with(getContext()).load(nuoc.getImgAnhNuoc()).into(imgAnhNuoc);
+            Glide.with(getContext()).load(nuoc.getImgSale()).into(imgSale);
         }
         return viewNuoc;
     }

@@ -75,7 +75,7 @@ public class ListDesk extends Fragment {
                 @Override
                 public void onSuccess() {
                     dataDesk.addAll(firebaseListDesk.getArrDesk());
-                    deskAdapter = new DeskAdapter(getContext(), R.layout.show_listdesk, dataDesk);
+                    deskAdapter = new DeskAdapter(getActivity(), R.layout.show_listdesk, dataDesk);
                     gv_ListDesk.setAdapter(deskAdapter);
                 }
 
@@ -157,16 +157,7 @@ public class ListDesk extends Fragment {
                                 btnDong.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
-                                        AlertDialog.Builder yesno = new AlertDialog.Builder(getActivity());
-                                        yesno.setTitle("Thông báo!");
-                                        yesno.setNegativeButton("Ok", new DialogInterface.OnClickListener() {
-                                            @Override
-                                            public void onClick(DialogInterface dialogyesno, int i) {
-                                                dialogInterface.dismiss();
-                                            }
-                                        });
-                                        yesno.create();
-                                        yesno.show();
+
                                     }
                                 });
                                 AlertDialog dialogThem = builderThem.create();
@@ -191,6 +182,7 @@ public class ListDesk extends Fragment {
                                 txtTenbanLD1.setText(desk.getTenBan());
                                 txtSonguoiLD1.setText(String.valueOf(desk.getSoNguoi()));
                                 spKhuVucLD1.setSelection(dataDesk.indexOf(desk.getKhuVuc()));
+
                                 dataDesk.clear();
                                 btnDongy1.setOnClickListener(new View.OnClickListener() {
                                     @Override

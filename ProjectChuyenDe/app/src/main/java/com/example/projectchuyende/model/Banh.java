@@ -6,6 +6,7 @@ public class Banh {
     private String giaCa;
     private String giam;
     private String ImgAnhBanh;
+    private String ImgSale;
 
 
     public Banh() {
@@ -17,13 +18,15 @@ public class Banh {
         this.tenBanh= tenBanh;
     }
 
-    public Banh(String tenBanh, String diaChi, String giaCa, String giam, String imgAnhBanh) {
+    public Banh(String tenBanh, String diaChi, String giaCa, String giam, String imgAnhBanh, String imgSale) {
         super();
         this.tenBanh = tenBanh;
         this.diaChi = diaChi;
         this.giaCa = giaCa;
         this.giam = giam;
         this.ImgAnhBanh = imgAnhBanh;
+        this.ImgSale = imgSale;
+
     }
 
     public String getDiaChi() {
@@ -66,6 +69,14 @@ public class Banh {
         ImgAnhBanh = imgAnhBanh;
     }
 
+    public String getImgSale() {
+        return ImgSale;
+    }
+
+    public void setImgSale(String imgSale) {
+        this.ImgSale = imgSale;
+    }
+
     @Override
     public String toString() {
         return "Banh{" +
@@ -74,6 +85,7 @@ public class Banh {
                 ", giaCa='" + giaCa + '\'' +
                 ", giam='" + giam + '\'' +
                 ", ImgAnhBanh='" + ImgAnhBanh + '\'' +
+                ", imgSale='" + ImgSale + '\'' +
                 '}';
     }
 }

@@ -53,6 +53,7 @@ public class BanhAdapter extends ArrayAdapter {
             TextView DiaChi = viewBanh.findViewById(R.id.tvDiaChi);
             TextView Giam = viewBanh.findViewById(R.id.tvGiam);
             ImageView imgAnhBanh=viewBanh.findViewById(R.id.imgAnhBanh);
+            ImageView imgSale=viewBanh.findViewById(R.id.imgSale);
 
 
             TenBanh.setText(banh.getTenBanh());
@@ -60,6 +61,7 @@ public class BanhAdapter extends ArrayAdapter {
             GiaCa.setText(banh.getGiaCa());
             Giam.setText(banh.getGiam());
             Glide.with(getContext()).load(banh.getImgAnhBanh()).into(imgAnhBanh);
+            Glide.with(getContext()).load(banh.getImgSale()).into(imgSale);
 
         }
         return viewBanh;

@@ -7,26 +7,27 @@ public class Nhan_Vien implements Serializable {
     private String Date;
     private String Email;
     private String EmployeeCode;
-    private String NhanVienId;
+    private String userId;
     private String Password;
     private String Phone;
-    private String Tennhanvien;
+    private String Tennv;
     private String User;
     private String permission;
+    private String imgURL;
 
     public Nhan_Vien() {
     }
 
-    public Nhan_Vien(String chucvu, String date, String email, String employeeCode, String nhanVienId, String password, String phone, String tennhanvien, String user, String permission) {
-        Chucvu = chucvu;
-        Date = date;
-        Email = email;
-        EmployeeCode = employeeCode;
-        NhanVienId = nhanVienId;
-        Password = password;
-        Phone = phone;
-        Tennhanvien = tennhanvien;
-        User = user;
+    public Nhan_Vien(String chucvu, String date, String email, String employeeCode, String userId, String password, String phone, String tennv, String user, String permission) {
+        this.Chucvu = chucvu;
+        this.Date = date;
+        this.Email = email;
+        this.EmployeeCode = employeeCode;
+        this.userId = userId;
+        this.Password = password;
+        this.Phone = phone;
+        this.Tennv = tennv;
+        this.User = user;
         this.permission = permission;
     }
 
@@ -62,12 +63,12 @@ public class Nhan_Vien implements Serializable {
         EmployeeCode = employeeCode;
     }
 
-    public String getNhanVienId() {
-        return NhanVienId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setNhanVienId(String nhanVienId) {
-        NhanVienId = nhanVienId;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getPassword() {
@@ -86,12 +87,12 @@ public class Nhan_Vien implements Serializable {
         Phone = phone;
     }
 
-    public String getTennhanvien() {
-        return Tennhanvien;
+    public String getTennv() {
+        return Tennv;
     }
 
-    public void setTennhanvien(String tennhanvien) {
-        Tennhanvien = tennhanvien;
+    public void setTennv(String tennv) {
+        Tennv = tennv;
     }
 
     public String getUser() {
@@ -108,5 +109,13 @@ public class Nhan_Vien implements Serializable {
 
     public void setPermission(String permission) {
         this.permission = permission;
+    }
+
+    public String getImgURL() {
+        return imgURL;
+    }
+
+    public void setImgURL(String imgURL) {
+        this.imgURL = imgURL;
     }
 }
