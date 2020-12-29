@@ -236,7 +236,7 @@
     <!-- Chọn loại tài khoản -->
     <string name="rbtnNV">Nhân viên</string>
     <string name="rbtnKH">Khách hàng</string>
-    <string name="rbtnAdmin">Admimn</string>
+    <string name="rbtnAdmin">Admin</string>
 
 
 </resources>
