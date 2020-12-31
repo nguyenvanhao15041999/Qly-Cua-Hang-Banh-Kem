@@ -10,15 +10,16 @@
         android:id="@+id/imageView3"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/cake"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"></ImageView>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
@@ -36,7 +37,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
                 <TextView
-
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/txtVersion"
@@ -143,6 +143,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/layout_marginTop"
                     android:text="@string/txtTutorial1"
+
                     android:textSize="@dimen/textSize"
                     android:textStyle="bold" />
             </LinearLayout>

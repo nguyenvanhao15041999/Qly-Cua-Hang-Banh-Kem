@@ -1,13 +1,18 @@
 package com.example.projectchuyende.ui.account;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
@@ -23,28 +28,32 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Objects;
 
-public class Change_account extends AppCompatActivity {
+public class Change_account extends Fragment {
     Button btntaotaikhoan;
     EditText edtManv, edtTennv, edtsdt, edtmatkhau, edtTaikhoan, edtAdress, edtchucvu,edt_email;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
+    RadioButton rdbnam, rdbnu, rdbNhanvien, rdbQuanly;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_change_account);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)  {
+        View root = inflater.inflate(R.layout.activity_change_account, container, false);
         firebaseAuth = FirebaseAuth.getInstance();
-        btntaotaikhoan = findViewById(R.id.btnTao);
-        edtManv = findViewById(R.id.txtmanv);
-        edt_email = findViewById(R.id.txtmail);
-        edtTennv = findViewById(R.id.txtHoTen);
-        edtsdt = findViewById(R.id.txtsdtnv);
-        edtTaikhoan = findViewById(R.id.txtAccount);
-        edtmatkhau = findViewById(R.id.txtpass);
-        edtAdress = findViewById(R.id.txtngaysinh);
-        edtchucvu = findViewById(R.id.txtchucvunv);
+        btntaotaikhoan = root.findViewById(R.id.btnTao);
+        edtManv =  root.findViewById(R.id.txtmanv);
+        rdbnam =  root.findViewById(R.id.txt_Nam);
+        rdbnu =  root.findViewById(R.id.txt_Nu);
+        rdbNhanvien =  root.findViewById(R.id.txt_Nhanvien);
+        rdbQuanly =  root.findViewById(R.id.txt_Quanly);
+        edt_email =  root.findViewById(R.id.txtmail);
+        edtTennv =  root.findViewById(R.id.txtHoTen);
+        edtsdt =  root.findViewById(R.id.txtsdtnv);
+        edtTaikhoan =  root.findViewById(R.id.txtAccount);
+        edtmatkhau =  root.findViewById(R.id.txtpass);
+        edtAdress =  root.findViewById(R.id.txtngaysinh);
         setControl();
-        Toolbar toolbar = findViewById(R.id.toolbar_forgotpassword);
+        Toolbar toolbar =  root.findViewById(R.id.toolbar_forgotpassword);
+        return  root;
     }
 
 
@@ -61,20 +70,25 @@ public class Change_account extends AppCompatActivity {
                 String password = edtmatkhau.getText().toString();
                 String email = edt_email.getText().toString();
                 String address = edtAdress.getText().toString();
-                String chucvu = edtchucvu.getText().toString();
+                String gioitinh="";
+                if (rdbnam.isChecked()){
+                    gioitinh=rdbnam.getText().toString();
+                }
+
+                if(rdbnu.isChecked()){
+                    gioitinh=rdbnu.getText().toString();
+                }
                 String permisstion = "user";
 
                 if (!TextUtils.isEmpty(user) && !TextUtils.isEmpty(password)
                         && !TextUtils.isEmpty(manv) && !TextUtils.isEmpty(tennv)
-                        && !TextUtils.isEmpty(chucvu) && !TextUtils.isEmpty(address)
+                         && !TextUtils.isEmpty(address)
                         && !TextUtils.isEmpty(sdt) && !TextUtils.isEmpty(email)) {
-                    register(manv, user, password, sdt, address, tennv, chucvu, email, permisstion);
+                    register(manv, user, password, sdt, address, tennv,  email,gioitinh, permisstion);
                 } else if (TextUtils.isEmpty(manv)) {
                     edtManv.setError("Employee code is invalid!");
                 } else if (TextUtils.isEmpty(tennv)) {
                     edtTennv.setError("Staff's name is invalid!");
-                } else if (TextUtils.isEmpty(chucvu)) {
-                    edtchucvu.setError("position is invalid!");
                 } else if (TextUtils.isEmpty(address)) {
                     edtAdress.setError("Address is invalid!");
                 } else if (TextUtils.isEmpty(sdt)) {
@@ -89,7 +103,7 @@ public class Change_account extends AppCompatActivity {
             }
         });
     }
-    private void register(final String manv, final String user, final String password, final String sdt, final String address, final String tennv, final String chucvu, final String email, String permisstion) {
+    private void register(final String manv, final String user, final String password, final String sdt, final String address, final String tennv, final String email, final String giotinh,String permisstion) {
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -106,23 +120,23 @@ public class Change_account extends AppCompatActivity {
                     hashMap.put("sdt", sdt);
                     hashMap.put("Email", email);
                     hashMap.put("Tennv", tennv);
-                    hashMap.put("Chucvu", chucvu);
                     hashMap.put("Password", password);
-
+                    hashMap.put("gioitinh", giotinh);
+                    hashMap.put("chucvu", "Nhân Viên");
                     databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if (task.isSuccessful()) {
-                                Toast.makeText(Change_account.this, "Tạo thành công!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Tạo thành công!", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(Change_account.this, "Lỗi!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), "Lỗi!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });
 
 
                 } else {
-                    Toast.makeText(Change_account.this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
         });

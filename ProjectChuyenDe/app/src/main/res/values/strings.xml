@@ -24,6 +24,7 @@
     <string name="edt_diachi">Enter your address...</string>
     <!--    admin-->
     <string name="menu_taikhoanquanly">Tạo tài khoản quản lý</string>
+
     <string name="edtTk">Enter account...</string>
     <string name="menu_createmanager">Tạo tài khoản quản lý</string>
     <!--    Menu quan ly -->
@@ -58,7 +59,8 @@
     <string name="btntaotaikhoan">Tạo tài khoản</string>
     <string name="motaSP2">Mô tả</string>
     <string name="btn_taikhoan">Tài khoản</string>
-
+    <string name="rdbQuanly">Quản lý</string>
+    <string name="rdbNhanvien">Nhân viên</string>
     <string name="edt_hoten">Enter your name</string>
     <string name="tv_ngaysinh">Ngày sinh</string>
     <string name="edtngaysinh">Enter your date...</string>
@@ -234,6 +236,7 @@
     <!-- Chọn loại tài khoản -->
     <string name="rbtnNV">Nhân viên</string>
     <string name="rbtnKH">Khách hàng</string>
-    <string name="rbtnAdmin">Admimn</string>
+    <string name="rbtnAdmin">Admin</string>
+
 
 </resources>
