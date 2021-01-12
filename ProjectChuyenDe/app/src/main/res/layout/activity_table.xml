@@ -51,80 +51,13 @@
             android:background="@color/colorWhite"
             android:entries="@array/Khuvuc" ></Spinner>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <GridView
+            android:id="@+id/gvBan"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/imgBan1"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/table_rong"></ImageView>
-
-            <ImageView
-                android:id="@+id/imgBan2"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/table_rong"></ImageView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/imgBan3"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/table_rong"></ImageView>
-
-            <ImageView
-                android:id="@+id/imgBan4"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/table_rong"></ImageView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/imgBan5"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_marginRight="20dp"
-                android:src="@drawable/table_rong"></ImageView>
-
-            <ImageView
-                android:id="@+id/imgBan6"
-                android:layout_width="120dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:src="@drawable/table_rong"></ImageView>
-        </LinearLayout>
+            android:layout_marginTop="10dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth" />
 
         <LinearLayout
             android:layout_width="match_parent"

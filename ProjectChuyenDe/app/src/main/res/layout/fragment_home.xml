@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPink"
+    android:id="@+id/avHomeFragment"
     tools:context=".ui.home.HomeFragment">
 
     <LinearLayout
@@ -45,7 +46,7 @@
         <ListView
             android:id="@+id/lvDanhsachHome"
             android:layout_width="match_parent"
-            android:layout_height="550dp"
+            android:layout_height="600dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"

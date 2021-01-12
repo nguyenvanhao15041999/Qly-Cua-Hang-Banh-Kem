@@ -1,15 +1,18 @@
 package com.example.projectchuyende.ui.menu;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import com.example.projectchuyende.R;
@@ -101,6 +104,28 @@ public class MenuFragment extends Fragment {
                 //Gọi dữ liệu lên màn hình
                 customAdapter_nuoc = new NuocAdapter(getContext(), R.layout.nuoc_listview, data_nuoc);
                 lvDanhSach.setAdapter(customAdapter_nuoc);
+            }
+        });
+
+        //Xử lý nút ListView khai báo thông tin Sản Phẩm
+        lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                final String[] danhsach = {"Thông tin"};
+                builder.setItems(danhsach,new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (danhsach[i]) {
+                            case "Thông tin":
+                                Intent intent = new Intent(getActivity(), BookParty.class);
+                                getActivity().startActivity(intent);
+                                break;
+                        }
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
             }
         });
     }

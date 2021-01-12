@@ -28,6 +28,7 @@ import com.example.projectchuyende.ui.account.Product_chi_tiet;
 import com.example.projectchuyende.ui.account.Staff_inform;
 import com.example.projectchuyende.ui.bill.Bill;
 import com.example.projectchuyende.ui.order.BookParty;
+import com.example.projectchuyende.ui.order.Bookdesk;
 import com.example.projectchuyende.ui.table.Table;
 
 import java.util.ArrayList;
@@ -93,12 +94,8 @@ public class HomeFragment extends Fragment {
                 }
             });
         } else {
-            customAdapter_banh.notifyDataSetChanged();
+            customAdapter_nuoc.notifyDataSetChanged();
         }
-
-        //Gọi dữ liệu lên màn hình
-        customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
-        lvDanhSach.setAdapter(customAdapter_banh);
 
         //Xử lý nút Button chuyển trang Bàn
         btnKhu.setOnClickListener(new View.OnClickListener() {
@@ -115,8 +112,12 @@ public class HomeFragment extends Fragment {
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), BookParty.class);
                 getActivity().startActivity(intent);
+
             }
         });
+        //Gọi dữ liệu lên màn hình
+        customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
+        lvDanhSach.setAdapter(customAdapter_banh);
 
         //Xử lý nút Button chuyển list Bánh
         btnBanh.setOnClickListener(new View.OnClickListener() {
@@ -138,5 +139,24 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        //Xử lý nút ListView khai báo thông tin Sản Phẩm
+        lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+                final String[] danhsach = {"Thông tin"};
+                builder.setItems(danhsach,new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        switch (danhsach[i]) {
+                            case "Thông tin":
+
+                        }
+                    }
+                });
+                AlertDialog dialog = builder.create();
+                dialog.show();
+            }
+        });
     }
 }
