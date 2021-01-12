@@ -84,7 +84,7 @@ public class MenuFragment extends Fragment {
                 public void onFail() {}
             });
         }
-        else {customAdapter_banh.notifyDataSetChanged();
+        else {customAdapter_nuoc.notifyDataSetChanged();
         }
 
         //Xử lý nút Button chuyển list Bánh

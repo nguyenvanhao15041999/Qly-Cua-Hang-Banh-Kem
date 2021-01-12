@@ -10,15 +10,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.example.projectchuyende.R;
-import com.example.projectchuyende.ui.order.BookParty;
-import com.example.projectchuyende.ui.order.Bookdesk;
 import com.example.projectchuyende.ui.pay.PayFragment;
+
+import java.util.ArrayList;
 
 public class Bill extends AppCompatActivity {
     ImageView imgBack;
+    ListView lvDanhSach;
     Button btnHuy, btnThanhToan;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +29,16 @@ public class Bill extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarbill);
         imgBack= findViewById(R.id.imgBack);
         btnHuy= findViewById(R.id.btnHuy);
+        lvDanhSach= findViewById(R.id.lvDanhSachHD);
         btnThanhToan= findViewById(R.id.btnThanhToan);
+
         setSupportActionBar(toolbar);
         setEvent();
     }
 
     public void setEvent() {
+
+
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

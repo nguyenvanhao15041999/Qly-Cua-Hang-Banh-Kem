@@ -150,7 +150,9 @@ public class HomeFragment extends Fragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsach[i]) {
                             case "Thông tin":
-
+                                Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
+                                getActivity().startActivity(intent);
+                                break;
                         }
                     }
                 });

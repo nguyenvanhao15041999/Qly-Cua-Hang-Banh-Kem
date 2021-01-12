@@ -54,8 +54,8 @@
         <GridView
             android:id="@+id/gvBan"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="500dp"
+            android:layout_margin="5dp"
             android:numColumns="2"
             android:stretchMode="columnWidth" />
 
