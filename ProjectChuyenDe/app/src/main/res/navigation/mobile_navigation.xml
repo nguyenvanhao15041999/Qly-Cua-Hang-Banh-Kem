@@ -59,9 +59,9 @@
         tools:layout="@layout/activity_staff_inform" />
     <fragment
         android:id="@+id/nav_taikhoanquanly"
-        android:name="com.example.projectchuyende.ui.creatermanager.CreateManager"
+        android:name="com.example.projectchuyende.ui.creatermanager.CreateManagerFragment"
         android:label="@string/menu_taikhoanquanly"
-        tools:layout="@layout/create_manager_fragment" />
+        tools:layout="@layout/activity_change_account" />
     <fragment
         android:id="@+id/nav_taonhanvien"
         android:name="com.example.projectchuyende.ui.account.Change_account"
