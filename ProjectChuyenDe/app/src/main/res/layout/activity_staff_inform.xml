@@ -8,7 +8,9 @@
     android:id="@+id/lnInfor"
     android:orientation="vertical"
     tools:context=".ui.account.Staff_inform">
-
+    <include
+        android:id="@+id/include4"
+        layout="@layout/toolbar_thongtinnv" />
     <ImageView
         android:layout_gravity="center"
         android:id="@+id/imageView2"

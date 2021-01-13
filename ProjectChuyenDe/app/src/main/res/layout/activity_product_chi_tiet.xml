@@ -15,6 +15,7 @@
     android:orientation="horizontal"
     app:layout_constraintTop_toBottomOf="@+id/linearLayout8"
     tools:ignore="MissingConstraints">
+
     <ImageView
         android:id="@+id/imgSP"
         android:layout_width="102dp"
