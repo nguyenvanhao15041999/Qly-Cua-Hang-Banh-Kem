@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_margin="5dp"
     android:orientation="vertical"
+    android:background="@color/colorPink"
     tools:context=".ui.listdesk.ThongTinban">
 
     <LinearLayout
@@ -34,12 +35,12 @@
                 android:textSize="30dp" />
 
             <Button
-                android:id="@+id/btnthemTTB"
+                android:id="@+id/btnDatTTB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:text="@string/btnThemTTB" />
+                android:text="@string/btnDatTTB" />
         </LinearLayout>
     </LinearLayout>
 
@@ -51,16 +52,18 @@
 
         <TextView
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:text="@string/txtSonguoi"
             android:textSize="20dp" />
 
         <TextView
             android:id="@+id/tvSonguoiTTB"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:background="@color/colorBlue"
+            android:gravity="center"
             android:textSize="20dp" />
     </LinearLayout>
 
@@ -72,16 +75,18 @@
 
         <TextView
             android:layout_width="100dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
             android:text="@string/txtKhuvuc"
             android:textSize="20dp" />
 
         <TextView
             android:id="@+id/tvKhuvucTTB"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:background="@color/colorBlue"
+            android:gravity="center"
             android:textSize="20dp" />
     </LinearLayout>
 

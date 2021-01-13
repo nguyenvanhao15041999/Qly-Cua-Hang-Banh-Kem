@@ -16,7 +16,7 @@ import com.example.projectchuyende.ui.pay.PayFragment;
 
 public class ThongTinban extends AppCompatActivity {
     TextView txtTenban, txtSonguoi, txtKhuvuc;
-    Button btnThem;
+    Button btnDat;
     ImageView imgBan;
 
     @Override
@@ -24,7 +24,7 @@ public class ThongTinban extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_thong_tinban);
 
-        btnThem = findViewById(R.id.btnthemTTB);
+        btnDat = findViewById(R.id.btnDatTTB);
         txtTenban = findViewById(R.id.tvNameTTB);
         txtSonguoi = findViewById(R.id.tvSonguoiTTB);
         txtKhuvuc = findViewById(R.id.tvKhuvucTTB);
@@ -44,10 +44,10 @@ public class ThongTinban extends AppCompatActivity {
             imgBan.setImageResource(R.drawable.table_rong);
         }
 
-        btnThem.setOnClickListener(new View.OnClickListener() {
+        btnDat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplication(), PayFragment.class);
+                Intent intent = new Intent(getApplicationContext(), PayFragment.class);
                 startActivity(intent);
             }
         });
