@@ -53,7 +53,6 @@ public class SignInFragment extends Fragment {
     Intent intent;
     RadioGroup rbtngChonLoaiTK;
     FirebaseUser user;
-    User username;
 
     @Nullable
     @Override
@@ -199,8 +198,6 @@ public class SignInFragment extends Fragment {
 
                     if (user.getUid() != null) {
                         String userID = user.getUid();
-                         intent = new Intent();
-                         intent.putExtra("hoTen", username1.getUsername());
 
                         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(table);
                         ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {

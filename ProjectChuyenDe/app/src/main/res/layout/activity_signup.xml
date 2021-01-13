@@ -47,7 +47,7 @@
             android:background="@color/colorWhite"
             android:gravity="center"
             android:hint="@string/edtTaikhoan"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
 
     </LinearLayout>
 
@@ -77,7 +77,7 @@
             android:background="@color/colorWhite"
             android:gravity="center"
             android:hint="Nhập mật khẩu.."
-            android:textSize="20dp" />
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -107,7 +107,7 @@
             android:hint="@string/edt_email"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -166,7 +166,7 @@
             android:hint="@string/edt_diachi"
             android:background="@color/colorWhite"
             android:gravity="center"
-            android:textSize="20dp" />
+            android:textSize="15dp" />
     </LinearLayout>
 
     <LinearLayout
