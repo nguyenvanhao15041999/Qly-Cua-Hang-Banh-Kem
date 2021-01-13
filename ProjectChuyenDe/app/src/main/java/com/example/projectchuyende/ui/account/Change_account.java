@@ -30,10 +30,10 @@ import java.util.Objects;
 
 public class Change_account extends Fragment {
     Button btntaotaikhoan;
-    EditText edtManv, edtTennv, edtsdt, edtmatkhau, edtTaikhoan, edtAdress, edtchucvu,edt_email;
+    EditText edtManv, edtTennv, edtsdt, edtmatkhau, edtTaikhoan, edtAdress, edtluong,edt_email;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
-    RadioButton rdbnam, rdbnu, rdbNhanvien, rdbQuanly;
+    RadioButton rdbnam, rdbnu;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)  {
@@ -43,14 +43,13 @@ public class Change_account extends Fragment {
         edtManv =  root.findViewById(R.id.txtmanv);
         rdbnam =  root.findViewById(R.id.txt_Nam);
         rdbnu =  root.findViewById(R.id.txt_Nu);
-        rdbNhanvien =  root.findViewById(R.id.txt_Nhanvien);
-        rdbQuanly =  root.findViewById(R.id.txt_Quanly);
         edt_email =  root.findViewById(R.id.txtmail);
         edtTennv =  root.findViewById(R.id.txtHoTen);
         edtsdt =  root.findViewById(R.id.txtsdtnv);
         edtTaikhoan =  root.findViewById(R.id.txtAccount);
         edtmatkhau =  root.findViewById(R.id.txtpass);
         edtAdress =  root.findViewById(R.id.txtngaysinh);
+        edtluong = root.findViewById(R.id.txtLuong);
         setControl();
         Toolbar toolbar =  root.findViewById(R.id.toolbar_forgotpassword);
         return  root;
@@ -69,6 +68,7 @@ public class Change_account extends Fragment {
                 String user = edtTaikhoan.getText().toString();
                 String password = edtmatkhau.getText().toString();
                 String email = edt_email.getText().toString();
+                String luong = edtluong.getText().toString();
                 String address = edtAdress.getText().toString();
                 String gioitinh="";
                 if (rdbnam.isChecked()){
@@ -82,9 +82,9 @@ public class Change_account extends Fragment {
 
                 if (!TextUtils.isEmpty(user) && !TextUtils.isEmpty(password)
                         && !TextUtils.isEmpty(manv) && !TextUtils.isEmpty(tennv)
-                         && !TextUtils.isEmpty(address)
+                         && !TextUtils.isEmpty(address)&& !TextUtils.isEmpty(luong)
                         && !TextUtils.isEmpty(sdt) && !TextUtils.isEmpty(email)) {
-                    register(manv, user, password, sdt, address, tennv,  email,gioitinh, permisstion);
+                    register(manv, user, password, sdt, address, tennv,  email,gioitinh,luong, permisstion);
                 } else if (TextUtils.isEmpty(manv)) {
                     edtManv.setError("Employee code is invalid!");
                 } else if (TextUtils.isEmpty(tennv)) {
@@ -99,11 +99,13 @@ public class Change_account extends Fragment {
                     edtmatkhau.setError("Password is invalid!");
                 } else if (TextUtils.isEmpty(email)) {
                     edt_email.setError("Password is invalid!");
+                }else if (TextUtils.isEmpty(email)) {
+                    edt_email.setError("Password is invalid!");
                 }
             }
         });
     }
-    private void register(final String manv, final String user, final String password, final String sdt, final String address, final String tennv, final String email, final String giotinh,String permisstion) {
+    private void register(final String manv, final String user, final String password, final String sdt, final String address, final String tennv, final String email, final String gioitinh, final String luong, String permisstion) {
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
@@ -121,8 +123,9 @@ public class Change_account extends Fragment {
                     hashMap.put("Email", email);
                     hashMap.put("Tennv", tennv);
                     hashMap.put("Password", password);
-                    hashMap.put("gioitinh", giotinh);
-                    hashMap.put("chucvu", "Nhân Viên");
+                    hashMap.put("gioitinh", gioitinh);
+                    hashMap.put("luong", luong );
+                    hashMap.put("chucvu", "Nhân viên");
                     databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

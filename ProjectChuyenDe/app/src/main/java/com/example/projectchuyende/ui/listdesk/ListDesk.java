@@ -118,7 +118,6 @@ public class ListDesk extends Fragment {
                                 final EditText txtSonguoiLD = customListdesk.findViewById(R.id.txtSonguoiLD_dialog);
                                 final Spinner spKhuVucLD = customListdesk.findViewById(R.id.spKhuvucLD_dialog);
 
-                                final Button btnDong = customListdesk.findViewById(R.id.btnCancelLD_dialog);
                                 final Button btnDongy = customListdesk.findViewById(R.id.btnAcceptLD_dialog);
                                 desk = new Desk();
                                 btnDongy.setOnClickListener(new View.OnClickListener() {
@@ -153,13 +152,6 @@ public class ListDesk extends Fragment {
                                     }
 
                                 });
-
-                                btnDong.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-
-                                    }
-                                });
                                 AlertDialog dialogThem = builderThem.create();
                                 dialogThem.show();
                                 break;
@@ -174,7 +166,7 @@ public class ListDesk extends Fragment {
                                 final EditText txtSonguoiLD1 = customSua.findViewById(R.id.txtSonguoiLD_dialog);
                                 final Spinner spKhuVucLD1 = customSua.findViewById(R.id.spKhuvucLD_dialog);
 
-                                Button btnDong1 = customSua.findViewById(R.id.btnCancelLD_dialog);
+
                                 final Button btnDongy1 = customSua.findViewById(R.id.btnAcceptLD_dialog);
 
                                 desk = dataDesk.get(vitri);

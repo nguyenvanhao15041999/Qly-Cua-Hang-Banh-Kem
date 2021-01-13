@@ -36,7 +36,7 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     Button btnKhu, btnDatTiec, btnBanh, btnNuocUong;
     ListView lvDanhSach;
-    int index = -1;
+    String index = "banh";
 
     ArrayList<Banh> data_banh = new ArrayList<>();
     ArrayList<Nuoc> data_nuoc = new ArrayList<>();
@@ -44,6 +44,8 @@ public class HomeFragment extends Fragment {
     NuocAdapter customAdapter_nuoc;
     FirebaseBanh FirebaseBanh;
     FirebaseNuoc FirebaseNuoc;
+    Banh banh;
+    Nuoc nuoc;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -126,6 +128,7 @@ public class HomeFragment extends Fragment {
                 //Gọi dữ liệu lên màn hình
                 customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
                 lvDanhSach.setAdapter(customAdapter_banh);
+                index = "banh";
             }
         });
 
@@ -136,6 +139,7 @@ public class HomeFragment extends Fragment {
                 //Gọi dữ liệu lên màn hình
                 customAdapter_nuoc = new NuocAdapter(getContext(), R.layout.nuoc_listview, data_nuoc);
                 lvDanhSach.setAdapter(customAdapter_nuoc);
+                index = "nuoc";
             }
         });
 
@@ -145,12 +149,24 @@ public class HomeFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 final String[] danhsach = {"Thông tin"};
-                builder.setItems(danhsach,new DialogInterface.OnClickListener() {
+                builder.setItems(danhsach, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsach[i]) {
                             case "Thông tin":
                                 Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
+                                if (index == "banh") {
+                                    banh = data_banh.get(vitri);
+                                    intent.putExtra("motabanh", banh.getMoTa());
+                                } else {
+                                    nuoc = data_nuoc.get(vitri);
+                                    intent.putExtra("motanuoc", nuoc.getMoTa());
+                                    intent.putExtra("tenNuoc", nuoc.getTenNuoc());
+                                }
+
+
+                                intent.putExtra("index", index);
+
                                 getActivity().startActivity(intent);
                                 break;
                         }
