@@ -41,7 +41,6 @@ public class HomeFragment extends Fragment {
     ListView lvDanhSach;
 
 
-    int index = -1;
 
     String index = "banh";
 
@@ -158,15 +157,14 @@ public class HomeFragment extends Fragment {
         customAdapter_banh.notifyDataSetChanged();
         lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(final AdapterView<?> adapterView, View view, final int position, long l) {
+            public void onItemClick(final AdapterView<?> adapterView, View view, final int vitri, long l) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
                 builder.setTitle("Chức Năng");
                 //int position =0;
                 final String[] danhsach = {"Thông tin", "Xóa", "Sửa"};
-                final int positionToRemove = position;
+                final int positionToRemove = vitri;
 
-                final String[] danhsach = {"Thông tin"};
 
                 builder.setItems(danhsach, new DialogInterface.OnClickListener() {
                     @Override
@@ -174,11 +172,10 @@ public class HomeFragment extends Fragment {
                         switch (danhsach[i]) {
 
 
-                            case "Thông Tin":
-                                Intent intentt = new Intent(getActivity(), Product_chi_tiet.class);
-                                getActivity().startActivity(intentt);
-                                break;
+
                             case "Xóa":
+
+                                break;
 
 
                             case "Thông tin":
