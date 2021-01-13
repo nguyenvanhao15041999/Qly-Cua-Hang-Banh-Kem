@@ -13,14 +13,22 @@ import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.projectchuyende.R;
+import com.example.projectchuyende.adapter.HoaDonAdapter;
+import com.example.projectchuyende.adapter.TableAdapter;
+import com.example.projectchuyende.model.Desk;
+import com.example.projectchuyende.model.HoaDon;
 import com.example.projectchuyende.ui.pay.PayFragment;
+import com.example.projectchuyende.ui.table.FirebaseBan;
 
 import java.util.ArrayList;
 
 public class Bill extends AppCompatActivity {
     ImageView imgBack;
-    ListView lvDanhSach;
+    ListView lvDanhSachV;
     Button btnHuy, btnThanhToan;
+    ArrayList<HoaDon> data_HD = new ArrayList<>();
+    HoaDonAdapter customAdapter_bill;
+    FirebaseHoaDon FirebaseHoaDon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +37,8 @@ public class Bill extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbarbill);
         imgBack= findViewById(R.id.imgBack);
         btnHuy= findViewById(R.id.btnHuy);
-        lvDanhSach= findViewById(R.id.lvDanhSachHD);
+        lvDanhSachV= findViewById(R.id.lvDanhSachHD);
+        FirebaseHoaDon = new FirebaseHoaDon(getApplication());
         btnThanhToan= findViewById(R.id.btnThanhToan);
 
         setSupportActionBar(toolbar);
@@ -37,6 +46,26 @@ public class Bill extends AppCompatActivity {
     }
 
     public void setEvent() {
+        //Gọi Dữ liệu Bánh từ Firebase
+        if (customAdapter_bill == null) {
+            FirebaseHoaDon.LoadDSHoaDon(new FirebaseHoaDon.IListener() {
+                @Override
+                public void onSuccess() {
+                    data_HD.addAll(FirebaseHoaDon.getArrHD());
+                    customAdapter_bill = new HoaDonAdapter(getApplication(), R.layout.listview_bill, data_HD);
+                    lvDanhSachV.setAdapter(customAdapter_bill);
+                }
+
+                @Override
+                public void onFail() {
+
+                }
+            });
+
+        } else {
+            customAdapter_bill.notifyDataSetChanged();
+        }
+
 
 
         imgBack.setOnClickListener(new View.OnClickListener() {
