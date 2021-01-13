@@ -34,6 +34,7 @@ import com.example.projectchuyende.model.Nuoc;
 import com.example.projectchuyende.ui.account.Product_chi_tiet;
 import com.example.projectchuyende.ui.account.Staff_inform;
 import com.example.projectchuyende.ui.bill.Bill;
+import com.example.projectchuyende.ui.editFood.EditFood;
 import com.example.projectchuyende.ui.listdesk.ThongTinban;
 import com.example.projectchuyende.ui.order.BookParty;
 import com.example.projectchuyende.ui.order.Bookdesk;
@@ -44,7 +45,6 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     Button btnKhu, btnDatTiec, btnBanh, btnNuocUong;
     ListView lvDanhSach;
-
 
 
     String index = "banh";
@@ -58,7 +58,6 @@ public class HomeFragment extends Fragment {
     FirebaseNuoc FirebaseNuoc;
     Banh banh;
     Nuoc nuoc;
-
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -131,9 +130,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-        //Gọi dữ liệu lên màn hình
-        customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
-        lvDanhSach.setAdapter(customAdapter_banh);
 
         //Xử lý nút Button chuyển list Bánh
         btnBanh.setOnClickListener(new View.OnClickListener() {
@@ -142,86 +138,128 @@ public class HomeFragment extends Fragment {
                 //Gọi dữ liệu lên màn hình
                 customAdapter_banh = new BanhAdapter(getContext(), R.layout.banh_listview, data_banh);
                 lvDanhSach.setAdapter(customAdapter_banh);
-                index = "banh";
+                lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(final AdapterView<?> adapterView, View view, final int vitri, long l) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+
+                        builder.setTitle("Chức Năng");
+
+                        final String[] danhsach = {"Thông tin", "Xóa", "Sửa"};
+
+                        builder.setItems(danhsach, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                switch (danhsach[i]) {
+                                    case "Thông tin":
+                                        Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
+                                        banh = data_banh.get(vitri);
+                                        intent.putExtra("motabanh", banh.getMoTa());
+                                        intent.putExtra("tenbanh", banh.getTenBanh());
+                                        intent.putExtra("imgurl", banh.getImgAnhBanh());
+                                        startActivity(intent);
+                                        break;
+                                    case "Xóa":
+                                        banh = data_banh.get(vitri);
+                                        int tang = vitri + 1;
+                                        final String sanphamne = "SanPhamBanh" + tang;
+                                        FirebaseBanh.xoaBanh(sanphamne, new FirebaseBanh.IListener() {
+                                            @Override
+                                            public void onSuccess() {
+                                                Toast.makeText(getContext(), "Đã xóa thành công", Toast.LENGTH_LONG).show();
+                                            }
+
+                                            @Override
+                                            public void onFail() {
+                                                Toast.makeText(getContext(), "Xóa thất bại", Toast.LENGTH_LONG).show();
+                                            }
+                                        });
+                                        data_banh.clear();
+                                        customAdapter_banh.notifyDataSetChanged();
+                                        break;
+                                    default:
+                                        banh = data_banh.get(vitri);
+                                        Intent intent1 = new Intent(getActivity(), EditFood.class);
+                                        intent1.putExtra("tenbanh", banh.getTenBanh());
+                                        intent1.putExtra("diachibanh", banh.getDiaChi());
+                                        intent1.putExtra("giacabanh", banh.getGiaCa());
+                                        intent1.putExtra("imgbanh", banh.getImgAnhBanh());
+                                        startActivity(intent1);
+                                        break;
+                                }
+                            }
+                        });
+                        AlertDialog dialogChucnang = builder.create();
+                        dialogChucnang.show();
+                    }
+                });
+
             }
         });
 
-        //Xử lý nút Button chuyển list Nước Uống
         btnNuocUong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Gọi dữ liệu lên màn hình
-                customAdapter_nuoc = new NuocAdapter(getContext(), R.layout.nuoc_listview, data_nuoc);
+                customAdapter_nuoc = new NuocAdapter(getContext(), R.layout.banh_listview, data_nuoc);
                 lvDanhSach.setAdapter(customAdapter_nuoc);
-                index = "nuoc";
-            }
-        });
-
-        //Xử lý nút ListView khai báo thông tin Sản Phẩm
-
-        lvDanhSach.setAdapter(customAdapter_banh);
-        customAdapter_banh.notifyDataSetChanged();
-        lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(final AdapterView<?> adapterView, View view, final int vitri, long l) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-
-                builder.setTitle("Chức Năng");
-                //int position =0;
-                final String[] danhsach = {"Thông tin", "Xóa", "Sửa"};
-                final int positionToRemove = vitri;
-
-
-                builder.setItems(danhsach, new DialogInterface.OnClickListener() {
+                lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        switch (danhsach[i]) {
+                    public void onItemClick(final AdapterView<?> adapterView, View view, final int vitri, long l) {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
+                        builder.setTitle("Chức Năng");
 
+                        final String[] danhsach = {"Thông tin", "Xóa", "Sửa"};
 
-                            case "Xóa":
+                        builder.setItems(danhsach, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                switch (danhsach[i]) {
+                                    case "Thông tin":
+                                        Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
+                                        nuoc = data_nuoc.get(vitri);
+                                        intent.putExtra("motanuoc", nuoc.getMoTa());
+                                        intent.putExtra("tennuoc", nuoc.getTenNuoc());
+                                        intent.putExtra("imgurl", nuoc.getImgAnhNuoc());
+                                        startActivity(intent);
+                                        break;
+                                    case "Xóa":
+                                        nuoc = data_nuoc.get(vitri);
+                                        int tang = vitri + 1;
+                                        final String sanphamne = "SanPhamNuoc" + tang;
+                                        FirebaseNuoc.xoaNuoc(sanphamne, new FirebaseNuoc.IListener() {
+                                            @Override
+                                            public void onSuccess() {
+                                                Toast.makeText(getContext(), "Đã xóa thành công", Toast.LENGTH_LONG).show();
+                                            }
 
-                                break;
-
-
-                            case "Thông tin":
-                                Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
-
-
-                                    banh = data_banh.get(vitri);
-                                    intent.putExtra("motabanh", banh.getMoTa());
-                                    nuoc = data_nuoc.get(vitri);
-                                    intent.putExtra("motanuoc", nuoc.getMoTa());
-                                    intent.putExtra("tenNuoc", nuoc.getTenNuoc());
-
-
-
-                                intent.putExtra("index", index);
-
-                                getActivity().startActivity(intent);
-
-                                startActivity(intent);
-
-                                break;
-                        }
+                                            @Override
+                                            public void onFail() {
+                                                Toast.makeText(getContext(), "Xóa thất bại", Toast.LENGTH_LONG).show();
+                                            }
+                                        });
+                                        data_nuoc.clear();
+                                        customAdapter_nuoc.notifyDataSetChanged();
+                                        break;
+                                    default:
+                                        nuoc = data_nuoc.get(vitri);
+                                        Intent intent1 = new Intent(getActivity(), EditFood.class);
+                                        intent1.putExtra("tennuoc", nuoc.getTenNuoc());
+                                        intent1.putExtra("giacanuoc", nuoc.getGiaCa());
+                                        intent1.putExtra("diachinuoc", nuoc.getDiaChi());
+                                        intent1.putExtra("imgnuoc", nuoc.getImgAnhNuoc());
+                                        startActivity(intent1);
+                                        break;
+                                }
+                            }
+                        });
+                        AlertDialog dialogChucnang = builder.create();
+                        dialogChucnang.show();
                     }
                 });
-                AlertDialog dialogChucnang = builder.create();
-                dialogChucnang.show();
             }
         });
-
-
-//        lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
-//                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-//
-//
-//                AlertDialog dialog = builder.create();
-//                dialog.show();
-//            }
-//        });
 
 
     }

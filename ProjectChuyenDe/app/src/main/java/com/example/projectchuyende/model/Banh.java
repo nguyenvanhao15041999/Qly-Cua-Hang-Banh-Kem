@@ -95,7 +95,8 @@ public class Banh {
                 ", giaCa='" + giaCa + '\'' +
                 ", giam='" + giam + '\'' +
                 ", ImgAnhBanh='" + ImgAnhBanh + '\'' +
-                ", imgSale='" + ImgSale + '\'' +
+                ", ImgSale='" + ImgSale + '\'' +
+                ", moTa='" + moTa + '\'' +
                 '}';
     }
 }

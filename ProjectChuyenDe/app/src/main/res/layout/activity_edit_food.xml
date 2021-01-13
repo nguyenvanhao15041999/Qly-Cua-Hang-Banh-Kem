@@ -136,7 +136,7 @@
             android:layout_marginStart="20dp" />
 
 
-        <EditText
+        <ImageView
             android:layout_width="350dp"
             android:layout_height="100dp"
             android:id="@+id/edtHinhAnh"

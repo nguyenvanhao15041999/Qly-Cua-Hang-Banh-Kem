@@ -13,9 +13,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.model.ThongtinBanh;
 import com.example.projectchuyende.ui.bill.Bill;
@@ -24,10 +26,11 @@ import com.example.projectchuyende.ui.table.FirebaseBan;
 import java.util.ArrayList;
 
 public class Product_chi_tiet extends AppCompatActivity {
-    ArrayList<ThongtinBanh> databanh = new ArrayList<>();
+
     TextView edtMotaSP;
     TextView txtSo, txtSanpham;
     Button btnthem, btnCong, btnTru;
+    ImageView imgSP;
     int index = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,18 +42,21 @@ public class Product_chi_tiet extends AppCompatActivity {
         btnTru = findViewById(R.id.decreaseQuantityBtn);
         txtSo = findViewById(R.id.quantity);
         txtSanpham = findViewById(R.id.tvEmpName);
+        imgSP=findViewById(R.id.imgSP);
         setEvent();
     }
 
     private void setEvent() {
-        String sosanh="banh";
         Intent intent=getIntent();
-        if (intent.getStringExtra("index")==sosanh){
             edtMotaSP.setText(intent.getStringExtra("motabanh"));
-        }else{
+        txtSanpham.setText(intent.getStringExtra("tenbanh"));
+        Glide.with(getApplicationContext()).load(intent.getStringExtra("imgurl")).into(imgSP);
+
+
             edtMotaSP.setText(intent.getStringExtra("motanuoc"));
-            txtSanpham.setText(intent.getStringExtra("tenNuoc"));
-        }
+            txtSanpham.setText(intent.getStringExtra("tennuoc"));
+        Glide.with(getApplicationContext()).load(intent.getStringExtra("imgurl")).into(imgSP);
+
         btnCong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
