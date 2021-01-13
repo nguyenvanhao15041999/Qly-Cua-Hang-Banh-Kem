@@ -152,18 +152,21 @@ public class SignInFragment extends Fragment {
                 String password = edtPassword.getText().toString();
                 if (!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)) {
                     switch (rbtngChonLoaiTK.getCheckedRadioButtonId()) {
+                        // Choose User account
                         case R.id.rbtnKH: {
                             String table = "Users";
                             String mess = "nguoidung";
                             login(username, password, table, mess);
                         }
                         break;
+                        // Choose nhan vien account
                         case R.id.rbtnNV: {
                             String table = "Nhan_Vien";
                             String mess = "nhanvien";
                             login(username, password, table, mess);
                         }
                         break;
+                        // Choose admin account
                         case R.id.rbtnAdmin: {
                             String table = "PrivateUsers";
                             String mess = "admin";
@@ -175,9 +178,9 @@ public class SignInFragment extends Fragment {
                         }
                     }
 
-                } else if (TextUtils.isEmpty(username)) {
+                } else if (TextUtils.isEmpty(username)) { // Is username empty?
                     edtAccount.setError("Account is invalid!");
-                } else if (TextUtils.isEmpty(password)) {
+                } else if (TextUtils.isEmpty(password)) { // Is password empty?
                     edtPassword.setError("Password is invalid!");
                 }
             }
@@ -192,13 +195,14 @@ public class SignInFragment extends Fragment {
                 if (task.isSuccessful()) {
                     Log.d("signin", "Sign in success");
                     Toast.makeText(getActivity(), "Sign in success", Toast.LENGTH_SHORT).show();
+                    // Get user after login with firebase
                     user = FirebaseAuth.getInstance().getCurrentUser();
-
                     User username1 = null;
 
-                    if (user.getUid() != null) {
+                    if (user.getUid() != null) { // Is user null?
+                        // Get id of user
                         String userID = user.getUid();
-
+                        // User userID to get user info in table
                         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(table);
                         ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
@@ -231,7 +235,7 @@ public class SignInFragment extends Fragment {
     private void changeIntent(String mess, DataSnapshot snapshot) {
         Intent intent = getActivity().getIntent();
         intent.setClass(getActivity(), MainActivity.class);
-
+        // Find and put user info follow account of user or employee (nhân viên)
         if (mess.equals("nguoidung")) {
             User nguoidung = snapshot.getValue(User.class);
             intent.putExtra(mess, nguoidung);
@@ -244,6 +248,7 @@ public class SignInFragment extends Fragment {
 
     }
 
+    // Use to change intent when account is admin
     private void changeIntent(String mess, String username) {
         Intent intent = getActivity().getIntent();
         intent.setClass(getActivity(), MainActivity.class);

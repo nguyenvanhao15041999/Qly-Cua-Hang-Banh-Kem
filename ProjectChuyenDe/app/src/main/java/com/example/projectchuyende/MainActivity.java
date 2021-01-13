@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.example.projectchuyende.model.Dialog;
 import com.example.projectchuyende.model.Nhan_Vien;
 import com.example.projectchuyende.model.User;
+import com.example.projectchuyende.ui.bill.Bill;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -87,10 +88,11 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         if (isLogin == true) {
             isLogin = false;
+            // Load navigation drawer when account is user
             if (getIntent().getSerializableExtra("nguoidung") != null) {
                 User user = (User) getIntent().getSerializableExtra("nguoidung");
-                navigationView.getMenu().clear();
-                navigationView.inflateMenu(R.menu.nguoidung);
+                navigationView.getMenu().clear(); // clear menu of navigation drawer
+                navigationView.inflateMenu(R.menu.nguoidung); // set new munu to navigation drawer
 
                 // Menu item
                 nav_signout = menuNav.findItem(R.id.nav_signout);
@@ -109,16 +111,16 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                tvEmpName.setText(user.getUsername());
+                tvEmpName.setText(user.getUsername()); // show name follow account login
                 if (user.getPermission().equals("user")) {
-                    tvEmpJobTitle.setText("Khách Hàng");
+                    tvEmpJobTitle.setText("Khách Hàng"); // show jobtitle follow account login
                 }
-            } else if (getIntent().getSerializableExtra("nhanvien") != null) {
+            } else if (getIntent().getSerializableExtra("nhanvien") != null) { //// Load navigation drawer when account is employee
                 isLogin = false;
 
                 Nhan_Vien nhanvien = (Nhan_Vien) getIntent().getSerializableExtra("nhanvien");
 
-                if (nhanvien.getChucvu().equals("Nhân Viên")) {
+                if (nhanvien.getChucvu().equals("Nhân Viên")) { // Jobtitle is "Nhân Viên"
                     navigationView.getMenu().clear();
                     navigationView.inflateMenu(R.menu.nhanvien_menu);
                     // Menu item
@@ -139,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
                     tvEmpName.setText(nhanvien.getUser());
                     tvEmpJobTitle.setText(nhanvien.getChucvu());
-                } else if (nhanvien.getChucvu().equals("Quản Lý")) {
+                } else if (nhanvien.getChucvu().equals("Quản Lý")) { // Jobtitle is "Quản Lý"
                     navigationView.getMenu().clear();
                     navigationView.inflateMenu(R.menu.quanly_menu);
                     // Menu item
@@ -161,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
                     tvEmpJobTitle.setText(nhanvien.getChucvu());
                 }
 
-            } else if (getIntent().getStringExtra("admin") != null) {
+            } else if (getIntent().getStringExtra("admin") != null) { // Jobtitle is "admin"
                 String username = getIntent().getStringExtra("admin");
 
                 navigationView.getMenu().clear();
@@ -196,17 +198,23 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    //thoat app
+    //exit app
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         switch (id) {
-            case R.id.exit:
+            case R.id.exit: {
                 Intent intent = new Intent(Intent.ACTION_MAIN);
                 intent.addCategory(Intent.CATEGORY_HOME);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
-                break;
+            }break;
+            case R.id.action_shopping:
+            {
+                Intent intent = getIntent();
+                intent.setClass(getApplicationContext(), Bill.class);
+                startActivity(intent);
+            }break;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -219,22 +227,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
     public void dialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("Thông báo!");
         builder.setMessage("Bạn có muôn đăng xuất và thoát chương trình?");
+        // "Có" button is clicked
         builder.setPositiveButton("Có", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                FirebaseAuth.getInstance().signOut();
+                FirebaseAuth.getInstance().signOut(); // Logout firebase account
+                // Show fisrt screen when app start again
                 getIntent().putExtra("nguoidung", (String) null);
                 Intent intent = new Intent();
                 intent.setClass(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
+                // Close old screen
                 finish();
             }
         });
+        // "Không" button is clicked
         builder.setNegativeButton("Không", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
@@ -244,6 +255,5 @@ public class MainActivity extends AppCompatActivity {
 
         builder.create().show();
     }
-
 
 }
