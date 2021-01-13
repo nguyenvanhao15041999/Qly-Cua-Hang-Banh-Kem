@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPink"
     android:id="@+id/lnInfor"
+    android:orientation="vertical"
     tools:context=".ui.account.Staff_inform">
 
     <ImageView
+        android:layout_gravity="center"
         android:id="@+id/imageView2"
         android:layout_width="150dp"
         android:layout_height="100dp"
@@ -172,30 +174,7 @@
             android:textSize="20dp" />
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout9">
 
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="20dp"
-            android:text="@string/tv_diaChi"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/txtDiaChi"
-            android:layout_width="250dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="35dp"
-            android:background="@color/colorBlue"
-            android:gravity="center"
-            android:hint="@string/txt_diachi"
-            android:textSize="20dp" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout11"
@@ -237,4 +216,4 @@
             android:text="@string/btn_taikhoan"
             android:textAllCaps="false" />
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
