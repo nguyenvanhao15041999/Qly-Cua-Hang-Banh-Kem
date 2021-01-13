@@ -192,7 +192,6 @@ public class SignInFragment extends Fragment {
                     Log.d("signin", "Sign in success");
                     Toast.makeText(getActivity(), "Sign in success", Toast.LENGTH_SHORT).show();
                     user = FirebaseAuth.getInstance().getCurrentUser();
-
                     if (user.getUid() != null) {
                         String userID = user.getUid();
 
@@ -200,9 +199,9 @@ public class SignInFragment extends Fragment {
                         ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                if(mess.equals("admin")){
+                                if (mess.equals("admin")) {
                                     changeIntent(mess, username);
-                                }else {
+                                } else {
                                     changeIntent(mess, snapshot);
                                 }
                             }
@@ -223,9 +222,6 @@ public class SignInFragment extends Fragment {
                 }
             }
         });
-
-
-
     }
 
     private void changeIntent(String mess, DataSnapshot snapshot) {
@@ -244,7 +240,7 @@ public class SignInFragment extends Fragment {
 
     }
 
-    private void changeIntent(String mess, String username){
+    private void changeIntent(String mess, String username) {
         Intent intent = getActivity().getIntent();
         intent.setClass(getActivity(), MainActivity.class);
         intent.putExtra(mess, username);
