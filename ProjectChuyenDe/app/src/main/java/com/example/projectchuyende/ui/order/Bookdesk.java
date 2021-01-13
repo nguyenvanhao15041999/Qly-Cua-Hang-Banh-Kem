@@ -19,14 +19,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.projectchuyende.R;
+import com.example.projectchuyende.model.User;
 import com.example.projectchuyende.ui.bill.Bill;
 import com.example.projectchuyende.ui.table.Table;
 import com.google.android.material.navigation.NavigationView;
 
 public class Bookdesk extends AppCompatActivity {
+    EditText txtHoTen;
     ImageView imgBack;
     Button btnDat, btnHuy;
     private AppBarConfiguration mAppBarConfiguration;
@@ -38,6 +41,7 @@ public class Bookdesk extends AppCompatActivity {
         imgBack= findViewById(R.id.imgBack);
         btnDat= findViewById(R.id.btnDat);
         btnHuy= findViewById(R.id.btnHuy);
+        txtHoTen= findViewById(R.id.txtHoTen);
         setSupportActionBar(toolbar);
 
         setEvent();
@@ -45,6 +49,8 @@ public class Bookdesk extends AppCompatActivity {
     }
 
     public void setEvent() {
+//        User user = null;
+//        txtHoTen.setText(user.getUsername());
         imgBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

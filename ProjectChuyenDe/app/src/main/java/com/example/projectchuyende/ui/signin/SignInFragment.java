@@ -40,6 +40,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 public class SignInFragment extends Fragment {
     Button btnSignup;
     TextView tvForgotpass;
@@ -52,6 +53,7 @@ public class SignInFragment extends Fragment {
     Intent intent;
     RadioGroup rbtngChonLoaiTK;
     FirebaseUser user;
+    User username;
 
     @Nullable
     @Override
@@ -192,8 +194,13 @@ public class SignInFragment extends Fragment {
                     Log.d("signin", "Sign in success");
                     Toast.makeText(getActivity(), "Sign in success", Toast.LENGTH_SHORT).show();
                     user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    User username1 = null;
+
                     if (user.getUid() != null) {
                         String userID = user.getUid();
+                         intent = new Intent();
+                         intent.putExtra("hoTen", username1.getUsername());
 
                         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(table);
                         ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
