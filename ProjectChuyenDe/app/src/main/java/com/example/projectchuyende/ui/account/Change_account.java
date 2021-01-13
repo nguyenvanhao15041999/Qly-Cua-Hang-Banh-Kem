@@ -122,7 +122,7 @@ public class Change_account extends Fragment {
                     hashMap.put("Tennv", tennv);
                     hashMap.put("Password", password);
                     hashMap.put("gioitinh", giotinh);
-                    hashMap.put("chucvu", "Nhân Viên");
+                    hashMap.put("chucvu", "Quản Lý");
                     databaseReference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

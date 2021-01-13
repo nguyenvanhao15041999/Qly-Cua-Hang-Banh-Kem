@@ -96,6 +96,8 @@ public class List_staff extends Fragment {
 
                                     }
                                 });
+                                arrdata_listStaff.clear();
+                                ListStaffadapter.notifyDataSetChanged();
                                 break;
                         }
                     }
