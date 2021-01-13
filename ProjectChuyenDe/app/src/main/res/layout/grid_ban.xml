@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/imgBanDat"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/table_rong" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSoBan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bàn Số 1"
+                android:layout_margin="5dp"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvSoNguoi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:text="Dành Cho 6 Người"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

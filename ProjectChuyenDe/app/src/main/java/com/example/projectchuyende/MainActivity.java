@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Nhan_Vien nhanvien = (Nhan_Vien) getIntent().getSerializableExtra("nhanvien");
 
-                if (nhanvien.getChucvu().equals("Nhân viên")) {
+                if (nhanvien.getChucvu().equals("Nhân Viên")) {
                     navigationView.getMenu().clear();
                     navigationView.inflateMenu(R.menu.nhanvien_menu);
                     // Menu item

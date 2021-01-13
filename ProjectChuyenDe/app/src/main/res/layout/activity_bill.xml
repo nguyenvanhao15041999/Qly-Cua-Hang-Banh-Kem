@@ -116,7 +116,7 @@
         <ListView
             android:id="@+id/lvDanhSachHD"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="500dp"
             android:layout_margin="5dp"></ListView>
 
         <LinearLayout

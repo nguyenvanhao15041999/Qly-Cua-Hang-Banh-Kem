@@ -12,7 +12,7 @@
             android:id="@+id/nav_taikhoanquanly"
             android:icon="@drawable/listthongtinnhanvien"
             android:title="@string/menu_taikhoanquanly" />
-
+        <item
             android:id="@+id/nav_trogiup"
             android:icon="@drawable/ic_baseline_help_24"
             android:title="@string/menu_help" />
