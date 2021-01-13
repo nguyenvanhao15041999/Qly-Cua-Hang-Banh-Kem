@@ -6,6 +6,8 @@ import android.content.DialogInterface;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.projectchuyende.R;
+
 public class Dialog  extends AppCompatActivity {
     @Override
     public void onBackPressed() {
@@ -27,4 +29,7 @@ public class Dialog  extends AppCompatActivity {
         AlertDialog alert = builder.create();
         alert.show();
     }
+
+
+
 }

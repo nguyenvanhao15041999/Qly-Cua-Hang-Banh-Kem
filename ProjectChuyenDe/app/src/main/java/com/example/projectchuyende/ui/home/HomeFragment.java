@@ -16,8 +16,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.projectchuyende.MainActivity;
 import com.example.projectchuyende.R;
 import com.example.projectchuyende.SanPham.FirebaseNuoc;
 import com.example.projectchuyende.adapter.BanhAdapter;
@@ -27,6 +29,7 @@ import com.example.projectchuyende.firebaseallManager.FirebaseListDesk;
 import com.example.projectchuyende.firebaseallManager.FirebaseallManager;
 import com.example.projectchuyende.model.Banh;
 import com.example.projectchuyende.model.Desk;
+import com.example.projectchuyende.model.Dialog;
 import com.example.projectchuyende.model.Nuoc;
 import com.example.projectchuyende.ui.account.Product_chi_tiet;
 import com.example.projectchuyende.ui.account.Staff_inform;
@@ -41,7 +44,11 @@ import java.util.ArrayList;
 public class HomeFragment extends Fragment {
     Button btnKhu, btnDatTiec, btnBanh, btnNuocUong;
     ListView lvDanhSach;
+
+
+
     String index = "banh";
+
 
     ArrayList<Banh> data_banh = new ArrayList<>();
     ArrayList<Nuoc> data_nuoc = new ArrayList<>();
@@ -66,6 +73,7 @@ public class HomeFragment extends Fragment {
         setEvent();
         return root;
     }
+
 
     public void setEvent() {
 
@@ -150,15 +158,32 @@ public class HomeFragment extends Fragment {
         });
 
         //Xử lý nút ListView khai báo thông tin Sản Phẩm
+
+        lvDanhSach.setAdapter(customAdapter_banh);
+        customAdapter_banh.notifyDataSetChanged();
         lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
+            public void onItemClick(final AdapterView<?> adapterView, View view, final int vitri, long l) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                final String[] danhsach = {"Thông tin"};
+
+                builder.setTitle("Chức Năng");
+                //int position =0;
+                final String[] danhsach = {"Thông tin", "Xóa", "Sửa"};
+                final int positionToRemove = vitri;
+
+
                 builder.setItems(danhsach, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsach[i]) {
+
+
+
+                            case "Xóa":
+
+                                break;
+
+
                             case "Thông tin":
                                 Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
 
@@ -185,6 +210,19 @@ public class HomeFragment extends Fragment {
                 dialogChucnang.show();
             }
         });
+
+
+//        lvDanhSach.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, final int vitri, long l) {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+//
+//
+//                AlertDialog dialog = builder.create();
+//                dialog.show();
+//            }
+//        });
+
 
     }
 }

@@ -65,6 +65,7 @@ public class SignUpActivity extends Activity {
             }
         });
 
+        // When sign up button is clicked
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,16 +80,17 @@ public class SignUpActivity extends Activity {
                 if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password)
                     && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(address)
                     && !TextUtils.isEmpty(phoneNumber)){
+                    // run register function
                     register(username, password, email, address, phoneNumber, permisstion);
-                } else if(TextUtils.isEmpty(username)){
+                } else if(TextUtils.isEmpty(username)){ // username is null
                     edtAccount.setError("Account is invalid!");
-                } else if(TextUtils.isEmpty(password)) {
+                } else if(TextUtils.isEmpty(password)) { // password name is null
                     edtPassword.setError("Password is invalid!");
-                } else if(TextUtils.isEmpty(email)) {
+                } else if(TextUtils.isEmpty(email)) { // email name is null
                     edtPassword.setError("Email is invalid!");
-                } else if(TextUtils.isEmpty(address)) {
+                } else if(TextUtils.isEmpty(address)) { // address name is null
                     edtPassword.setError("Address is invalid!");
-                } else if(TextUtils.isEmpty(phoneNumber)) {
+                } else if(TextUtils.isEmpty(phoneNumber)) { // phoneNumber name is null
                     edtPassword.setError("Phone Number is invalid!");
                 }
 
@@ -97,12 +99,16 @@ public class SignUpActivity extends Activity {
     }
 
     private void register(final String username, final String password, final String email, final String address, final String phoneNumber, final String permisstion) {
+        // create new user account
         firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                // creating success
                 if (task.isSuccessful()) {
+                    // Get user id of account created
                     FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                     String userId = firebaseUser.getUid();
+                    // Save user info in Users table
                     databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(userId);
 
                     HashMap<String, String> hashMap = new HashMap<>();
