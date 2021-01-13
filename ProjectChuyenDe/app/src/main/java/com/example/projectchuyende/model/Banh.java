@@ -7,6 +7,7 @@ public class Banh {
     private String giam;
     private String ImgAnhBanh;
     private String ImgSale;
+    private String moTa;
 
 
     public Banh() {
@@ -15,10 +16,10 @@ public class Banh {
 
     public Banh(String tenBanh) {
         super();
-        this.tenBanh= tenBanh;
+        this.tenBanh = tenBanh;
     }
 
-    public Banh(String tenBanh, String diaChi, String giaCa, String giam, String imgAnhBanh, String imgSale) {
+    public Banh(String tenBanh, String diaChi, String giaCa, String giam, String imgAnhBanh, String imgSale, String moTa) {
         super();
         this.tenBanh = tenBanh;
         this.diaChi = diaChi;
@@ -26,6 +27,7 @@ public class Banh {
         this.giam = giam;
         this.ImgAnhBanh = imgAnhBanh;
         this.ImgSale = imgSale;
+        this.moTa = moTa;
 
     }
 
@@ -75,6 +77,14 @@ public class Banh {
 
     public void setImgSale(String imgSale) {
         this.ImgSale = imgSale;
+    }
+
+    public String getMoTa() {
+        return moTa;
+    }
+
+    public void setMoTa(String moTa) {
+        this.moTa = moTa;
     }
 
     @Override

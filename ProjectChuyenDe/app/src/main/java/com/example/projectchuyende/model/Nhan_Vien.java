@@ -12,13 +12,16 @@ public class Nhan_Vien implements Serializable {
     private String Phone;
     private String Tennv;
     private String User;
+    private String Manv;
     private String permission;
     private String imgURL;
+    private String luong;
+    private  String gioitinh;
 
     public Nhan_Vien() {
     }
 
-    public Nhan_Vien(String chucvu, String date, String email, String employeeCode, String userId, String password, String phone, String tennv, String user, String permission) {
+    public Nhan_Vien(String chucvu, String date, String email, String employeeCode, String userId, String password, String phone, String tennv, String user,String gioitinh,String luong,String Manv, String permission) {
         this.Chucvu = chucvu;
         this.Date = date;
         this.Email = email;
@@ -27,6 +30,9 @@ public class Nhan_Vien implements Serializable {
         this.Password = password;
         this.Phone = phone;
         this.Tennv = tennv;
+        this.Manv = Manv;
+        this.luong = luong;
+        this.gioitinh = gioitinh;
         this.User = user;
         this.permission = permission;
     }
@@ -117,5 +123,29 @@ public class Nhan_Vien implements Serializable {
 
     public void setImgURL(String imgURL) {
         this.imgURL = imgURL;
+    }
+
+    public String getGioitinh() {
+        return gioitinh;
+    }
+
+    public void setGioitinh(String gioitinh) {
+        this.gioitinh = gioitinh;
+    }
+
+    public String getLuong() {
+        return luong;
+    }
+
+    public void setLuong(String luong) {
+        this.luong = luong;
+    }
+
+    public String getManv() {
+        return Manv;
+    }
+
+    public void setManv(String manv) {
+        Manv = manv;
     }
 }

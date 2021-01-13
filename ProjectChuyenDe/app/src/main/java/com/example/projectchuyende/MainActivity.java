@@ -95,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
                 // Menu item
                 nav_signout = menuNav.findItem(R.id.nav_signout);
                 nav_signout.setVisible(true);
-
                 nav_signin = menuNav.findItem(R.id.nav_signin);
                 nav_signin.setVisible(false);
 

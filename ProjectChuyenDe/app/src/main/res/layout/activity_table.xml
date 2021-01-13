@@ -53,8 +53,10 @@
 
         <GridView
             android:id="@+id/gvBan"
+            android:background="@color/colorWhite"
+            android:padding="5dp"
             android:layout_width="wrap_content"
-            android:layout_height="500dp"
+            android:layout_height="600dp"
             android:layout_margin="5dp"
             android:numColumns="2"
             android:stretchMode="columnWidth" />

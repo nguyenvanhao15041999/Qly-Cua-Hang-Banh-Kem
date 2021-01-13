@@ -12,29 +12,40 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.projectchuyende.R;
 
-public class Staff_inform extends Fragment {
+public class Staff_inform extends AppCompatActivity {
     Button btn_taikhoan;
+    TextView txtMaNV, txtTenNV, txtChucvu, txtSDT, txtGioitinh, txtEmail, txtLuong;
 
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.activity_staff_inform, container, false);
-        btn_taikhoan = root.findViewById(R.id.btntaikhoan);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_staff_inform);
 
+        btn_taikhoan = findViewById(R.id.btntaikhoan);
+        txtMaNV = findViewById(R.id.txtmanv);
+        txtTenNV = findViewById(R.id.txtnamenv);
+        txtChucvu = findViewById(R.id.txtchucvunv);
+        txtSDT = findViewById(R.id.txtsdtnv);
+        txtGioitinh = findViewById(R.id.txtGioitinh);
+        txtEmail = findViewById(R.id.txtmail);
+        txtLuong = findViewById(R.id.txtLuong);
         setEvent();
-        return root;
+
     }
 
     public void setEvent() {
-        btn_taikhoan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Intent intent=getIntent();
+        txtTenNV.setText(intent.getStringExtra("Tennv"));
+        txtMaNV.setText(intent.getStringExtra("Manv"));
+        txtLuong.setText(intent.getStringExtra("luong"));
+        txtEmail.setText(intent.getStringExtra("email"));
+        txtGioitinh.setText(intent.getStringExtra("gioitinh"));
+        txtSDT.setText(intent.getStringExtra("SDT"));
+        txtChucvu.setText(intent.getStringExtra("Chucvu"));
 
-                Intent intent = new Intent(getActivity(), Change_account.class);
-                getActivity().startActivity(intent);
-            }
-        });
     }
 
 }

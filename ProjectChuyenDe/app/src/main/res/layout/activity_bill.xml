@@ -36,6 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:text="HD001"
                 android:background="@color/colorWhite"
                 android:textSize="20dp"></EditText>
         </LinearLayout>
@@ -60,6 +61,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
+                android:text="Phan Duy Thái"
                 android:layout_marginLeft="5dp"
                 android:textSize="20dp"></EditText>
         </LinearLayout>
@@ -83,6 +85,7 @@
                 android:id="@+id/txtSDT"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:text="034721055"
                 android:background="@color/colorWhite"
                 android:layout_marginLeft="5dp"
                 android:textSize="20dp"></EditText>
@@ -109,6 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
+                android:text="TP.HCM"
                 android:background="@color/colorWhite"
                 android:textSize="20dp"></EditText>
         </LinearLayout>
@@ -116,7 +120,7 @@
         <ListView
             android:id="@+id/lvDanhSachHD"
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="450dp"
             android:layout_margin="5dp"></ListView>
 
         <LinearLayout

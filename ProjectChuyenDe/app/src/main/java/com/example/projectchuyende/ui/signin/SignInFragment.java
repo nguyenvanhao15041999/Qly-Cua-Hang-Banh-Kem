@@ -40,6 +40,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 public class SignInFragment extends Fragment {
     Button btnSignup;
     TextView tvForgotpass;
@@ -52,6 +53,7 @@ public class SignInFragment extends Fragment {
     Intent intent;
     RadioGroup rbtngChonLoaiTK;
     FirebaseUser user;
+    User username;
 
     @Nullable
     @Override
@@ -193,16 +195,20 @@ public class SignInFragment extends Fragment {
                     Toast.makeText(getActivity(), "Sign in success", Toast.LENGTH_SHORT).show();
                     user = FirebaseAuth.getInstance().getCurrentUser();
 
+                    User username1 = null;
+
                     if (user.getUid() != null) {
                         String userID = user.getUid();
+                         intent = new Intent();
+                         intent.putExtra("hoTen", username1.getUsername());
 
                         DatabaseReference ref = FirebaseDatabase.getInstance().getReference(table);
                         ref.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                if(mess.equals("admin")){
+                                if (mess.equals("admin")) {
                                     changeIntent(mess, username);
-                                }else {
+                                } else {
                                     changeIntent(mess, snapshot);
                                 }
                             }
@@ -223,9 +229,6 @@ public class SignInFragment extends Fragment {
                 }
             }
         });
-
-
-
     }
 
     private void changeIntent(String mess, DataSnapshot snapshot) {
@@ -244,7 +247,7 @@ public class SignInFragment extends Fragment {
 
     }
 
-    private void changeIntent(String mess, String username){
+    private void changeIntent(String mess, String username) {
         Intent intent = getActivity().getIntent();
         intent.setClass(getActivity(), MainActivity.class);
         intent.putExtra(mess, username);

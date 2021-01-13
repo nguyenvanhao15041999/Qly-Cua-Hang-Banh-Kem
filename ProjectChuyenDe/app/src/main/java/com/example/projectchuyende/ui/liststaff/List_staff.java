@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -73,10 +74,24 @@ public class List_staff extends Fragment {
                     public void onClick(DialogInterface dialogInterface, int i) {
                         switch (danhsachChucnang[i]) {
                             case "Thông tin":
-                                Staff_inform staff_inform = new Staff_inform();
-                                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                                nhanvien=arrdata_listStaff.get(vitri);
+                                Intent intent=new Intent(getContext(),Staff_inform.class);
+                                intent.putExtra("Manv",nhanvien.getManv());
+                                intent.putExtra("Tennv",nhanvien.getTennv());
+                                intent.putExtra("Chucvu",nhanvien.getChucvu());
+                                intent.putExtra("SDT",nhanvien.getPhone());
+                                intent.putExtra("gioitinh",nhanvien.getGioitinh());
+                                intent.putExtra("email", nhanvien.getEmail());
+                                intent.putExtra("luong",nhanvien.getLuong());
+                                startActivity(intent);
+                               /* Staff_inform staff_inform = new Staff_inform();
+                                FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
                                 fragmentTransaction.replace(R.id.lnListstaff, staff_inform);
                                 fragmentTransaction.commit();
+                                Bundle bundle=new Bundle();
+                                bundle.putString("Tennv","Phan Duy Thai");
+                                staff_inform.setArguments(bundle);*/
+
                                 break;
                             default:
                                 nhanvien=arrdata_listStaff.get(vitri);
@@ -91,6 +106,8 @@ public class List_staff extends Fragment {
 
                                     }
                                 });
+                                arrdata_listStaff.clear();
+                                ListStaffadapter.notifyDataSetChanged();
                                 break;
                         }
                     }

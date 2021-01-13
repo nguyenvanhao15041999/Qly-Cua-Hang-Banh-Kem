@@ -7,6 +7,7 @@ public class Nuoc {
     private String giam;
     private String ImgAnhNuoc;
     private String ImgSale;
+    private String moTa;
 
     public Nuoc() {
 
@@ -17,7 +18,7 @@ public class Nuoc {
         this.tenNuoc= tenNuoc;
     }
 
-    public Nuoc(String tenNuoc, String diaChi, String giaCa, String giam, String imgAnhNuoc, String imgSale) {
+    public Nuoc(String tenNuoc, String diaChi, String giaCa, String giam, String imgAnhNuoc, String imgSale,String moTa) {
         super();
         this.tenNuoc = tenNuoc;
         this.diaChi = diaChi;
@@ -25,6 +26,7 @@ public class Nuoc {
         this.giam = giam;
         this.ImgAnhNuoc = imgAnhNuoc;
         this.ImgSale = imgSale;
+        this.moTa=moTa;
     }
 
     public String getDiaChi() {
@@ -73,6 +75,14 @@ public class Nuoc {
 
     public void setImgSale(String imgSale) {
         this.ImgSale = imgSale;
+    }
+
+    public String getMoTa() {
+        return moTa;
+    }
+
+    public void setMoTa(String moTa) {
+        this.moTa = moTa;
     }
 
     @Override
