@@ -161,6 +161,7 @@ public class HomeFragment extends Fragment {
                                 } else {
                                     nuoc = data_nuoc.get(vitri);
                                     intent.putExtra("motanuoc", nuoc.getMoTa());
+                                    intent.putExtra("tenNuoc", nuoc.getTenNuoc());
                                 }
 
 

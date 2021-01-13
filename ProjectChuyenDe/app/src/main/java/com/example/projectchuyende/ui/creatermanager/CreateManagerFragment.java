@@ -44,8 +44,6 @@ public class CreateManagerFragment extends Fragment {
         edtManv =  root.findViewById(R.id.txtmanv);
         rdbnam =  root.findViewById(R.id.txt_Nam);
         rdbnu =  root.findViewById(R.id.txt_Nu);
-        rdbNhanvien =  root.findViewById(R.id.txt_Nhanvien);
-        rdbQuanly =  root.findViewById(R.id.txt_Quanly);
         edt_email =  root.findViewById(R.id.txtmail);
         edtTennv =  root.findViewById(R.id.txtHoTen);
         edtsdt =  root.findViewById(R.id.txtsdtnv);
