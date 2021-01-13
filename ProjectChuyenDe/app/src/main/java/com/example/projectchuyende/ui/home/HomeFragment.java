@@ -1,5 +1,6 @@
 package com.example.projectchuyende.ui.home;
 
+import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,11 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -21,12 +23,15 @@ import com.example.projectchuyende.SanPham.FirebaseNuoc;
 import com.example.projectchuyende.adapter.BanhAdapter;
 import com.example.projectchuyende.adapter.NuocAdapter;
 import com.example.projectchuyende.SanPham.FirebaseBanh;
+import com.example.projectchuyende.firebaseallManager.FirebaseListDesk;
 import com.example.projectchuyende.firebaseallManager.FirebaseallManager;
 import com.example.projectchuyende.model.Banh;
+import com.example.projectchuyende.model.Desk;
 import com.example.projectchuyende.model.Nuoc;
 import com.example.projectchuyende.ui.account.Product_chi_tiet;
 import com.example.projectchuyende.ui.account.Staff_inform;
 import com.example.projectchuyende.ui.bill.Bill;
+import com.example.projectchuyende.ui.listdesk.ThongTinban;
 import com.example.projectchuyende.ui.order.BookParty;
 import com.example.projectchuyende.ui.order.Bookdesk;
 import com.example.projectchuyende.ui.table.Table;
@@ -46,6 +51,7 @@ public class HomeFragment extends Fragment {
     FirebaseNuoc FirebaseNuoc;
     Banh banh;
     Nuoc nuoc;
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -155,26 +161,30 @@ public class HomeFragment extends Fragment {
                         switch (danhsach[i]) {
                             case "Thông tin":
                                 Intent intent = new Intent(getActivity(), Product_chi_tiet.class);
-                                if (index == "banh") {
+
+
                                     banh = data_banh.get(vitri);
                                     intent.putExtra("motabanh", banh.getMoTa());
-                                } else {
                                     nuoc = data_nuoc.get(vitri);
                                     intent.putExtra("motanuoc", nuoc.getMoTa());
                                     intent.putExtra("tenNuoc", nuoc.getTenNuoc());
-                                }
+
 
 
                                 intent.putExtra("index", index);
 
                                 getActivity().startActivity(intent);
+
+                                startActivity(intent);
+
                                 break;
                         }
                     }
                 });
-                AlertDialog dialog = builder.create();
-                dialog.show();
+                AlertDialog dialogChucnang = builder.create();
+                dialogChucnang.show();
             }
         });
+
     }
 }

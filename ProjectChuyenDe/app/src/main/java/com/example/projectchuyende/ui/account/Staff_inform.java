@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.projectchuyende.R;
+import com.example.projectchuyende.ui.bill.Bill;
 
 public class Staff_inform extends AppCompatActivity {
     Button btn_taikhoan;
@@ -45,7 +46,14 @@ public class Staff_inform extends AppCompatActivity {
         txtGioitinh.setText(intent.getStringExtra("gioitinh"));
         txtSDT.setText(intent.getStringExtra("SDT"));
         txtChucvu.setText(intent.getStringExtra("Chucvu"));
-
+        btn_taikhoan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Staff_inform.this, Account.class);
+                startActivity(intent);
+            }
+        });
     }
+
 
 }

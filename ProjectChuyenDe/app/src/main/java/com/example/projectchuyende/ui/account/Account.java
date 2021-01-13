@@ -12,11 +12,9 @@ import android.view.ViewGroup;
 
 import com.example.projectchuyende.R;
 
-public class Account extends Fragment {
-
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.activity_account, container, false);
-        return root;
+public class Account extends AppCompatActivity {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_account);
     }
 }

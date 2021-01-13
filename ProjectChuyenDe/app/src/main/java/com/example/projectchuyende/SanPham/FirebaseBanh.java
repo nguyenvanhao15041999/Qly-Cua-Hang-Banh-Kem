@@ -5,7 +5,13 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
+import com.example.projectchuyende.firebaseallManager.FirebaseListDesk;
 import com.example.projectchuyende.model.Banh;
+import com.example.projectchuyende.model.Desk;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -71,7 +77,48 @@ public class FirebaseBanh {
                 iListener.onFail();
             }
         });
+    }
 
+    public void ThemBanh(Banh banh, final FirebaseBanh.IListener iListener) {
+        String id = mDatabaseBanh.child(SanPhamBanh).push().getKey();
+        mDatabaseBanh.child(SanPhamBanh).child(banh.getTenBanh()).setValue(banh).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                iListener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                iListener.onFail();
+            }
+        });
+    }
 
+    public void SuaBanh(String ID, Banh banh, final FirebaseBanh.IListener iListener) {
+        mDatabaseBanh.child(SanPhamBanh).child(ID).setValue(banh).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                iListener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                iListener.onFail();
+            }
+        });
+    }
+
+    public void xoaBanh(String id, final FirebaseBanh.IListener listener){
+        mDatabaseBanh.child(SanPhamBanh).child(id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                listener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onFail();
+            }
+        });
     }
 }

@@ -5,7 +5,12 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 
+import com.example.projectchuyende.model.Banh;
 import com.example.projectchuyende.model.Nuoc;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -68,6 +73,49 @@ public class FirebaseNuoc {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 iListener.onFail();
+            }
+        });
+    }
+
+    public void ThemNuoc(Nuoc nuoc, final FirebaseNuoc.IListener iListener) {
+        String id = mDatabaseNuoc.child(SanPhamNuoc).push().getKey();
+        mDatabaseNuoc.child(SanPhamNuoc).child(nuoc.getTenNuoc()).setValue(nuoc).addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                iListener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                iListener.onFail();
+            }
+        });
+    }
+
+    public void SuaNuoc(String ID, Nuoc nuoc, final FirebaseNuoc.IListener iListener) {
+        mDatabaseNuoc.child(SanPhamNuoc).child(ID).setValue(nuoc).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                iListener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                iListener.onFail();
+            }
+        });
+    }
+
+    public void xoaNuoc(String id, final FirebaseNuoc.IListener listener){
+        mDatabaseNuoc.child(SanPhamNuoc).child(id).removeValue().addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                listener.onSuccess();
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                listener.onFail();
             }
         });
     }
