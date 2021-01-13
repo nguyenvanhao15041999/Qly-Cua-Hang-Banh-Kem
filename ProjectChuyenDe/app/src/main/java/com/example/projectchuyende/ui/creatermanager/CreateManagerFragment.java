@@ -34,8 +34,10 @@ public class CreateManagerFragment extends Fragment {
     EditText edtManv, edtTennv, edtsdt, edtmatkhau, edtTaikhoan, edtAdress, edtchucvu,edt_email;
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
-    RadioButton rdbnam, rdbnu, rdbNhanvien, rdbQuanly;
+    RadioButton rdbnam, rdbnu;
 
+
+    // create new account manager
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)  {
         View root = inflater.inflate(R.layout.activity_change_account, container, false);
