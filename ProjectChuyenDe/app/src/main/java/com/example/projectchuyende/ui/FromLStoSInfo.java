@@ -14,13 +14,12 @@ public class FromLStoSInfo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        List_staff list_staff= new List_staff();
-        FragmentManager fragmentManager=getSupportFragmentManager();
-
-        fragmentManager.beginTransaction().add(R.id.chuyentrang,list_staff,null).commit();
-
         setContentView(R.layout.activity_from_l_sto_s_info);
 
+
+        List_staff list_staff = new List_staff();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        fragmentManager.beginTransaction().add(R.id.chuyentrang, list_staff, null).commit();
     }
 }

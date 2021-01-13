@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -74,9 +75,13 @@ public class List_staff extends Fragment {
                         switch (danhsachChucnang[i]) {
                             case "Thông tin":
                                 Staff_inform staff_inform = new Staff_inform();
-                                FragmentTransaction fragmentTransaction = getParentFragmentManager().beginTransaction();
+                                FragmentTransaction fragmentTransaction = getChildFragmentManager().beginTransaction();
                                 fragmentTransaction.replace(R.id.lnListstaff, staff_inform);
                                 fragmentTransaction.commit();
+                                Bundle bundle=new Bundle();
+                                bundle.putString("Tennv","Phan Duy Thai");
+                                staff_inform.setArguments(bundle);
+
                                 break;
                             default:
                                 nhanvien=arrdata_listStaff.get(vitri);
