@@ -7,8 +7,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.projectchuyende.model.Dialog;
 import com.example.projectchuyende.model.Nhan_Vien;
 import com.example.projectchuyende.model.User;
 import com.google.android.material.navigation.NavigationView;
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvEmpJobTitle;
     private Menu menuNav;
     private MenuItem nav_signout, nav_signin;
-
+    private  ListView lvDanhSach;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         tvEmpName = (TextView) headerView.findViewById(R.id.tvEmpName);
         tvEmpJobTitle = (TextView) headerView.findViewById(R.id.tvEmpJobTitle);
 
+        lvDanhSach = findViewById(R.id.lvDanhsachHome);
+
         menuNav = navigationView.getMenu();
         nav_signout = menuNav.findItem(R.id.nav_signout);
         nav_signout.setVisible(false);
@@ -68,7 +72,15 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
+
+
+
     }
+
+
+
 
     @Override
     protected void onResume() {
@@ -176,6 +188,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -204,6 +218,7 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 
 
     public void dialog() {
